@@ -18,15 +18,20 @@ export default function Main() {
 
     if (!target) return;
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          handleClick(false);
-        } else {
-          handleClick(true);
-        }
-      });
-    });
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            handleClick(false);
+          } else {
+            handleClick(true);
+          }
+        });
+      },
+      {
+        threshold: 0.75,
+      }
+    );
 
     observer.observe(target);
   }, []);
@@ -57,11 +62,9 @@ export default function Main() {
   return (
     <>
       <br />
-      <h1 id="homeTitle" ref={title}>
-        Home
-      </h1>
+      <h1 id="homeTitle">Home</h1>
       <div className={styles.mainGrid} id="mainbody"></div>
-      <button onClick={() => handleClick(!isScrolled)}>Click me</button>
+      <button onClick={() => handleClick(!isScrolled)}>Click me test</button>
       {spaces}
       {spaces}
       {spaces}

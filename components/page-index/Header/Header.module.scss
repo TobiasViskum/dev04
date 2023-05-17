@@ -6,6 +6,7 @@
   width: 100svw;
   justify-content: space-between;
   border-color: var(--second-bg);
+  height: 64px;
 
   border-width: 0;
   border-bottom-width: 1px;
@@ -17,22 +18,22 @@
   align-items: center;
   > p {
     opacity: 0;
-    transition: all 0.5s;
+    transition: opacity 0.5s;
   }
 
   opacity: 0;
-  transition: all 0.5s;
+  transition: opacity 0.5s;
 }
 
 .headerActive {
   > p {
     opacity: 1;
-    transition: all 0.5s;
+    transition: opacity 0.5s;
   }
 
   opacity: 1;
 
-  transition: all 0.5s;
+  transition: opacity 0.5s;
 }
 
 .header > * {
