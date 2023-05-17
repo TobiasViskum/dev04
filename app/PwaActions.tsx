@@ -14,9 +14,9 @@ export default function PwaActions() {
   if (isPWA() == false) return <></>;
   if (isMobile() == false) return <></>;
 
-  const root = document.documentElement;
-  const rootStyles = getComputedStyle(root);
-  rootStyles.setProperty("--touch-actions", "none");
+  const documentStyle = document.documentElement.style;
+
+  documentStyle.setProperty("--touch-actions", "none", "important");
 
   return <></>;
 }
