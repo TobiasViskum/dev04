@@ -1,0 +1,8 @@
+@import "@/app/mixins.scss";
+
+.image {
+  top: 16px;
+  left: 16px;
+  position: fixed;
+  @include square(64px);
+}

@@ -1,0 +1,52 @@
+@import "@/app/mixins";
+
+.header {
+  position: fixed;
+  display: flex;
+  width: 100svw;
+  justify-content: space-between;
+  border-color: var(--second-bg);
+
+  border-width: 0;
+  border-bottom-width: 1px;
+  border-color: var(--second-bg);
+  border-style: solid;
+  background: var(--first-bg), 0.5;
+  backdrop-filter: blur(15px);
+
+  align-items: center;
+  > p {
+    opacity: 0;
+    transition: all 0.5s;
+  }
+
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.headerActive {
+  > p {
+    opacity: 1;
+    transition: all 0.5s;
+  }
+
+  opacity: 1;
+
+  transition: all 0.5s;
+}
+
+.header > * {
+  padding: 8px;
+}
+
+.title {
+}
+
+.settingsHolder {
+  @include square;
+  width: 32px;
+  height: 32px;
+}
+.settingsIcon {
+  @include next-image;
+}

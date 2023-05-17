@@ -1,0 +1,31 @@
+.mainGrid {
+  display: grid;
+
+  gap: 1rem;
+  grid-auto-columns: 1fr;
+
+  grid-template-areas:
+    "one one two"
+    "three three two"
+    "four five five";
+  * {
+    background-color: blueviolet;
+    display: grid;
+    place-items: center;
+  }
+  :nth-child(1) {
+    grid-area: one;
+  }
+  :nth-child(2) {
+    grid-area: two;
+  }
+  :nth-child(3) {
+    grid-area: three;
+  }
+  :nth-child(4) {
+    grid-area: four;
+  }
+  :nth-child(5) {
+    grid-area: five;
+  }
+}
