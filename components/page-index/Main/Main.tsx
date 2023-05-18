@@ -1,5 +1,5 @@
 import styles from "./Main.module.scss";
-import SearchSection from "../SearchSection/SearchSection";
+import { SearchSection, FavoritesSections, TabsSection } from "..";
 
 interface Props {
   profileData: string;
@@ -11,6 +11,8 @@ export default function Main(props: Props) {
   return (
     <main className={styles.main}>
       <SearchSection profileData={profileData} />
+      <FavoritesSections profileData={profileData} />
+      <TabsSection profileData={profileData} />
       <div>
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita consectetur esse sequi
         nesciunt quis quisquam qui ipsa animi. Nobis ullam sint suscipit voluptatem debitis incidunt

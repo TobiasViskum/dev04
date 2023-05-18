@@ -29,15 +29,18 @@
     justify-content: space-between;
     align-items: center;
     width: calc(100% - var(--navbar-height));
-  }
-
-  .settingsHolder {
-    @include square;
-    width: var(--icon-size);
-    height: var(--icon-size);
-  }
-  .settingsIcon {
-    @include next-image;
+    .settingsHolder {
+      @include square;
+      width: var(--icon-size);
+      height: var(--icon-size);
+    }
+    .settingsIcon {
+      @include next-image;
+    }
+    .title {
+      color: var(--first-text);
+      font-weight: 600;
+    }
   }
 }
 

@@ -1,7 +1,12 @@
 @import "/app/mixins.scss";
 
-.main > * {
-  min-width: 350px;
+.main {
+  display: grid;
+  row-gap: 12px;
+
+  > * {
+    min-width: 350px;
+  }
 }
 
 .favoritesSection {

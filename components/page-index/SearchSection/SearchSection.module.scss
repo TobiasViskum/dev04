@@ -3,13 +3,11 @@
 .searchSection {
   --searching-template-rows: 1fr 1fr;
   --searching-opacity: 1;
-  --searching-padding: 0px;
 
   margin-top: calc(var(--navbar-height) * 1.25);
   display: grid;
   grid-template-rows: var(--searching-template-rows);
   row-gap: 8px;
-  padding-bottom: var(--searching-padding);
 
   @include transition(grid-template-rows);
 

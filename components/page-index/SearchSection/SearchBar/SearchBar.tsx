@@ -39,7 +39,7 @@ export default function SearchBar() {
     <>
       <div className={styles.container} id="searchbar">
         <div className={styles.searchIconHolder}>
-          <img src={search.src} alt="search icon" className={styles.searchIcon} />
+          <Image src={search} alt="search icon" className={styles.searchIcon} />
         </div>
         <div className={styles.border} />
         <input

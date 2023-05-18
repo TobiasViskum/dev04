@@ -52,7 +52,7 @@ module.exports = require("next/dist/compiled/react-server-dom-webpack-experiment
 
 /***/ }),
 
-/***/ 1090:
+/***/ 5232:
 /***/ ((module) => {
 
 "use strict";
@@ -351,7 +351,7 @@ __webpack_require__.r(__webpack_exports__);
         '',
         {
         children: ['__PAGE__', {}, {
-          page: [() => Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 3648)), "C:\\Users\\tobia\\Personal\\Development\\React\\dev04\\app\\page.tsx"],
+          page: [() => Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 1215)), "C:\\Users\\tobia\\Personal\\Development\\React\\dev04\\app\\page.tsx"],
           metadata: {
     icon: [(async (props) => (await Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 4756))).default(props))],
     apple: [],
@@ -402,13 +402,13 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 7191:
+/***/ 2532:
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
+Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 408, 23));
 Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 6826));
 Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 5908));
 Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 6038));
-Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 408, 23));
 Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 4783));
 Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 9883))
 
@@ -539,17 +539,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6931);
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _SearchBar_module_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(4086);
-/* harmony import */ var _SearchBar_module_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_SearchBar_module_scss__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _assets_images__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(5049);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(7640);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _SearchBar_module_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(4086);
+/* harmony import */ var _SearchBar_module_scss__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_SearchBar_module_scss__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var next_image__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(8421);
+/* harmony import */ var next_image__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_image__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _assets_images__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(5049);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(7640);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
 /* __next_internal_client_entry_do_not_use__ default auto */ 
 
 
 
+
 function SearchBar() {
-    const searchbar = (0,react__WEBPACK_IMPORTED_MODULE_2__.useRef)(null);
+    const searchbar = (0,react__WEBPACK_IMPORTED_MODULE_3__.useRef)(null);
     function handleFocus(newState) {
         const searchSection = document.getElementById("searchSection");
         const docElement = document.documentElement;
@@ -564,7 +567,7 @@ function SearchBar() {
             searchbar.current?.blur();
         }
     }
-    (0,react__WEBPACK_IMPORTED_MODULE_2__.useEffect)(()=>{
+    (0,react__WEBPACK_IMPORTED_MODULE_3__.useEffect)(()=>{
         function cancelFocus() {
             handleFocus(false);
             searchbar?.current?.blur();
@@ -574,25 +577,25 @@ function SearchBar() {
     }, []);
     return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
         children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
-            className: (_SearchBar_module_scss__WEBPACK_IMPORTED_MODULE_3___default().container),
+            className: (_SearchBar_module_scss__WEBPACK_IMPORTED_MODULE_4___default().container),
             id: "searchbar",
             children: [
                 /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
-                    className: (_SearchBar_module_scss__WEBPACK_IMPORTED_MODULE_3___default().searchIconHolder),
-                    children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("img", {
-                        src: _assets_images__WEBPACK_IMPORTED_MODULE_1__/* .search.src */ .yC.src,
+                    className: (_SearchBar_module_scss__WEBPACK_IMPORTED_MODULE_4___default().searchIconHolder),
+                    children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_image__WEBPACK_IMPORTED_MODULE_1___default()), {
+                        src: _assets_images__WEBPACK_IMPORTED_MODULE_2__/* .search */ .yC,
                         alt: "search icon",
-                        className: (_SearchBar_module_scss__WEBPACK_IMPORTED_MODULE_3___default().searchIcon)
+                        className: (_SearchBar_module_scss__WEBPACK_IMPORTED_MODULE_4___default().searchIcon)
                     })
                 }),
                 /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
-                    className: (_SearchBar_module_scss__WEBPACK_IMPORTED_MODULE_3___default().border)
+                    className: (_SearchBar_module_scss__WEBPACK_IMPORTED_MODULE_4___default().border)
                 }),
                 /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("input", {
                     ref: searchbar,
                     spellCheck: false,
                     placeholder: "Search...",
-                    className: (_SearchBar_module_scss__WEBPACK_IMPORTED_MODULE_3___default().searchBar),
+                    className: (_SearchBar_module_scss__WEBPACK_IMPORTED_MODULE_4___default().searchBar),
                     onFocus: ()=>handleFocus(true),
                     onBlur: ()=>handleFocus(false)
                 })
@@ -613,6 +616,7 @@ module.exports = {
 	"navbar": "Header_navbar__n62Gf",
 	"settingsHolder": "Header_settingsHolder___1chm",
 	"settingsIcon": "Header_settingsIcon__stPY2",
+	"title": "Header_title__7V0zf",
 	"headerActive": "Header_headerActive__vrC5s",
 	"intersector": "Header_intersector__wCl6f"
 };
@@ -662,7 +666,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 3648:
+/***/ 1215:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -694,6 +698,44 @@ const { __esModule, $$typeof } = proxy;
 // EXTERNAL MODULE: ./components/page-index/Main/Main.module.scss
 var Main_module = __webpack_require__(3977);
 var Main_module_default = /*#__PURE__*/__webpack_require__.n(Main_module);
+;// CONCATENATED MODULE: ./components/page-index/Main/Main.tsx
+
+
+
+function Main(props) {
+    const profileData = JSON.parse(props.profileData);
+    return /*#__PURE__*/ (0,jsx_runtime_.jsxs)("main", {
+        className: (Main_module_default()).main,
+        children: [
+            /*#__PURE__*/ jsx_runtime_.jsx(SearchSection, {
+                profileData: profileData
+            }),
+            /*#__PURE__*/ jsx_runtime_.jsx(FavoritesSections, {
+                profileData: profileData
+            }),
+            /*#__PURE__*/ jsx_runtime_.jsx(TabsSection, {
+                profileData: profileData
+            }),
+            /*#__PURE__*/ jsx_runtime_.jsx("div", {
+                children: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita consectetur esse sequi nesciunt quis quisquam qui ipsa animi. Nobis ullam sint suscipit voluptatem debitis incidunt exercitationem nulla, corrupti molestias atque iusto, ab at ratione iure illo aperiam quae dignissimos fugiat asperiores eum! Pariatur, quasi earum provident hic iste fugiat veritatis quibusdam libero, neque eaque quas, autem dicta aliquid mollitia in. Placeat eos quam perferendis adipisci? Mollitia modi a velit sed ipsa nesciunt tenetur temporibus sequi culpa nemo fugit molestias eos consequatur ut dolorem odit, labore nobis architecto accusamus! Molestias rem vero aliquid excepturi omnis obcaecati nisi eos expedita fugit. Porro."
+            }),
+            /*#__PURE__*/ jsx_runtime_.jsx("div", {
+                id: "testscroll",
+                children: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates sit tempora laborum voluptatibus illum rerum maiores! Dolores quos, atque impedit officia cum enim earum sapiente natus mollitia aperiam, magni beatae esse facilis assumenda quas repellendus, voluptatem explicabo aspernatur exercitationem fugit vitae repellat accusantium veniam. In velit illo distinctio illum quo quibusdam? Necessitatibus pariatur odio quaerat placeat? Quam placeat exercitationem molestias odio at nobis nostrum iste ipsa. Similique iste, eos temporibus accusamus consequuntur earum ab, error quas, atque eaque minus mollitia fugit! Ad voluptatem, et aperiam perspiciatis maiores fugit corporis harum culpa deserunt recusandae incidunt veritatis necessitatibus maxime velit earum eius ducimus laborum porro iusto soluta praesentium alias hic minima cum? Rem consequuntur obcaecati repellat laborum magnam tenetur! Dolores cupiditate sunt quo ut nulla libero, debitis culpa animi, unde eius nisi tempore magni nihil, explicabo ex aliquam assumenda? Nostrum corrupti maxime eligendi natus voluptatibus reprehenderit vero accusamus adipisci quis. Facilis perspiciatis omnis non delectus, voluptate itaque soluta totam hic incidunt dolore sunt, ratione numquam sequi laborum enim nesciunt, neque blanditiis necessitatibus molestiae nostrum odio. Doloremque temporibus itaque earum officia eum, ducimus voluptate et? Aliquam, harum. Consequuntur, eveniet? Alias iusto similique facere id pariatur? Labore repudiandae quisquam iste sapiente, optio corrupti rem."
+            }),
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, nesciunt possimus. Aliquam, sunt consequatur. Ipsum facilis exercitationem rem suscipit consectetur temporibus nam? Error optio, ut a fugit exercitationem tempora temporibus inventore laboriosam. Ratione delectus voluptatum, facere quis sint cupiditate omnis ipsam atque cumque perferendis nulla nam aut ipsum. Dolorem provident deserunt obcaecati possimus. Dolores assumenda quibusdam at tenetur magnam? Facilis enim quo ad inventore error quia iste ipsum sapiente molestias in dolorem fugiat ducimus nemo excepturi doloremque, fuga dicta voluptas fugit iure modi omnis dolorum voluptatibus quod quas! Corrupti labore quidem quos sequi vitae fugit tempora dolores dolorum possimus numquam."
+        ]
+    });
+}
+
+;// CONCATENATED MODULE: ./components/page-index/Footer/Footer.tsx
+
+function Footer() {
+    return /*#__PURE__*/ jsx_runtime_.jsx("footer", {
+        children: "Footer"
+    });
+}
+
 // EXTERNAL MODULE: ./components/page-index/SearchSection/SearchSection.module.scss
 var SearchSection_module = __webpack_require__(5754);
 var SearchSection_module_default = /*#__PURE__*/__webpack_require__.n(SearchSection_module);
@@ -848,39 +890,40 @@ function SearchSection(props) {
     });
 }
 
-;// CONCATENATED MODULE: ./components/page-index/Main/Main.tsx
+;// CONCATENATED MODULE: ./components/page-index/FavoritesSection/FavoritesSection.tsx
 
-
-
-function Main(props) {
-    const profileData = JSON.parse(props.profileData);
-    return /*#__PURE__*/ (0,jsx_runtime_.jsxs)("main", {
-        className: (Main_module_default()).main,
+function FavoritesSections(props) {
+    const profileData = props.profileData;
+    return /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
         children: [
-            /*#__PURE__*/ jsx_runtime_.jsx(SearchSection, {
-                profileData: profileData
+            /*#__PURE__*/ jsx_runtime_.jsx("h2", {
+                children: "Favorites"
             }),
-            /*#__PURE__*/ jsx_runtime_.jsx("div", {
-                children: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita consectetur esse sequi nesciunt quis quisquam qui ipsa animi. Nobis ullam sint suscipit voluptatem debitis incidunt exercitationem nulla, corrupti molestias atque iusto, ab at ratione iure illo aperiam quae dignissimos fugiat asperiores eum! Pariatur, quasi earum provident hic iste fugiat veritatis quibusdam libero, neque eaque quas, autem dicta aliquid mollitia in. Placeat eos quam perferendis adipisci? Mollitia modi a velit sed ipsa nesciunt tenetur temporibus sequi culpa nemo fugit molestias eos consequatur ut dolorem odit, labore nobis architecto accusamus! Molestias rem vero aliquid excepturi omnis obcaecati nisi eos expedita fugit. Porro."
-            }),
-            /*#__PURE__*/ jsx_runtime_.jsx("div", {
-                id: "testscroll",
-                children: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates sit tempora laborum voluptatibus illum rerum maiores! Dolores quos, atque impedit officia cum enim earum sapiente natus mollitia aperiam, magni beatae esse facilis assumenda quas repellendus, voluptatem explicabo aspernatur exercitationem fugit vitae repellat accusantium veniam. In velit illo distinctio illum quo quibusdam? Necessitatibus pariatur odio quaerat placeat? Quam placeat exercitationem molestias odio at nobis nostrum iste ipsa. Similique iste, eos temporibus accusamus consequuntur earum ab, error quas, atque eaque minus mollitia fugit! Ad voluptatem, et aperiam perspiciatis maiores fugit corporis harum culpa deserunt recusandae incidunt veritatis necessitatibus maxime velit earum eius ducimus laborum porro iusto soluta praesentium alias hic minima cum? Rem consequuntur obcaecati repellat laborum magnam tenetur! Dolores cupiditate sunt quo ut nulla libero, debitis culpa animi, unde eius nisi tempore magni nihil, explicabo ex aliquam assumenda? Nostrum corrupti maxime eligendi natus voluptatibus reprehenderit vero accusamus adipisci quis. Facilis perspiciatis omnis non delectus, voluptate itaque soluta totam hic incidunt dolore sunt, ratione numquam sequi laborum enim nesciunt, neque blanditiis necessitatibus molestiae nostrum odio. Doloremque temporibus itaque earum officia eum, ducimus voluptate et? Aliquam, harum. Consequuntur, eveniet? Alias iusto similique facere id pariatur? Labore repudiandae quisquam iste sapiente, optio corrupti rem."
-            }),
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, nesciunt possimus. Aliquam, sunt consequatur. Ipsum facilis exercitationem rem suscipit consectetur temporibus nam? Error optio, ut a fugit exercitationem tempora temporibus inventore laboriosam. Ratione delectus voluptatum, facere quis sint cupiditate omnis ipsam atque cumque perferendis nulla nam aut ipsum. Dolorem provident deserunt obcaecati possimus. Dolores assumenda quibusdam at tenetur magnam? Facilis enim quo ad inventore error quia iste ipsum sapiente molestias in dolorem fugiat ducimus nemo excepturi doloremque, fuga dicta voluptas fugit iure modi omnis dolorum voluptatibus quod quas! Corrupti labore quidem quos sequi vitae fugit tempora dolores dolorum possimus numquam."
+            /*#__PURE__*/ jsx_runtime_.jsx("p", {
+                children: "You dont have any favorites yet!"
+            })
         ]
     });
 }
 
-;// CONCATENATED MODULE: ./components/page-index/Footer/Footer.tsx
+;// CONCATENATED MODULE: ./components/page-index/TabsSection/TabsSection.tsx
 
-function Footer() {
-    return /*#__PURE__*/ jsx_runtime_.jsx("footer", {
-        children: "Footer"
+function TabsSection(props) {
+    return /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+        children: [
+            /*#__PURE__*/ jsx_runtime_.jsx("h2", {
+                children: "Tabs"
+            }),
+            /*#__PURE__*/ jsx_runtime_.jsx("p", {
+                children: "Here is all tabs going to be displayed!"
+            })
+        ]
     });
 }
 
 ;// CONCATENATED MODULE: ./components/page-index/index.ts
+
+
 
 
 
