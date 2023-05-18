@@ -402,15 +402,15 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 9689:
+/***/ 7191:
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 9883));
-Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 408, 23));
 Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 6826));
-Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 6038));
 Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 5908));
-Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 4783))
+Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 6038));
+Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 408, 23));
+Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 4783));
+Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 9883))
 
 /***/ }),
 
@@ -555,6 +555,7 @@ function SearchBar() {
         const docElement = document.documentElement;
         if (!searchSection) return;
         if (newState) {
+            docElement.scrollTo(0, 8);
             searchSection.style.setProperty("--searching-template-rows", "0.01fr 1fr");
             searchSection.style.setProperty("--searching-opacity", "0");
         } else {
@@ -564,38 +565,12 @@ function SearchBar() {
         }
     }
     (0,react__WEBPACK_IMPORTED_MODULE_2__.useEffect)(()=>{
-        const searchSection = document.getElementById("searchSection");
-        let shrinkElement = document.getElementById("searchbar");
-        let shrinkThreshold = 0; // distance to scroll before element starts shrinking
-        let shrinkDistance = 10; // distance over which element shrinks
-        let isScrolling;
         function cancelFocus() {
             handleFocus(false);
             searchbar?.current?.blur();
         }
         window.addEventListener("touchmove", cancelFocus);
         window.addEventListener("touchstart", cancelFocus);
-        window.addEventListener("scroll", function(e) {
-            let scrollY = window.pageYOffset;
-            if (!shrinkElement) return;
-            if (scrollY > shrinkThreshold) {
-                let shrinkProgress = Math.min(1, (scrollY - shrinkThreshold) / shrinkDistance);
-                searchSection?.style.setProperty("--searching-template-rows", `1fr ${1 - shrinkProgress}fr`);
-            } else {
-                searchSection?.style.setProperty("--searching-template-rows", "1fr 1fr");
-            }
-            // Clear our timeout throughout the scroll
-            window.clearTimeout(isScrolling);
-            // Set a timeout to run after scrolling ends
-            isScrolling = setTimeout(function() {
-                if (!shrinkElement) return;
-                if (scrollY > shrinkThreshold + shrinkDistance) {
-                    searchSection?.style.setProperty("--searching-template-rows", "1fr 0fr");
-                } else {
-                    searchSection?.style.setProperty("--searching-template-rows", "1fr 1fr");
-                }
-            }, 66);
-        });
     }, []);
     return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
         children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
@@ -975,7 +950,7 @@ __webpack_require__.r(__webpack_exports__);
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [859,571,831,286,538,550], () => (__webpack_exec__(6908)));
+var __webpack_exports__ = __webpack_require__.X(0, [859,571,831,286,342,550], () => (__webpack_exec__(6908)));
 module.exports = __webpack_exports__;
 
 })();

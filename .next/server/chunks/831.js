@@ -3982,7 +3982,7 @@ function PacketHeader(length, number) {
 
 /***/ }),
 
-/***/ 1265:
+/***/ 3275:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
@@ -4574,7 +4574,7 @@ var Sequences = __webpack_require__(6140);
 var Packets = __webpack_require__(7307);
 var Stream = (__webpack_require__(2781).Stream);
 var Util = __webpack_require__(3837);
-var PacketWriter = __webpack_require__(1265);
+var PacketWriter = __webpack_require__(3275);
 module.exports = Protocol;
 Util.inherits(Protocol, Stream);
 function Protocol(options) {
@@ -7785,7 +7785,7 @@ exports[3230] = "ER_CANT_START_SERVER_NAMED_PIPE";
 
 /***/ }),
 
-/***/ 9897:
+/***/ 4374:
 /***/ ((__unused_webpack_module, exports) => {
 
 // Manually extracted from mysql-5.5.23/include/mysql_com.h
@@ -9266,7 +9266,7 @@ exports.UseOldPasswordPacket = __webpack_require__(3274);
 
 /***/ }),
 
-/***/ 6024:
+/***/ 4959:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
@@ -9474,7 +9474,7 @@ var fs = __webpack_require__(7147);
 var Packets = __webpack_require__(7307);
 var ResultSet = __webpack_require__(2774);
 var Sequence = __webpack_require__(5200);
-var ServerStatus = __webpack_require__(9897);
+var ServerStatus = __webpack_require__(4374);
 var Readable = __webpack_require__(1528);
 var Util = __webpack_require__(3837);
 module.exports = Query;
@@ -9837,7 +9837,7 @@ Statistics.prototype.determinePacket = function determinePacket(firstByte) {
 /***/ 6140:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
-exports.ChangeUser = __webpack_require__(6024);
+exports.ChangeUser = __webpack_require__(4959);
 exports.Handshake = __webpack_require__(4931);
 exports.Ping = __webpack_require__(7101);
 exports.Query = __webpack_require__(1237);
