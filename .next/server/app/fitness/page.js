@@ -340,6 +340,7 @@ __webpack_require__.r(__webpack_exports__);
       },
         {
           'layout': [() => Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 6514)), "C:\\Users\\tobia\\Personal\\Development\\React\\dev04\\app\\layout.tsx"],
+'error': [() => Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 7254)), "C:\\Users\\tobia\\Personal\\Development\\React\\dev04\\app\\error.tsx"],
 'not-found': [() => Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 7131)), "C:\\Users\\tobia\\Personal\\Development\\React\\dev04\\app\\not-found.tsx"],
           metadata: {
     icon: [(async (props) => (await Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 4756))).default(props))],
@@ -434,7 +435,7 @@ async function page() {
 var __webpack_require__ = require("../../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [859,571,831,462,647,550], () => (__webpack_exec__(7100)));
+var __webpack_exports__ = __webpack_require__.X(0, [859,571,831,462,538,550], () => (__webpack_exec__(7100)));
 module.exports = __webpack_exports__;
 
 })();

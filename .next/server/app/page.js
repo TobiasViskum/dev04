@@ -351,7 +351,7 @@ __webpack_require__.r(__webpack_exports__);
         '',
         {
         children: ['__PAGE__', {}, {
-          page: [() => Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 6512)), "C:\\Users\\tobia\\Personal\\Development\\React\\dev04\\app\\page.tsx"],
+          page: [() => Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 3648)), "C:\\Users\\tobia\\Personal\\Development\\React\\dev04\\app\\page.tsx"],
           metadata: {
     icon: [(async (props) => (await Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 4756))).default(props))],
     apple: [],
@@ -363,6 +363,7 @@ __webpack_require__.r(__webpack_exports__);
       },
         {
           'layout': [() => Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 6514)), "C:\\Users\\tobia\\Personal\\Development\\React\\dev04\\app\\layout.tsx"],
+'error': [() => Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 7254)), "C:\\Users\\tobia\\Personal\\Development\\React\\dev04\\app\\error.tsx"],
 'not-found': [() => Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 7131)), "C:\\Users\\tobia\\Personal\\Development\\React\\dev04\\app\\not-found.tsx"],
           metadata: {
     icon: [(async (props) => (await Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 4756))).default(props))],
@@ -401,30 +402,30 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 6917:
+/***/ 2292:
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
 Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 9883));
-Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 5378))
+Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 408, 23));
+Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 4783));
+Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 6826));
+Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 5908));
+Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 6038))
 
 /***/ }),
 
-/***/ 134:
+/***/ 5049:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "uy": () => (/* reexport safe */ _settings_png__WEBPACK_IMPORTED_MODULE_1__["default"]),
+/* harmony export */   "yC": () => (/* reexport safe */ _search_png__WEBPACK_IMPORTED_MODULE_2__["default"])
+/* harmony export */ });
+/* harmony import */ var _profileTobias_png__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6826);
+/* harmony import */ var _settings_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(5908);
+/* harmony import */ var _search_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(6038);
 
-// EXPORTS
-__webpack_require__.d(__webpack_exports__, {
-  "H": () => (/* reexport */ profileTobias),
-  "u": () => (/* reexport */ settings)
-});
-
-;// CONCATENATED MODULE: ./assets/images/profileTobias.png
-/* harmony default export */ const profileTobias = ({"src":"/_next/static/media/profileTobias.56bde7f5.png","height":246,"width":244,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAABBklEQVR42g3Mu07CUBwH4F//HA6SWrmEFCHhEi8LDDqIGu3iru/gZHwkH0RdnL3MJpgYQwyDFUm1hbbp7fQc2b982t3DfV0vFC6SpXeVCXHS67ZUf6unaVS29VprwJTE28J3m5/vE3x7EcbjD21/2JO1htleW5+cszSTTREF0rWn4OAkshJenl9RMxswu/1r5vuBSkNBrlAoUo6vmYMgBw2piMqmPGV/Sx8bnKPNy4hTicUKVjjh6HAEo9UBs237MalXLUMvSeE61NRL6HSr8tjaWw27RFGs3czmIYI4BeOA8zvHzuiA9IpBoTf9oTNr+9bQmB1HCUUqUzkUwih5YmXz0nEKg3+/nnKkPQVrugAAAABJRU5ErkJggg==","blurWidth":8,"blurHeight":8});
-;// CONCATENATED MODULE: ./assets/images/settings.png
-/* harmony default export */ const settings = ({"src":"/_next/static/media/settings.0ba832d2.png","height":512,"width":512,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAMAAADz0U65AAAAUVBMVEUEdP4Ec/4EdP4Ec/4EdP4Fc/4Ec/4EdP4Ec/4FdP4Ec/4Ec/4Ec/4Ec/4EdP4Fc/4Ec/4EdP4Ec/4FdP4Ec/4Fc/4EdP4FdP4EdP4Fc/4Ec/6O3LfsAAAAF3RSTlMAACkpKioqKyzCwsPE7u/v8Pn5+/v8/h0GiB4AAAA/SURBVHjaLcbJAYAgEATB8UbAC1ZpyD9QP9SrpMVnC27QegHldvIkeEqU1QYN0/v1xJIgsWs7K3CM0hyy+Uk/m60ER2KC+/8AAAAASUVORK5CYII=","blurWidth":8,"blurHeight":8});
-;// CONCATENATED MODULE: ./assets/images/index.ts
 
 
 
@@ -449,8 +450,8 @@ var jsx_runtime_ = __webpack_require__(6931);
 // EXTERNAL MODULE: ./components/page-index/Header/Header.module.scss
 var Header_module = __webpack_require__(8278);
 var Header_module_default = /*#__PURE__*/__webpack_require__.n(Header_module);
-// EXTERNAL MODULE: ./assets/images/index.ts + 2 modules
-var assets_images = __webpack_require__(134);
+// EXTERNAL MODULE: ./assets/images/index.ts
+var assets_images = __webpack_require__(5049);
 // EXTERNAL MODULE: ./node_modules/next/image.js
 var next_image = __webpack_require__(8421);
 var image_default = /*#__PURE__*/__webpack_require__.n(next_image);
@@ -462,38 +463,21 @@ function useFirstRender(props) {
     const updateHeader = props.updateHeader;
     return (0,react_experimental_.useEffect)(()=>{
         if (typeof document == "undefined") return;
-        const title = document.getElementById("title");
-        let smallSize = "-75px";
-        let bigSize = "-90px";
-        let currentRootMargin = smallSize;
-        let observer = beginObserving(smallSize);
-        window.addEventListener("resize", ()=>{
-            if (window.innerWidth < 600 && currentRootMargin != smallSize) {
-                currentRootMargin = smallSize;
-                observer?.disconnect();
-                observer = beginObserving(smallSize);
-            } else if (window.innerWidth >= 600 && currentRootMargin != bigSize) {
-                currentRootMargin = bigSize;
-                observer?.disconnect();
-                observer = beginObserving(bigSize);
+        const style = getComputedStyle(document.documentElement);
+        const observingElement = document.getElementById("profileIcon");
+        let currState = false;
+        window.addEventListener("scroll", ()=>{
+            if (!observingElement) return;
+            const navbarHeight = Number(style.getPropertyValue("--navbar-height").replace("px", ""));
+            const distanceFromTop = observingElement.getBoundingClientRect().top;
+            if (distanceFromTop <= navbarHeight && currState == false) {
+                currState = true;
+                updateHeader(true);
+            } else if (distanceFromTop > navbarHeight && currState == true) {
+                currState = false;
+                updateHeader(false);
             }
         });
-        function beginObserving(rootMargin) {
-            if (!title) return;
-            const observer = new IntersectionObserver((entries)=>{
-                entries.forEach((entry)=>{
-                    if (entry.isIntersecting) {
-                        updateHeader(false);
-                    } else {
-                        updateHeader(true);
-                    }
-                });
-            }, {
-                rootMargin: rootMargin
-            });
-            observer.observe(title);
-            return observer;
-        }
     }, []);
 }
 
@@ -532,7 +516,7 @@ function Header() {
                 /*#__PURE__*/ jsx_runtime_.jsx("div", {
                     className: (Header_module_default()).settingsHolder,
                     children: /*#__PURE__*/ jsx_runtime_.jsx((image_default()), {
-                        src: assets_images/* settingsPng */.u,
+                        src: assets_images/* settingsPng */.uy,
                         alt: "settings",
                         className: (Header_module_default()).settingsIcon
                     })
@@ -545,7 +529,109 @@ function Header() {
 
 /***/ }),
 
-/***/ 5378:
+/***/ 4783:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ SearchBar)
+/* harmony export */ });
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6931);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _SearchBar_module_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(4086);
+/* harmony import */ var _SearchBar_module_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_SearchBar_module_scss__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _assets_images__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(5049);
+/* __next_internal_client_entry_do_not_use__ default auto */ 
+
+
+function SearchBar() {
+    return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
+        children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+            className: (_SearchBar_module_scss__WEBPACK_IMPORTED_MODULE_2___default().container),
+            children: [
+                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
+                    className: (_SearchBar_module_scss__WEBPACK_IMPORTED_MODULE_2___default().searchIconHolder),
+                    children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("img", {
+                        src: _assets_images__WEBPACK_IMPORTED_MODULE_1__/* .search.src */ .yC.src,
+                        alt: "search icon",
+                        className: (_SearchBar_module_scss__WEBPACK_IMPORTED_MODULE_2___default().searchIcon)
+                    })
+                }),
+                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
+                    className: (_SearchBar_module_scss__WEBPACK_IMPORTED_MODULE_2___default().border)
+                }),
+                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("input", {
+                    spellCheck: false,
+                    placeholder: "Search...",
+                    className: (_SearchBar_module_scss__WEBPACK_IMPORTED_MODULE_2___default().searchBar)
+                })
+            ]
+        })
+    });
+}
+
+
+/***/ }),
+
+/***/ 8278:
+/***/ ((module) => {
+
+// Exports
+module.exports = {
+	"header": "Header_header__oka2D",
+	"navbar": "Header_navbar__n62Gf",
+	"settingsHolder": "Header_settingsHolder___1chm",
+	"settingsIcon": "Header_settingsIcon__stPY2",
+	"headerActive": "Header_headerActive__vrC5s",
+	"intersector": "Header_intersector__wCl6f"
+};
+
+
+/***/ }),
+
+/***/ 3977:
+/***/ ((module) => {
+
+// Exports
+module.exports = {
+	"main": "Main_main__u8hg_"
+};
+
+
+/***/ }),
+
+/***/ 4086:
+/***/ ((module) => {
+
+// Exports
+module.exports = {
+	"container": "SearchBar_container__YjLHQ",
+	"searchIconHolder": "SearchBar_searchIconHolder__P6Vb1",
+	"border": "SearchBar_border__H_kEU",
+	"searchIcon": "SearchBar_searchIcon__DGN_N",
+	"searchBar": "SearchBar_searchBar__Vka7J"
+};
+
+
+/***/ }),
+
+/***/ 5754:
+/***/ ((module) => {
+
+// Exports
+module.exports = {
+	"searchSection": "SearchSection_searchSection__tJhw_",
+	"upperRow": "SearchSection_upperRow__UVnB1",
+	"profileHolder": "SearchSection_profileHolder__mO3Gv",
+	"profileIcon": "SearchSection_profileIcon__HIi6D",
+	"title": "SearchSection_title__aPcGE"
+};
+
+
+/***/ }),
+
+/***/ 3648:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -554,19 +640,47 @@ __webpack_require__.r(__webpack_exports__);
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "default": () => (/* binding */ Main)
+  "default": () => (/* binding */ Home)
 });
 
 // EXTERNAL MODULE: external "next/dist/compiled/react-experimental/jsx-runtime"
 var jsx_runtime_ = __webpack_require__(6931);
+// EXTERNAL MODULE: ./lib/db/index.ts + 2 modules
+var db = __webpack_require__(4550);
+// EXTERNAL MODULE: ./node_modules/next/dist/build/webpack/loaders/next-flight-loader/module-proxy.js
+var module_proxy = __webpack_require__(5985);
+;// CONCATENATED MODULE: ./components/page-index/Header/Header.tsx
+
+const proxy = (0,module_proxy.createProxy)(String.raw`C:\Users\tobia\Personal\Development\React\dev04\components\page-index\Header\Header.tsx`)
+
+// Accessing the __esModule property and exporting $$typeof are required here.
+// The __esModule getter forces the proxy target to create the default export
+// and the $$typeof value is for rendering logic to determine if the module
+// is a client boundary.
+const { __esModule, $$typeof } = proxy;
+/* harmony default export */ const Header = (proxy.default);
+
 // EXTERNAL MODULE: ./components/page-index/Main/Main.module.scss
-var Main_module = __webpack_require__(6321);
+var Main_module = __webpack_require__(3977);
 var Main_module_default = /*#__PURE__*/__webpack_require__.n(Main_module);
+// EXTERNAL MODULE: ./components/page-index/SearchSection/SearchSection.module.scss
+var SearchSection_module = __webpack_require__(5754);
+var SearchSection_module_default = /*#__PURE__*/__webpack_require__.n(SearchSection_module);
 // EXTERNAL MODULE: ./node_modules/next/image.js
-var next_image = __webpack_require__(8421);
+var next_image = __webpack_require__(2208);
 var image_default = /*#__PURE__*/__webpack_require__.n(next_image);
-// EXTERNAL MODULE: ./assets/images/index.ts + 2 modules
-var assets_images = __webpack_require__(134);
+;// CONCATENATED MODULE: ./assets/images/profileTobias.png
+/* harmony default export */ const profileTobias = ({"src":"/_next/static/media/profileTobias.56bde7f5.png","height":246,"width":244,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAABBklEQVR42g3Mu07CUBwH4F//HA6SWrmEFCHhEi8LDDqIGu3iru/gZHwkH0RdnL3MJpgYQwyDFUm1hbbp7fQc2b982t3DfV0vFC6SpXeVCXHS67ZUf6unaVS29VprwJTE28J3m5/vE3x7EcbjD21/2JO1htleW5+cszSTTREF0rWn4OAkshJenl9RMxswu/1r5vuBSkNBrlAoUo6vmYMgBw2piMqmPGV/Sx8bnKPNy4hTicUKVjjh6HAEo9UBs237MalXLUMvSeE61NRL6HSr8tjaWw27RFGs3czmIYI4BeOA8zvHzuiA9IpBoTf9oTNr+9bQmB1HCUUqUzkUwih5YmXz0nEKg3+/nnKkPQVrugAAAABJRU5ErkJggg==","blurWidth":8,"blurHeight":8});
+;// CONCATENATED MODULE: ./assets/images/settings.png
+/* harmony default export */ const settings = ({"src":"/_next/static/media/settings.0ba832d2.png","height":512,"width":512,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAMAAADz0U65AAAAUVBMVEUEdP4Ec/4EdP4Ec/4EdP4Fc/4Ec/4EdP4Ec/4FdP4Ec/4Ec/4Ec/4Ec/4EdP4Fc/4Ec/4EdP4Ec/4FdP4Ec/4Fc/4EdP4FdP4EdP4Fc/4Ec/6O3LfsAAAAF3RSTlMAACkpKioqKyzCwsPE7u/v8Pn5+/v8/h0GiB4AAAA/SURBVHjaLcbJAYAgEATB8UbAC1ZpyD9QP9SrpMVnC27QegHldvIkeEqU1QYN0/v1xJIgsWs7K3CM0hyy+Uk/m60ER2KC+/8AAAAASUVORK5CYII=","blurWidth":8,"blurHeight":8});
+;// CONCATENATED MODULE: ./assets/images/search.png
+/* harmony default export */ const search = ({"src":"/_next/static/media/search.f6c519d6.png","height":512,"width":512,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAQAAABuBnYAAAAAV0lEQVR42mMAgX9MQMz1jw/EgnFt/035N/mfOwME/GP/N+MfB5Ce8o8fpqLnn+A/5n+T//FCuP7/Dv/r/TfjnxNEQ+K///+CQcbCDD3+LxXCBGIIQGYCAOe6LXptdS1iAAAAAElFTkSuQmCC","blurWidth":8,"blurHeight":8});
+;// CONCATENATED MODULE: ./assets/images/index.ts
+
+
+
+
+
 ;// CONCATENATED MODULE: ./lib/util/translator.ts
 let language = "";
 const setProfileData_Utilites = (profileData)=>{
@@ -648,9 +762,61 @@ const translator = (sentence)=>{
     return findTranslationArray[sentence];
 };
 
-;// CONCATENATED MODULE: ./components/page-index/Main/Main.tsx
-/* __next_internal_client_entry_do_not_use__ default auto */ 
+;// CONCATENATED MODULE: ./components/page-index/SearchSection/SearchBar/SearchBar.tsx
 
+const SearchBar_proxy = (0,module_proxy.createProxy)(String.raw`C:\Users\tobia\Personal\Development\React\dev04\components\page-index\SearchSection\SearchBar\SearchBar.tsx`)
+
+// Accessing the __esModule property and exporting $$typeof are required here.
+// The __esModule getter forces the proxy target to create the default export
+// and the $$typeof value is for rendering logic to determine if the module
+// is a client boundary.
+const { __esModule: SearchBar_esModule, $$typeof: SearchBar_$$typeof } = SearchBar_proxy;
+/* harmony default export */ const SearchBar = (SearchBar_proxy.default);
+
+;// CONCATENATED MODULE: ./components/page-index/SearchSection/SearchSection.tsx
+
+
+
+
+
+
+function SearchSection(props) {
+    const profileData = props.profileData;
+    return /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+        className: (SearchSection_module_default()).searchSection,
+        children: [
+            /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+                className: (SearchSection_module_default()).upperRow,
+                children: [
+                    /*#__PURE__*/ jsx_runtime_.jsx("div", {
+                        className: (SearchSection_module_default()).profileHolder,
+                        id: "profileIcon",
+                        children: /*#__PURE__*/ jsx_runtime_.jsx((image_default()), {
+                            src: profileTobias,
+                            alt: "profile",
+                            className: (SearchSection_module_default()).profileIcon
+                        })
+                    }),
+                    /*#__PURE__*/ (0,jsx_runtime_.jsxs)("h1", {
+                        id: "title",
+                        className: (SearchSection_module_default()).title,
+                        children: [
+                            translator("Family"),
+                            ", ",
+                            profileData.last_name
+                        ]
+                    })
+                ]
+            }),
+            /*#__PURE__*/ jsx_runtime_.jsx("div", {
+                className: (SearchSection_module_default()).lowerRow,
+                children: /*#__PURE__*/ jsx_runtime_.jsx(SearchBar, {})
+            })
+        ]
+    });
+}
+
+;// CONCATENATED MODULE: ./components/page-index/Main/Main.tsx
 
 
 
@@ -659,38 +825,8 @@ function Main(props) {
     return /*#__PURE__*/ (0,jsx_runtime_.jsxs)("main", {
         className: (Main_module_default()).main,
         children: [
-            /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
-                className: (Main_module_default()).searchSection,
-                children: [
-                    /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
-                        className: (Main_module_default()).upperRow,
-                        children: [
-                            /*#__PURE__*/ jsx_runtime_.jsx("div", {
-                                className: (Main_module_default()).profileHolder,
-                                children: /*#__PURE__*/ jsx_runtime_.jsx((image_default()), {
-                                    src: assets_images/* profileTobias */.H,
-                                    alt: "profile",
-                                    className: (Main_module_default()).profileIcon
-                                })
-                            }),
-                            /*#__PURE__*/ (0,jsx_runtime_.jsxs)("h1", {
-                                id: "title",
-                                className: (Main_module_default()).title,
-                                children: [
-                                    translator("Family"),
-                                    ", ",
-                                    profileData.last_name
-                                ]
-                            })
-                        ]
-                    }),
-                    /*#__PURE__*/ jsx_runtime_.jsx("div", {
-                        className: (Main_module_default()).lowerRow,
-                        children: /*#__PURE__*/ jsx_runtime_.jsx("input", {
-                            className: (Main_module_default()).searchbar
-                        })
-                    })
-                ]
+            /*#__PURE__*/ jsx_runtime_.jsx(SearchSection, {
+                profileData: profileData
             }),
             /*#__PURE__*/ jsx_runtime_.jsx("div", {
                 children: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita consectetur esse sequi nesciunt quis quisquam qui ipsa animi. Nobis ullam sint suscipit voluptatem debitis incidunt exercitationem nulla, corrupti molestias atque iusto, ab at ratione iure illo aperiam quae dignissimos fugiat asperiores eum! Pariatur, quasi earum provident hic iste fugiat veritatis quibusdam libero, neque eaque quas, autem dicta aliquid mollitia in. Placeat eos quam perferendis adipisci? Mollitia modi a velit sed ipsa nesciunt tenetur temporibus sequi culpa nemo fugit molestias eos consequatur ut dolorem odit, labore nobis architecto accusamus! Molestias rem vero aliquid excepturi omnis obcaecati nisi eos expedita fugit. Porro."
@@ -703,81 +839,6 @@ function Main(props) {
     });
 }
 
-
-/***/ }),
-
-/***/ 8278:
-/***/ ((module) => {
-
-// Exports
-module.exports = {
-	"header": "Header_header__oka2D",
-	"navbar": "Header_navbar__n62Gf",
-	"settingsHolder": "Header_settingsHolder___1chm",
-	"settingsIcon": "Header_settingsIcon__stPY2",
-	"headerActive": "Header_headerActive__vrC5s",
-	"intersector": "Header_intersector__wCl6f"
-};
-
-
-/***/ }),
-
-/***/ 6321:
-/***/ ((module) => {
-
-// Exports
-module.exports = {
-	"searchSection": "Main_searchSection__MfO4K",
-	"upperRow": "Main_upperRow__Ynz8y",
-	"profileHolder": "Main_profileHolder__9h_UR",
-	"profileIcon": "Main_profileIcon__EAoA2",
-	"title": "Main_title__DV7eO",
-	"searchbar": "Main_searchbar__RbnAC"
-};
-
-
-/***/ }),
-
-/***/ 6512:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-// ESM COMPAT FLAG
-__webpack_require__.r(__webpack_exports__);
-
-// EXPORTS
-__webpack_require__.d(__webpack_exports__, {
-  "default": () => (/* binding */ Home)
-});
-
-// EXTERNAL MODULE: external "next/dist/compiled/react-experimental/jsx-runtime"
-var jsx_runtime_ = __webpack_require__(6931);
-// EXTERNAL MODULE: ./lib/db/index.ts + 2 modules
-var db = __webpack_require__(4550);
-// EXTERNAL MODULE: ./node_modules/next/dist/build/webpack/loaders/next-flight-loader/module-proxy.js
-var module_proxy = __webpack_require__(5985);
-;// CONCATENATED MODULE: ./components/page-index/Header/Header.tsx
-
-const proxy = (0,module_proxy.createProxy)(String.raw`C:\Users\tobia\Personal\Development\React\dev04\components\page-index\Header\Header.tsx`)
-
-// Accessing the __esModule property and exporting $$typeof are required here.
-// The __esModule getter forces the proxy target to create the default export
-// and the $$typeof value is for rendering logic to determine if the module
-// is a client boundary.
-const { __esModule, $$typeof } = proxy;
-/* harmony default export */ const Header = (proxy.default);
-
-;// CONCATENATED MODULE: ./components/page-index/Main/Main.tsx
-
-const Main_proxy = (0,module_proxy.createProxy)(String.raw`C:\Users\tobia\Personal\Development\React\dev04\components\page-index\Main\Main.tsx`)
-
-// Accessing the __esModule property and exporting $$typeof are required here.
-// The __esModule getter forces the proxy target to create the default export
-// and the $$typeof value is for rendering logic to determine if the module
-// is a client boundary.
-const { __esModule: Main_esModule, $$typeof: Main_$$typeof } = Main_proxy;
-/* harmony default export */ const Main = (Main_proxy.default);
-
 ;// CONCATENATED MODULE: ./components/page-index/Footer/Footer.tsx
 
 function Footer() {
@@ -787,6 +848,7 @@ function Footer() {
 }
 
 ;// CONCATENATED MODULE: ./components/page-index/index.ts
+
 
 
 
@@ -810,6 +872,42 @@ async function Home() {
 }
 
 
+/***/ }),
+
+/***/ 6826:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({"src":"/_next/static/media/profileTobias.56bde7f5.png","height":246,"width":244,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAABBklEQVR42g3Mu07CUBwH4F//HA6SWrmEFCHhEi8LDDqIGu3iru/gZHwkH0RdnL3MJpgYQwyDFUm1hbbp7fQc2b982t3DfV0vFC6SpXeVCXHS67ZUf6unaVS29VprwJTE28J3m5/vE3x7EcbjD21/2JO1htleW5+cszSTTREF0rWn4OAkshJenl9RMxswu/1r5vuBSkNBrlAoUo6vmYMgBw2piMqmPGV/Sx8bnKPNy4hTicUKVjjh6HAEo9UBs237MalXLUMvSeE61NRL6HSr8tjaWw27RFGs3czmIYI4BeOA8zvHzuiA9IpBoTf9oTNr+9bQmB1HCUUqUzkUwih5YmXz0nEKg3+/nnKkPQVrugAAAABJRU5ErkJggg==","blurWidth":8,"blurHeight":8});
+
+/***/ }),
+
+/***/ 6038:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({"src":"/_next/static/media/search.f6c519d6.png","height":512,"width":512,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAQAAABuBnYAAAAAV0lEQVR42mMAgX9MQMz1jw/EgnFt/035N/mfOwME/GP/N+MfB5Ce8o8fpqLnn+A/5n+T//FCuP7/Dv/r/TfjnxNEQ+K///+CQcbCDD3+LxXCBGIIQGYCAOe6LXptdS1iAAAAAElFTkSuQmCC","blurWidth":8,"blurHeight":8});
+
+/***/ }),
+
+/***/ 5908:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({"src":"/_next/static/media/settings.0ba832d2.png","height":512,"width":512,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAMAAADz0U65AAAAUVBMVEUEdP4Ec/4EdP4Ec/4EdP4Fc/4Ec/4EdP4Ec/4FdP4Ec/4Ec/4Ec/4Ec/4EdP4Fc/4Ec/4EdP4Ec/4FdP4Ec/4Fc/4EdP4FdP4EdP4Fc/4Ec/6O3LfsAAAAF3RSTlMAACkpKioqKyzCwsPE7u/v8Pn5+/v8/h0GiB4AAAA/SURBVHjaLcbJAYAgEATB8UbAC1ZpyD9QP9SrpMVnC27QegHldvIkeEqU1QYN0/v1xJIgsWs7K3CM0hyy+Uk/m60ER2KC+/8AAAAASUVORK5CYII=","blurWidth":8,"blurHeight":8});
+
 /***/ })
 
 };
@@ -819,7 +917,7 @@ async function Home() {
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [859,571,831,421,647,550], () => (__webpack_exec__(6908)));
+var __webpack_exports__ = __webpack_require__.X(0, [859,571,831,286,538,550], () => (__webpack_exec__(6908)));
 module.exports = __webpack_exports__;
 
 })();

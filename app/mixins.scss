@@ -7,6 +7,9 @@
   width: 100%;
   height: 100%;
 }
+@mixin image-bg {
+  filter: invert(49%) sepia(0%) saturate(98%) hue-rotate(272deg) brightness(102%) contrast(94%);
+}
 
 @mixin transition($property: all, $property2: all) {
   -webkit-transition: $property 0.25s ease-in-out, $property2 0.25s ease-in-out;

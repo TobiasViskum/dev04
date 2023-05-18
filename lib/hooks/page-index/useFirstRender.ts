@@ -10,47 +10,24 @@ export default function useFirstRender(props: Props) {
 
   return useEffect(() => {
     if (typeof document == "undefined") return;
-    const title = document.getElementById("title");
+    const style = getComputedStyle(document.documentElement);
 
-    let smallSize = "-75px";
-    let bigSize = "-90px";
+    const observingElement = document.getElementById("profileIcon");
 
-    let currentRootMargin = smallSize;
-    let observer = beginObserving(smallSize);
+    let currState = false;
 
-    window.addEventListener("resize", () => {
-      if (window.innerWidth < 600 && currentRootMargin != smallSize) {
-        currentRootMargin = smallSize;
-        observer?.disconnect();
-        observer = beginObserving(smallSize);
-      } else if (window.innerWidth >= 600 && currentRootMargin != bigSize) {
-        currentRootMargin = bigSize;
-        observer?.disconnect();
-        observer = beginObserving(bigSize);
+    window.addEventListener("scroll", () => {
+      if (!observingElement) return;
+      const navbarHeight = Number(style.getPropertyValue("--navbar-height").replace("px", ""));
+      const distanceFromTop = observingElement.getBoundingClientRect().top;
+
+      if (distanceFromTop <= navbarHeight && currState == false) {
+        currState = true;
+        updateHeader(true);
+      } else if (distanceFromTop > navbarHeight && currState == true) {
+        currState = false;
+        updateHeader(false);
       }
     });
-
-    function beginObserving(rootMargin: string) {
-      if (!title) return;
-
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              updateHeader(false);
-            } else {
-              updateHeader(true);
-            }
-          });
-        },
-        {
-          rootMargin: rootMargin,
-        }
-      );
-
-      observer.observe(title);
-
-      return observer;
-    }
   }, []);
 }

@@ -1,0 +1,40 @@
+@import "/app/mixins.scss";
+
+.container {
+  display: flex;
+  align-items: center;
+
+  width: 85svw;
+  max-width: 425px;
+  min-width: 300px;
+  border-radius: 4px;
+  background-color: var(--second-bg);
+  font-size: 1rem;
+
+  .searchIconHolder {
+    padding: 2px;
+    width: calc(var(--icon-size) - 4px);
+    height: calc(var(--icon-size) - 4px);
+  }
+  .border {
+    height: calc(var(--icon-size) - 8px);
+    border-width: 0;
+    border-left-width: 1px;
+    border-style: solid;
+    border-color: var(--image-bg-text);
+    width: 4px;
+  }
+
+  .searchIcon {
+    @include image-bg;
+    @include next-image;
+  }
+
+  .searchBar {
+    font-size: 1rem;
+    background-color: var(--second-bg);
+    flex: 1;
+    border: 0;
+    outline: 0;
+  }
+}

@@ -1,9 +1,10 @@
 html {
-  --touch-actions: auto;
+  --touch-actions: pan-y;
   --navbar-height: 64px;
+  --icon-size: calc(var(--navbar-height) / 1.5);
 
   overflow: auto;
-  touch-action: --touch-actions;
+  touch-action: var(--touch-actions);
 
   --first-bg: #050505;
   --second-bg: #17181b;
@@ -11,7 +12,7 @@ html {
   --first-text: #fbfbfc;
   --second-text: #9094a1;
 
-  --image-bg-text: #808080;
+  --image-bg-text: #848484;
 
   --active-text: #0584ff;
 
@@ -36,6 +37,7 @@ body {
   min-height: 100svh;
   margin: 0;
   padding-left: 16px;
+  padding-right: 16px;
   overflow: hidden;
 
   max-width: 1232px;

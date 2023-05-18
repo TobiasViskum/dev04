@@ -1,9 +1,5 @@
-"use client";
-
 import styles from "./Main.module.scss";
-import Image from "next/image";
-import { profileTobias } from "@/assets/images";
-import { translator } from "@/lib/util/translator";
+import SearchSection from "../SearchSection/SearchSection";
 
 interface Props {
   profileData: string;
@@ -14,19 +10,7 @@ export default function Main(props: Props) {
 
   return (
     <main className={styles.main}>
-      <div className={styles.searchSection}>
-        <div className={styles.upperRow}>
-          <div className={styles.profileHolder}>
-            <Image src={profileTobias} alt="profile" className={styles.profileIcon} />
-          </div>
-          <h1 id="title" className={styles.title}>
-            {translator("Family")}, {profileData.last_name}
-          </h1>
-        </div>
-        <div className={styles.lowerRow}>
-          <input className={styles.searchbar} />
-        </div>
-      </div>
+      <SearchSection profileData={profileData} />
       <div>
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita consectetur esse sequi
         nesciunt quis quisquam qui ipsa animi. Nobis ullam sint suscipit voluptatem debitis incidunt

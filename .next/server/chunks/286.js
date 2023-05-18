@@ -1,5 +1,5 @@
-exports.id = 421;
-exports.ids = [421];
+exports.id = 286;
+exports.ids = [286];
 exports.modules = {
 
 /***/ 408:
@@ -673,6 +673,28 @@ if ((typeof exports.default === "function" || typeof exports.default === "object
     Object.assign(exports.default, exports);
     module.exports = exports.default;
 } //# sourceMappingURL=head.js.map
+
+
+/***/ }),
+
+/***/ 3881:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+/* __next_internal_client_entry_do_not_use__  cjs */ 
+const { createProxy  } = __webpack_require__(5985);
+module.exports = createProxy("C:\\Users\\tobia\\Personal\\Development\\React\\dev04\\node_modules\\next\\dist\\client\\image.js");
+ //# sourceMappingURL=image.js.map
+
+
+/***/ }),
+
+/***/ 2208:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+
+module.exports = __webpack_require__(3881);
 
 
 /***/ }),
