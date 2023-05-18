@@ -11,12 +11,12 @@ function isMobile() {
 
 export default function PwaActions() {
   if (typeof window == "undefined") return <></>;
-  if (isPWA() == false) return <></>;
-  if (isMobile() == false) return <></>;
-
   const documentStyle = document.documentElement.style;
 
-  documentStyle.setProperty("--touch-actions", "none", "important");
+  if (isMobile() == false) return <></>;
+  if (isPWA() == false) return <></>;
+
+  documentStyle.setProperty("--touch-actions", "none");
 
   return <></>;
 }

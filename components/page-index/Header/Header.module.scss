@@ -2,52 +2,51 @@
 
 .header {
   position: fixed;
-  display: flex;
+  left: 0;
+  top: 0;
   width: 100svw;
-  justify-content: space-between;
-  border-color: var(--second-bg);
-  height: 64px;
 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-color: var(--second-bg);
+  height: calc(var(--navbar-height) - 1px); //because of the border
   border-width: 0;
   border-bottom-width: 1px;
-  border-color: var(--second-bg);
-  border-style: solid;
-  background: var(--first-bg), 0.5;
-  backdrop-filter: blur(15px);
 
-  align-items: center;
-  > p {
-    opacity: 0;
-    transition: opacity 0.5s;
+  border-color: var(--first-bg);
+  border-style: solid;
+  background: var(--first-bg);
+  backdrop-filter: blur(10px);
+
+  @include transition(border-color, background);
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: calc(100% - var(--navbar-height));
   }
 
-  opacity: 0;
-  transition: opacity 0.5s;
+  .settingsHolder {
+    @include square;
+    width: calc(var(--navbar-height) / 1.5);
+    height: calc(var(--navbar-height) / 1.5);
+  }
+  .settingsIcon {
+    @include next-image;
+  }
 }
 
 .headerActive {
-  > p {
-    opacity: 1;
-    transition: opacity 0.5s;
-  }
+  border-color: var(--second-bg);
+  background: var(--first-bg), 0.5;
 
-  opacity: 1;
-
-  transition: opacity 0.5s;
+  @include transition(border-color, background);
 }
 
-.header > * {
-  padding: 8px;
-}
-
-.title {
-}
-
-.settingsHolder {
-  @include square;
-  width: 32px;
-  height: 32px;
-}
-.settingsIcon {
-  @include next-image;
+.intersector {
+  top: calc(var(--navbar-height) / 1.5);
+  position: absolute;
 }

@@ -7,3 +7,11 @@
   width: 100%;
   height: 100%;
 }
+
+@mixin transition($property: all, $property2: all) {
+  -webkit-transition: $property 0.25s ease-in-out, $property2 0.25s ease-in-out;
+  -moz-transition: $property 0.25s ease-in-out, $property2 0.25s ease-in-out;
+  -ms-transition: $property 0.25s ease-in-out, $property2 0.25s ease-in-out;
+  -o-transition: $property 0.25s ease-in-out, $property2 0.25s ease-in-out;
+  transition: $property 0.25s ease-in-out, $property2 0.25s ease-in-out;
+}

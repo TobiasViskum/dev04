@@ -1,5 +1,6 @@
 html {
   --touch-actions: auto;
+  --navbar-height: 64px;
 
   overflow: auto;
   touch-action: --touch-actions;
@@ -25,14 +26,19 @@ html {
 
   --news-bg: #2ed158;
   --alert-bg: #f55363;
+
+  display: flex;
+  justify-content: center;
 }
 
 body {
   color-scheme: light dark;
   min-height: 100svh;
   margin: 0;
-  padding: 0;
+  padding-left: 16px;
   overflow: hidden;
+
+  max-width: 1232px;
 
   @media (prefers-color-scheme: dark) {
     color: #f2f2f2;
@@ -47,4 +53,13 @@ p {
   line-height: 0;
   font-weight: 600;
   font-size: 1.5rem;
+}
+
+@media (max-width: 600px) {
+  html {
+    --navbar-height: 48px;
+  }
+  p {
+    font-size: 1rem;
+  }
 }

@@ -4,10 +4,12 @@ import { Header, Main, Footer } from "@/components/page-index";
 import { revalidatePath } from "next/cache";
 
 export default async function Home() {
+  const [profileData] = await getProfileData();
+
   return (
     <>
       <Header />
-      <Main />
+      <Main profileData={JSON.stringify(profileData)} />
       <Footer />
     </>
   );
