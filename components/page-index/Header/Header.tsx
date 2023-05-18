@@ -3,7 +3,7 @@
 import styles from "./Header.module.scss";
 import { settingsPng } from "@/assets/images";
 import Image from "next/image";
-import { useRef, useState } from "react";
+import { useState } from "react";
 import { hooks } from "@/lib/hooks/page-index";
 
 export default function Header() {
@@ -13,7 +13,7 @@ export default function Header() {
     setIsHeaderActive(newState);
   }
 
-  hooks.firstRender({ updateHeader });
+  hooks.useFirstRender({ updateHeader });
 
   return (
     <header className={styles.header + " " + (isHeaderActive ? styles.headerActive : "")}>

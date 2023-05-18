@@ -1,8 +1,7 @@
-import exp from "constants";
-import firstRender from "./firstRender";
+import useFirstRender from "./useFirstRender";
 
 const hooks = {
-  firstRender,
+  useFirstRender,
 };
 
 export { hooks };
