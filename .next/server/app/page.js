@@ -52,7 +52,7 @@ module.exports = require("next/dist/compiled/react-server-dom-webpack-experiment
 
 /***/ }),
 
-/***/ 1090:
+/***/ 5232:
 /***/ ((module) => {
 
 "use strict";
@@ -401,11 +401,11 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 4245:
+/***/ 6917:
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 5378));
-Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 9883))
+Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 9883));
+Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 5378))
 
 /***/ }),
 
@@ -463,17 +463,19 @@ function useFirstRender(props) {
     return (0,react_experimental_.useEffect)(()=>{
         if (typeof document == "undefined") return;
         const title = document.getElementById("title");
-        let currentRootMargin = "-32px";
-        let observer = beginObserving("-32px");
+        let smallSize = "-75px";
+        let bigSize = "-90px";
+        let currentRootMargin = smallSize;
+        let observer = beginObserving(smallSize);
         window.addEventListener("resize", ()=>{
-            if (window.innerWidth < 600 && currentRootMargin != "-32px") {
-                currentRootMargin = "-32px";
+            if (window.innerWidth < 600 && currentRootMargin != smallSize) {
+                currentRootMargin = smallSize;
                 observer?.disconnect();
-                observer = beginObserving("-32px");
-            } else if (window.innerWidth >= 600 && currentRootMargin != "-48px") {
-                currentRootMargin = "-48px";
+                observer = beginObserving(smallSize);
+            } else if (window.innerWidth >= 600 && currentRootMargin != bigSize) {
+                currentRootMargin = bigSize;
                 observer?.disconnect();
-                observer = beginObserving("-48px");
+                observer = beginObserving(bigSize);
             }
         });
         function beginObserving(rootMargin) {
@@ -695,7 +697,8 @@ function Main(props) {
             }),
             /*#__PURE__*/ jsx_runtime_.jsx("div", {
                 children: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates sit tempora laborum voluptatibus illum rerum maiores! Dolores quos, atque impedit officia cum enim earum sapiente natus mollitia aperiam, magni beatae esse facilis assumenda quas repellendus, voluptatem explicabo aspernatur exercitationem fugit vitae repellat accusantium veniam. In velit illo distinctio illum quo quibusdam? Necessitatibus pariatur odio quaerat placeat? Quam placeat exercitationem molestias odio at nobis nostrum iste ipsa. Similique iste, eos temporibus accusamus consequuntur earum ab, error quas, atque eaque minus mollitia fugit! Ad voluptatem, et aperiam perspiciatis maiores fugit corporis harum culpa deserunt recusandae incidunt veritatis necessitatibus maxime velit earum eius ducimus laborum porro iusto soluta praesentium alias hic minima cum? Rem consequuntur obcaecati repellat laborum magnam tenetur! Dolores cupiditate sunt quo ut nulla libero, debitis culpa animi, unde eius nisi tempore magni nihil, explicabo ex aliquam assumenda? Nostrum corrupti maxime eligendi natus voluptatibus reprehenderit vero accusamus adipisci quis. Facilis perspiciatis omnis non delectus, voluptate itaque soluta totam hic incidunt dolore sunt, ratione numquam sequi laborum enim nesciunt, neque blanditiis necessitatibus molestiae nostrum odio. Doloremque temporibus itaque earum officia eum, ducimus voluptate et? Aliquam, harum. Consequuntur, eveniet? Alias iusto similique facere id pariatur? Labore repudiandae quisquam iste sapiente, optio corrupti rem."
-            })
+            }),
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, nesciunt possimus. Aliquam, sunt consequatur. Ipsum facilis exercitationem rem suscipit consectetur temporibus nam? Error optio, ut a fugit exercitationem tempora temporibus inventore laboriosam. Ratione delectus voluptatum, facere quis sint cupiditate omnis ipsam atque cumque perferendis nulla nam aut ipsum. Dolorem provident deserunt obcaecati possimus. Dolores assumenda quibusdam at tenetur magnam? Facilis enim quo ad inventore error quia iste ipsum sapiente molestias in dolorem fugiat ducimus nemo excepturi doloremque, fuga dicta voluptas fugit iure modi omnis dolorum voluptatibus quod quas! Corrupti labore quidem quos sequi vitae fugit tempora dolores dolorum possimus numquam."
         ]
     });
 }

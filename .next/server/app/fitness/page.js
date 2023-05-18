@@ -52,7 +52,7 @@ module.exports = require("next/dist/compiled/react-server-dom-webpack-experiment
 
 /***/ }),
 
-/***/ 1090:
+/***/ 5232:
 /***/ ((module) => {
 
 "use strict";

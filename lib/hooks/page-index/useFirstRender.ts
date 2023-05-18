@@ -12,18 +12,21 @@ export default function useFirstRender(props: Props) {
     if (typeof document == "undefined") return;
     const title = document.getElementById("title");
 
-    let currentRootMargin = "-32px";
-    let observer = beginObserving("-32px");
+    let smallSize = "-75px";
+    let bigSize = "-90px";
+
+    let currentRootMargin = smallSize;
+    let observer = beginObserving(smallSize);
 
     window.addEventListener("resize", () => {
-      if (window.innerWidth < 600 && currentRootMargin != "-32px") {
-        currentRootMargin = "-32px";
+      if (window.innerWidth < 600 && currentRootMargin != smallSize) {
+        currentRootMargin = smallSize;
         observer?.disconnect();
-        observer = beginObserving("-32px");
-      } else if (window.innerWidth >= 600 && currentRootMargin != "-48px") {
-        currentRootMargin = "-48px";
+        observer = beginObserving(smallSize);
+      } else if (window.innerWidth >= 600 && currentRootMargin != bigSize) {
+        currentRootMargin = bigSize;
         observer?.disconnect();
-        observer = beginObserving("-48px");
+        observer = beginObserving(bigSize);
       }
     });
 
