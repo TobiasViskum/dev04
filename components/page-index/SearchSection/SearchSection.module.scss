@@ -1,18 +1,29 @@
 @import "/app/mixins.scss";
 
 .searchSection {
+  --searching-template-rows: 1fr 1fr;
+  --searching-opacity: 1;
+  --searching-padding: 0px;
+
   margin-top: calc(var(--navbar-height) * 1.25);
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-rows: var(--searching-template-rows);
   row-gap: 8px;
+  padding-bottom: var(--searching-padding);
+
+  @include transition(grid-template-rows);
 
   .upperRow {
+    overflow: hidden;
     display: flex;
+    align-items: flex-start;
     column-gap: 16px;
 
     .profileHolder {
-      width: var(--icon-size);
-      height: var(--icon-size);
+      width: clamp(36px, calc(var(--icon-size) * 1.1), 42px);
+      height: clamp(36px, calc(var(--icon-size) * 1.1), 42px);
+      opacity: var(--searching-opacity);
+      @include transition(opacity);
 
       .profileIcon {
         border-radius: 50%;
@@ -20,9 +31,13 @@
       }
     }
     .title {
-      display: flex;
-      align-items: flex-end;
       line-height: 0px;
+      opacity: var(--searching-opacity);
+      @include transition(opacity);
     }
   }
+}
+
+.lowerRow {
+  overflow: hidden;
 }

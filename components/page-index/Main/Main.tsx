@@ -21,7 +21,7 @@ export default function Main(props: Props) {
         nemo fugit molestias eos consequatur ut dolorem odit, labore nobis architecto accusamus!
         Molestias rem vero aliquid excepturi omnis obcaecati nisi eos expedita fugit. Porro.
       </div>
-      <div>
+      <div id="testscroll">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates sit tempora laborum
         voluptatibus illum rerum maiores! Dolores quos, atque impedit officia cum enim earum
         sapiente natus mollitia aperiam, magni beatae esse facilis assumenda quas repellendus,

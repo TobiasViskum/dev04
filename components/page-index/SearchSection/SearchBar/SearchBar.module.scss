@@ -4,8 +4,8 @@
   display: flex;
   align-items: center;
 
-  width: 85svw;
-  max-width: 425px;
+  width: 100%;
+  max-width: 475px;
   min-width: 300px;
   border-radius: 4px;
   background-color: var(--second-bg);
@@ -13,8 +13,8 @@
 
   .searchIconHolder {
     padding: 2px;
-    width: calc(var(--icon-size) - 4px);
-    height: calc(var(--icon-size) - 4px);
+    width: 28px;
+    height: 28px;
   }
   .border {
     height: calc(var(--icon-size) - 8px);

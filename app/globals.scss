@@ -1,11 +1,4 @@
 html {
-  --touch-actions: pan-y;
-  --navbar-height: 64px;
-  --icon-size: calc(var(--navbar-height) / 1.5);
-
-  overflow: auto;
-  touch-action: var(--touch-actions);
-
   --first-bg: #050505;
   --second-bg: #17181b;
 
@@ -28,16 +21,30 @@ html {
   --news-bg: #2ed158;
   --alert-bg: #f55363;
 
+  /* This isn't colors */
+  --transition-duration: 0.25s;
+
+  --touch-actions: pan-y;
+  --navbar-height: 64px;
+  --icon-size: calc(var(--navbar-height) / 1.5);
+
+  overflow: auto;
+  touch-action: var(--touch-actions);
+
   display: flex;
   justify-content: center;
+
+  padding-left: 16px;
+  padding-right: 16px;
+
+  scroll-behavior: smooth;
 }
 
 body {
   color-scheme: light dark;
   min-height: 100svh;
   margin: 0;
-  padding-left: 16px;
-  padding-right: 16px;
+
   overflow: hidden;
 
   max-width: 1232px;

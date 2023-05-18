@@ -52,7 +52,7 @@ module.exports = require("next/dist/compiled/react-server-dom-webpack-experiment
 
 /***/ }),
 
-/***/ 5232:
+/***/ 1090:
 /***/ ((module) => {
 
 "use strict";
@@ -402,15 +402,15 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 2292:
+/***/ 9689:
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
 Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 9883));
 Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 408, 23));
-Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 4783));
 Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 6826));
+Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 6038));
 Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 5908));
-Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 6038))
+Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 4783))
 
 /***/ }),
 
@@ -539,32 +539,87 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6931);
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _SearchBar_module_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(4086);
-/* harmony import */ var _SearchBar_module_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_SearchBar_module_scss__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _SearchBar_module_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(4086);
+/* harmony import */ var _SearchBar_module_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_SearchBar_module_scss__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _assets_images__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(5049);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(7640);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
 /* __next_internal_client_entry_do_not_use__ default auto */ 
 
 
+
 function SearchBar() {
+    const searchbar = (0,react__WEBPACK_IMPORTED_MODULE_2__.useRef)(null);
+    function handleFocus(newState) {
+        const searchSection = document.getElementById("searchSection");
+        const docElement = document.documentElement;
+        if (!searchSection) return;
+        if (newState) {
+            searchSection.style.setProperty("--searching-template-rows", "0.01fr 1fr");
+            searchSection.style.setProperty("--searching-opacity", "0");
+        } else {
+            searchSection.style.setProperty("--searching-template-rows", "1fr 1fr");
+            searchSection.style.setProperty("--searching-opacity", "1");
+            searchbar.current?.blur();
+        }
+    }
+    (0,react__WEBPACK_IMPORTED_MODULE_2__.useEffect)(()=>{
+        const searchSection = document.getElementById("searchSection");
+        let shrinkElement = document.getElementById("searchbar");
+        let shrinkThreshold = 0; // distance to scroll before element starts shrinking
+        let shrinkDistance = 10; // distance over which element shrinks
+        let isScrolling;
+        function cancelFocus() {
+            handleFocus(false);
+            searchbar?.current?.blur();
+        }
+        window.addEventListener("touchmove", cancelFocus);
+        window.addEventListener("touchstart", cancelFocus);
+        window.addEventListener("scroll", function(e) {
+            let scrollY = window.pageYOffset;
+            if (!shrinkElement) return;
+            if (scrollY > shrinkThreshold) {
+                let shrinkProgress = Math.min(1, (scrollY - shrinkThreshold) / shrinkDistance);
+                searchSection?.style.setProperty("--searching-template-rows", `1fr ${1 - shrinkProgress}fr`);
+            } else {
+                searchSection?.style.setProperty("--searching-template-rows", "1fr 1fr");
+            }
+            // Clear our timeout throughout the scroll
+            window.clearTimeout(isScrolling);
+            // Set a timeout to run after scrolling ends
+            isScrolling = setTimeout(function() {
+                if (!shrinkElement) return;
+                if (scrollY > shrinkThreshold + shrinkDistance) {
+                    searchSection?.style.setProperty("--searching-template-rows", "1fr 0fr");
+                } else {
+                    searchSection?.style.setProperty("--searching-template-rows", "1fr 1fr");
+                }
+            }, 66);
+        });
+    }, []);
     return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
         children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
-            className: (_SearchBar_module_scss__WEBPACK_IMPORTED_MODULE_2___default().container),
+            className: (_SearchBar_module_scss__WEBPACK_IMPORTED_MODULE_3___default().container),
+            id: "searchbar",
             children: [
                 /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
-                    className: (_SearchBar_module_scss__WEBPACK_IMPORTED_MODULE_2___default().searchIconHolder),
+                    className: (_SearchBar_module_scss__WEBPACK_IMPORTED_MODULE_3___default().searchIconHolder),
                     children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("img", {
                         src: _assets_images__WEBPACK_IMPORTED_MODULE_1__/* .search.src */ .yC.src,
                         alt: "search icon",
-                        className: (_SearchBar_module_scss__WEBPACK_IMPORTED_MODULE_2___default().searchIcon)
+                        className: (_SearchBar_module_scss__WEBPACK_IMPORTED_MODULE_3___default().searchIcon)
                     })
                 }),
                 /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
-                    className: (_SearchBar_module_scss__WEBPACK_IMPORTED_MODULE_2___default().border)
+                    className: (_SearchBar_module_scss__WEBPACK_IMPORTED_MODULE_3___default().border)
                 }),
                 /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("input", {
+                    ref: searchbar,
                     spellCheck: false,
                     placeholder: "Search...",
-                    className: (_SearchBar_module_scss__WEBPACK_IMPORTED_MODULE_2___default().searchBar)
+                    className: (_SearchBar_module_scss__WEBPACK_IMPORTED_MODULE_3___default().searchBar),
+                    onFocus: ()=>handleFocus(true),
+                    onBlur: ()=>handleFocus(false)
                 })
             ]
         })
@@ -625,7 +680,8 @@ module.exports = {
 	"upperRow": "SearchSection_upperRow__UVnB1",
 	"profileHolder": "SearchSection_profileHolder__mO3Gv",
 	"profileIcon": "SearchSection_profileIcon__HIi6D",
-	"title": "SearchSection_title__aPcGE"
+	"title": "SearchSection_title__aPcGE",
+	"lowerRow": "SearchSection_lowerRow__Yrq3z"
 };
 
 
@@ -784,6 +840,7 @@ function SearchSection(props) {
     const profileData = props.profileData;
     return /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
         className: (SearchSection_module_default()).searchSection,
+        id: "searchSection",
         children: [
             /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
                 className: (SearchSection_module_default()).upperRow,
@@ -832,6 +889,7 @@ function Main(props) {
                 children: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita consectetur esse sequi nesciunt quis quisquam qui ipsa animi. Nobis ullam sint suscipit voluptatem debitis incidunt exercitationem nulla, corrupti molestias atque iusto, ab at ratione iure illo aperiam quae dignissimos fugiat asperiores eum! Pariatur, quasi earum provident hic iste fugiat veritatis quibusdam libero, neque eaque quas, autem dicta aliquid mollitia in. Placeat eos quam perferendis adipisci? Mollitia modi a velit sed ipsa nesciunt tenetur temporibus sequi culpa nemo fugit molestias eos consequatur ut dolorem odit, labore nobis architecto accusamus! Molestias rem vero aliquid excepturi omnis obcaecati nisi eos expedita fugit. Porro."
             }),
             /*#__PURE__*/ jsx_runtime_.jsx("div", {
+                id: "testscroll",
                 children: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates sit tempora laborum voluptatibus illum rerum maiores! Dolores quos, atque impedit officia cum enim earum sapiente natus mollitia aperiam, magni beatae esse facilis assumenda quas repellendus, voluptatem explicabo aspernatur exercitationem fugit vitae repellat accusantium veniam. In velit illo distinctio illum quo quibusdam? Necessitatibus pariatur odio quaerat placeat? Quam placeat exercitationem molestias odio at nobis nostrum iste ipsa. Similique iste, eos temporibus accusamus consequuntur earum ab, error quas, atque eaque minus mollitia fugit! Ad voluptatem, et aperiam perspiciatis maiores fugit corporis harum culpa deserunt recusandae incidunt veritatis necessitatibus maxime velit earum eius ducimus laborum porro iusto soluta praesentium alias hic minima cum? Rem consequuntur obcaecati repellat laborum magnam tenetur! Dolores cupiditate sunt quo ut nulla libero, debitis culpa animi, unde eius nisi tempore magni nihil, explicabo ex aliquam assumenda? Nostrum corrupti maxime eligendi natus voluptatibus reprehenderit vero accusamus adipisci quis. Facilis perspiciatis omnis non delectus, voluptate itaque soluta totam hic incidunt dolore sunt, ratione numquam sequi laborum enim nesciunt, neque blanditiis necessitatibus molestiae nostrum odio. Doloremque temporibus itaque earum officia eum, ducimus voluptate et? Aliquam, harum. Consequuntur, eveniet? Alias iusto similique facere id pariatur? Labore repudiandae quisquam iste sapiente, optio corrupti rem."
             }),
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, nesciunt possimus. Aliquam, sunt consequatur. Ipsum facilis exercitationem rem suscipit consectetur temporibus nam? Error optio, ut a fugit exercitationem tempora temporibus inventore laboriosam. Ratione delectus voluptatum, facere quis sint cupiditate omnis ipsam atque cumque perferendis nulla nam aut ipsum. Dolorem provident deserunt obcaecati possimus. Dolores assumenda quibusdam at tenetur magnam? Facilis enim quo ad inventore error quia iste ipsum sapiente molestias in dolorem fugiat ducimus nemo excepturi doloremque, fuga dicta voluptas fugit iure modi omnis dolorum voluptatibus quod quas! Corrupti labore quidem quos sequi vitae fugit tempora dolores dolorum possimus numquam."

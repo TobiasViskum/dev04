@@ -11,10 +11,18 @@
   filter: invert(49%) sepia(0%) saturate(98%) hue-rotate(272deg) brightness(102%) contrast(94%);
 }
 
-@mixin transition($property: all, $property2: all) {
-  -webkit-transition: $property 0.25s ease-in-out, $property2 0.25s ease-in-out;
-  -moz-transition: $property 0.25s ease-in-out, $property2 0.25s ease-in-out;
-  -ms-transition: $property 0.25s ease-in-out, $property2 0.25s ease-in-out;
-  -o-transition: $property 0.25s ease-in-out, $property2 0.25s ease-in-out;
-  transition: $property 0.25s ease-in-out, $property2 0.25s ease-in-out;
+@mixin transition(
+  $property: all,
+  $duration: var(--transition-duration),
+  $delay: 0s,
+  $property2: all,
+  $duration2: var(--transition-duration),
+  $delay2: 0s
+) {
+  -webkit-transition: $property $duration ease-in-out $delay,
+    $property2 $duration2 ease-in-out $delay2;
+  -moz-transition: $property $duration ease-in-out $delay, $property2 $duration2 ease-in-out $delay2;
+  -ms-transition: $property $duration ease-in-out $delay, $property2 $duration2 ease-in-out $delay2;
+  -o-transition: $property $duration ease-in-out $delay, $property2 $duration2 ease-in-out $delay2;
+  transition: $property $duration ease-in-out $delay, $property2 $duration2 ease-in-out $delay2;
 }

@@ -22,7 +22,7 @@
   background: var(--first-bg);
   backdrop-filter: blur(10px);
 
-  @include transition(border-color, background);
+  @include transition(border-color, var(--transition-duration), 0s, background);
 
   .navbar {
     display: flex;
@@ -45,7 +45,7 @@
   border-color: var(--second-bg);
   background: var(--first-bg), 0.5;
 
-  @include transition(border-color, background);
+  @include transition(border-color, var(--transition-duration), 0s, background);
 }
 
 .intersector {
