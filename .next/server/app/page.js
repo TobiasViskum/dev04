@@ -108,7 +108,7 @@ module.exports = require("next/dist/shared/lib/hooks-client-context.js");
 
 /***/ }),
 
-/***/ 4486:
+/***/ 6795:
 /***/ ((module) => {
 
 "use strict";
@@ -402,7 +402,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 2011:
+/***/ 5116:
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
 Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 408, 23));
@@ -410,8 +410,8 @@ Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_re
 Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 6826));
 Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 6038));
 Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 5908));
-Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 9709));
 Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 5308));
+Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 9709));
 Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 9883))
 
 /***/ }),
@@ -628,6 +628,18 @@ module.exports = {
 
 /***/ }),
 
+/***/ 1192:
+/***/ ((module) => {
+
+// Exports
+module.exports = {
+	"cardHolder": "FavoritesSection_cardHolder__RCvhx",
+	"noFavoritesFoundParagraph": "FavoritesSection_noFavoritesFoundParagraph__rwen1"
+};
+
+
+/***/ }),
+
 /***/ 8278:
 /***/ ((module) => {
 
@@ -701,8 +713,8 @@ __webpack_require__.d(__webpack_exports__, {
 
 // EXTERNAL MODULE: external "next/dist/compiled/react-experimental/jsx-runtime"
 var jsx_runtime_ = __webpack_require__(6931);
-// EXTERNAL MODULE: ./lib/db/index.ts + 2 modules
-var db = __webpack_require__(4550);
+// EXTERNAL MODULE: ./lib/db/index.ts + 3 modules
+var db = __webpack_require__(4486);
 // EXTERNAL MODULE: ./node_modules/next/dist/build/webpack/loaders/next-flight-loader/module-proxy.js
 var module_proxy = __webpack_require__(5985);
 ;// CONCATENATED MODULE: ./components/page-index/Header/Header.tsx
@@ -725,6 +737,7 @@ var Main_module_default = /*#__PURE__*/__webpack_require__.n(Main_module);
 
 function Main(props) {
     const profileData = JSON.parse(props.profileData);
+    const appData = JSON.parse(props.appData);
     return /*#__PURE__*/ (0,jsx_runtime_.jsxs)("main", {
         className: (Main_module_default()).main,
         children: [
@@ -732,7 +745,8 @@ function Main(props) {
                 profileData: profileData
             }),
             /*#__PURE__*/ jsx_runtime_.jsx(FavoritesSections, {
-                profileData: profileData
+                profileData: profileData,
+                appData: appData
             }),
             /*#__PURE__*/ jsx_runtime_.jsx(TabsSection, {
                 profileData: profileData
@@ -917,6 +931,9 @@ function SearchSection(props) {
     });
 }
 
+// EXTERNAL MODULE: ./components/page-index/FavoritesSection/FavoritesSection.module.scss
+var FavoritesSection_module = __webpack_require__(1192);
+var FavoritesSection_module_default = /*#__PURE__*/__webpack_require__.n(FavoritesSection_module);
 // EXTERNAL MODULE: ./components/page-index/FavoritesSection/FavoritesCard/FavoritesCard.module.scss
 var FavoritesCard_module = __webpack_require__(259);
 var FavoritesCard_module_default = /*#__PURE__*/__webpack_require__.n(FavoritesCard_module);
@@ -925,7 +942,8 @@ var FavoritesCard_module_default = /*#__PURE__*/__webpack_require__.n(FavoritesC
 
 
 
-function FavoritesCard() {
+function FavoritesCard(props) {
+    const appData = props.appData;
     return /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
         className: (FavoritesCard_module_default()).container,
         children: [
@@ -938,7 +956,7 @@ function FavoritesCard() {
                 })
             }),
             /*#__PURE__*/ jsx_runtime_.jsx("h3", {
-                children: "Fitness"
+                children: appData.name
             }),
             /*#__PURE__*/ jsx_runtime_.jsx("div", {
                 className: (FavoritesCard_module_default()).arrowHolder,
@@ -955,17 +973,38 @@ function FavoritesCard() {
 ;// CONCATENATED MODULE: ./components/page-index/FavoritesSection/FavoritesSection.tsx
 
 
+
+function findFavorites(appData, favorites) {
+    let hasFoundFavorite = false;
+    return appData.map((app, index)=>{
+        if (favorites[app.name_id] != undefined) {
+            hasFoundFavorite = true;
+            return /*#__PURE__*/ jsx_runtime_.jsx(FavoritesCard, {
+                appData: app
+            }, index);
+        }
+        if (appData.length == index + 1 && hasFoundFavorite == false) {
+            return /*#__PURE__*/ jsx_runtime_.jsx("p", {
+                className: (FavoritesSection_module_default()).noFavoritesFoundParagraph,
+                children: "You dont have any favorites yet!"
+            }, index);
+        }
+    });
+}
 function FavoritesSections(props) {
     const profileData = props.profileData;
+    const appData = props.appData;
+    const favorites = JSON.parse(profileData.favorites);
+    const result = findFavorites(appData, favorites);
     return /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
         children: [
             /*#__PURE__*/ jsx_runtime_.jsx("h2", {
                 children: "Favorites"
             }),
-            /*#__PURE__*/ jsx_runtime_.jsx("p", {
-                children: "You dont have any favorites yet!"
-            }),
-            /*#__PURE__*/ jsx_runtime_.jsx(FavoritesCard, {})
+            /*#__PURE__*/ jsx_runtime_.jsx("div", {
+                className: (FavoritesSection_module_default()).cardHolder,
+                children: result
+            })
         ]
     });
 }
@@ -999,12 +1038,16 @@ function TabsSection(props) {
 
 
 async function Home() {
-    const [profileData] = await (0,db/* getProfileData */.$)();
+    const [[profileData], appData] = await Promise.all([
+        (0,db/* getProfileData */.$y)(),
+        (0,db/* getAppData */.$s)()
+    ]);
     return /*#__PURE__*/ (0,jsx_runtime_.jsxs)(jsx_runtime_.Fragment, {
         children: [
             /*#__PURE__*/ jsx_runtime_.jsx(Header, {}),
             /*#__PURE__*/ jsx_runtime_.jsx(Main, {
-                profileData: JSON.stringify(profileData)
+                profileData: JSON.stringify(profileData),
+                appData: JSON.stringify(appData)
             }),
             /*#__PURE__*/ jsx_runtime_.jsx(Footer, {})
         ]
@@ -1081,7 +1124,7 @@ __webpack_require__.r(__webpack_exports__);
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [859,571,831,286,538,550], () => (__webpack_exec__(6908)));
+var __webpack_exports__ = __webpack_require__.X(0, [859,571,831,286,342,486], () => (__webpack_exec__(6908)));
 module.exports = __webpack_exports__;
 
 })();

@@ -21,12 +21,15 @@ html {
   --news-bg: #2ed158;
   --alert-bg: #f55363;
 
+  //This is colors for tabs
+  --fitness-bg: rgb(250, 130, 31);
+
   /* This isn't colors */
   --transition-duration: 0.25s;
 
   --touch-actions: pan-y;
   --navbar-height: 64px;
-  --icon-size: calc(var(--navbar-height) / 1.5);
+  --icon-size: 32px;
 
   overflow: auto;
   touch-action: var(--touch-actions);

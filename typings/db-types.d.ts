@@ -22,3 +22,10 @@ interface ProfileData {
   last_name: string;
   favorites: string;
 }
+
+interface AppData {
+  id: number;
+  name_id: string;
+  name: string;
+  category: string;
+}

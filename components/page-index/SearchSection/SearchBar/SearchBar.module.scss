@@ -4,7 +4,9 @@
   display: flex;
   align-items: center;
 
-  @include card-size;
+  max-width: calc(450px - 2px);
+  border-radius: 4px;
+  border: var(--second-clr-transparent) solid 1px;
 
   background-color: var(--first-bg);
   font-size: 1rem;
