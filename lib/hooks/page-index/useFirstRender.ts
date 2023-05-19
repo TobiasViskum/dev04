@@ -11,19 +11,16 @@ export default function useFirstRender(props: Props) {
   return useEffect(() => {
     if (typeof document == "undefined") return;
     const searchSection = document.getElementById("searchSection");
-    const searchbar = document.getElementById("searchbar");
+    const searchbar = document.getElementById("searchInput");
     const observingElement = document.getElementById("profileIcon");
 
     const style = getComputedStyle(document.documentElement);
 
     let currState = false;
     function cancelFocus() {
-      if (!searchSection || !searchbar || !observingElement) return;
+      if (!searchbar) return;
 
-      searchSection.style.setProperty("--searching-template-rows", "1fr 1fr");
-      searchSection.style.setProperty("--searching-opacity", "1");
       searchbar.blur();
-      currState = false;
     }
     window.addEventListener("touchmove", cancelFocus);
     window.addEventListener("touchstart", cancelFocus);
@@ -37,6 +34,7 @@ export default function useFirstRender(props: Props) {
         updateHeader(true);
         searchSection.style.setProperty("--searching-template-rows", "1fr 0fr");
         searchSection.style.setProperty("--searching-opacity", "1");
+        searchbar.blur();
       } else if (distanceFromTop > navbarHeight && currState == true) {
         currState = false;
         updateHeader(false);

@@ -32,7 +32,7 @@ export default function SearchBar() {
         <div className={styles.border} />
         <input
           ref={searchbar}
-          id="searchbar"
+          id="searchInput"
           spellCheck={false}
           placeholder="Search..."
           className={styles.searchBar}

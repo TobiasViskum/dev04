@@ -52,7 +52,7 @@ module.exports = require("next/dist/compiled/react-server-dom-webpack-experiment
 
 /***/ }),
 
-/***/ 1090:
+/***/ 5232:
 /***/ ((module) => {
 
 "use strict";
@@ -470,16 +470,13 @@ function useFirstRender(props) {
     return (0,react_experimental_.useEffect)(()=>{
         if (typeof document == "undefined") return;
         const searchSection = document.getElementById("searchSection");
-        const searchbar = document.getElementById("searchbar");
+        const searchbar = document.getElementById("searchInput");
         const observingElement = document.getElementById("profileIcon");
         const style = getComputedStyle(document.documentElement);
         let currState = false;
         function cancelFocus() {
-            if (!searchSection || !searchbar || !observingElement) return;
-            searchSection.style.setProperty("--searching-template-rows", "1fr 1fr");
-            searchSection.style.setProperty("--searching-opacity", "1");
+            if (!searchbar) return;
             searchbar.blur();
-            currState = false;
         }
         window.addEventListener("touchmove", cancelFocus);
         window.addEventListener("touchstart", cancelFocus);
@@ -492,6 +489,7 @@ function useFirstRender(props) {
                 updateHeader(true);
                 searchSection.style.setProperty("--searching-template-rows", "1fr 0fr");
                 searchSection.style.setProperty("--searching-opacity", "1");
+                searchbar.blur();
             } else if (distanceFromTop > navbarHeight && currState == true) {
                 currState = false;
                 updateHeader(false);
@@ -605,7 +603,7 @@ function SearchBar() {
                 }),
                 /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("input", {
                     ref: searchbar,
-                    id: "searchbar",
+                    id: "searchInput",
                     spellCheck: false,
                     placeholder: "Search...",
                     className: (_SearchBar_module_scss__WEBPACK_IMPORTED_MODULE_4___default().searchBar),
