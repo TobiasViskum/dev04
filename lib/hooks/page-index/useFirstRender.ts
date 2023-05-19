@@ -19,13 +19,11 @@ export default function useFirstRender(props: Props) {
     let currState = false;
     function cancelFocus() {
       if (!searchSection || !searchbar || !observingElement) return;
-      const navbarHeight = Number(style.getPropertyValue("--navbar-height").replace("px", ""));
-      const distanceFromTop = observingElement.getBoundingClientRect().top;
-      if (distanceFromTop > navbarHeight && currState == true) {
-        searchSection.style.setProperty("--searching-template-rows", "1fr 1fr");
-        searchSection.style.setProperty("--searching-opacity", "1");
-        searchbar.blur();
-      }
+
+      searchSection.style.setProperty("--searching-template-rows", "1fr 1fr");
+      searchSection.style.setProperty("--searching-opacity", "1");
+      searchbar.blur();
+      currState = false;
     }
     window.addEventListener("touchmove", cancelFocus);
     window.addEventListener("touchstart", cancelFocus);

@@ -402,7 +402,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 3684:
+/***/ 1766:
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
 Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 408, 23));
@@ -476,13 +476,10 @@ function useFirstRender(props) {
         let currState = false;
         function cancelFocus() {
             if (!searchSection || !searchbar || !observingElement) return;
-            const navbarHeight = Number(style.getPropertyValue("--navbar-height").replace("px", ""));
-            const distanceFromTop = observingElement.getBoundingClientRect().top;
-            if (distanceFromTop > navbarHeight && currState == true) {
-                searchSection.style.setProperty("--searching-template-rows", "1fr 1fr");
-                searchSection.style.setProperty("--searching-opacity", "1");
-                searchbar.blur();
-            }
+            searchSection.style.setProperty("--searching-template-rows", "1fr 1fr");
+            searchSection.style.setProperty("--searching-opacity", "1");
+            searchbar.blur();
+            currState = false;
         }
         window.addEventListener("touchmove", cancelFocus);
         window.addEventListener("touchstart", cancelFocus);
