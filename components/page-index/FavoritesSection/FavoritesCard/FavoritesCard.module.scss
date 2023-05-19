@@ -1,1 +1,32 @@
 @import "/app/mixins.scss";
+
+.container {
+  display: flex;
+  align-items: center;
+  column-gap: 12px;
+  padding: 4px;
+  background-color: var(--first-bg);
+  @include card-size;
+
+  .iconHolder {
+    width: var(--icon-size);
+    height: var(--icon-size);
+    background-color: red;
+    border-radius: 4px;
+
+    .icon {
+      @include next-image;
+    }
+  }
+  .arrowHolder {
+    margin-left: auto;
+    margin-right: 4px;
+    width: calc(var(--icon-size) * 0.5);
+    height: calc(var(--icon-size) * 0.5);
+
+    .arrow {
+      @include image-bg;
+      @include next-image;
+    }
+  }
+}

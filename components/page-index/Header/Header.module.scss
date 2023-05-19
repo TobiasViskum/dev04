@@ -28,7 +28,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: calc(100% - var(--navbar-height));
+    width: calc(100% - 0.75 * var(--navbar-height));
     .settingsHolder {
       @include square;
       width: var(--icon-size);

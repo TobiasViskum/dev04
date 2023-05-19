@@ -4,11 +4,9 @@
   display: flex;
   align-items: center;
 
-  width: 100%;
-  max-width: 475px;
-  min-width: 300px;
-  border-radius: 4px;
-  background-color: var(--second-bg);
+  @include card-size;
+
+  background-color: var(--first-bg);
   font-size: 1rem;
 
   .searchIconHolder {
@@ -17,11 +15,11 @@
     height: 28px;
   }
   .border {
-    height: calc(var(--icon-size) - 8px);
+    height: 1rem;
     border-width: 0;
     border-left-width: 1px;
     border-style: solid;
-    border-color: var(--image-bg-text);
+    border-color: var(--second-clr);
     width: 4px;
   }
 
@@ -32,7 +30,7 @@
 
   .searchBar {
     font-size: 1rem;
-    background-color: var(--second-bg);
+    background-color: var(--first-bg);
     flex: 1;
     border: 0;
     outline: 0;

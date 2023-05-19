@@ -26,3 +26,11 @@
   -o-transition: $property $duration ease-in-out $delay, $property2 $duration2 ease-in-out $delay2;
   transition: $property $duration ease-in-out $delay, $property2 $duration2 ease-in-out $delay2;
 }
+
+@mixin card-size {
+  width: 90%;
+  max-width: 475px;
+  min-width: 300px;
+  border-radius: 4px;
+  border: var(--second-clr-transparent) solid 1px;
+}
