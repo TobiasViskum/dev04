@@ -2,5 +2,8 @@
 
 .main {
   display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
   row-gap: 12px;
+
+  @include transition(grid-template-rows);
 }

@@ -31,7 +31,7 @@ export default function FavoritesSections(props: Props) {
   const result = findFavorites(appData, favorites);
 
   return (
-    <div>
+    <div className={styles.main}>
       <h2>Favorites</h2>
       <div className={styles.cardHolder}>{result}</div>
     </div>

@@ -6,6 +6,7 @@
 
   margin-top: calc(var(--navbar-height) * 1.25);
   display: grid;
+  overflow: hidden;
   grid-template-rows: var(--searching-template-rows);
   row-gap: 8px;
 

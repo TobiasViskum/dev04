@@ -1,5 +1,9 @@
 @import "/app/mixins.scss";
 
+.main {
+  overflow: hidden;
+}
+
 .cardHolder {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 450px));

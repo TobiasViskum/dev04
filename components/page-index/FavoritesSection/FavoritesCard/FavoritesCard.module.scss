@@ -3,6 +3,7 @@
 .container {
   display: flex;
   align-items: center;
+  overflow: hidden;
   column-gap: 12px;
   padding: 4px;
   padding-left: 6px;
@@ -13,7 +14,6 @@
   .iconHolder {
     width: var(--icon-size);
     height: var(--icon-size);
-    background-color: var(--fitness-bg);
     border-radius: 4px;
     display: grid;
     place-items: center;
@@ -33,4 +33,11 @@
       @include next-image;
     }
   }
+}
+
+.fitness {
+  background-color: var(--fitness-bg);
+}
+.dog {
+  background-color: var(--dog-bg);
 }

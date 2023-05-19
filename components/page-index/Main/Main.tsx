@@ -14,7 +14,7 @@ export default function Main(props: Props) {
     <main className={styles.main}>
       <SearchSection profileData={profileData} />
       <FavoritesSections profileData={profileData} appData={appData} />
-      <TabsSection profileData={profileData} />
+      <TabsSection profileData={profileData} appData={appData} />
       <div>
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita consectetur esse sequi
         nesciunt quis quisquam qui ipsa animi. Nobis ullam sint suscipit voluptatem debitis incidunt

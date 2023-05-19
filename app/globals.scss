@@ -23,12 +23,13 @@ html {
 
   //This is colors for tabs
   --fitness-bg: rgb(250, 130, 31);
+  --dog-bg: rgb(19, 177, 90);
 
   /* This isn't colors */
   --transition-duration: 0.25s;
 
   --touch-actions: pan-y;
-  --navbar-height: 64px;
+  --navbar-height: 48px;
   --icon-size: 32px;
 
   overflow: auto;
@@ -71,14 +72,5 @@ h6 {
 
 p {
   color: var(--second-clr);
-  font-size: 1.5rem;
-}
-
-@media (max-width: 600px) {
-  html {
-    --navbar-height: 48px;
-  }
-  p {
-    font-size: 1rem;
-  }
+  font-size: 1rem;
 }
