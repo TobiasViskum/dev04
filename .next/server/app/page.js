@@ -52,7 +52,7 @@ module.exports = require("next/dist/compiled/react-server-dom-webpack-experiment
 
 /***/ }),
 
-/***/ 5232:
+/***/ 1090:
 /***/ ((module) => {
 
 "use strict";
@@ -402,13 +402,13 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 9623:
+/***/ 3684:
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
 Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 408, 23));
 Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 6826));
-Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 6038));
 Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 5908));
+Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 6038));
 Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 5308));
 Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 9709));
 Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 4783));
@@ -475,8 +475,10 @@ function useFirstRender(props) {
         const style = getComputedStyle(document.documentElement);
         let currState = false;
         function cancelFocus() {
-            if (!searchSection || !searchbar) return;
-            if (document.documentElement.scrollTop < 12) {
+            if (!searchSection || !searchbar || !observingElement) return;
+            const navbarHeight = Number(style.getPropertyValue("--navbar-height").replace("px", ""));
+            const distanceFromTop = observingElement.getBoundingClientRect().top;
+            if (distanceFromTop > navbarHeight && currState == true) {
                 searchSection.style.setProperty("--searching-template-rows", "1fr 1fr");
                 searchSection.style.setProperty("--searching-opacity", "1");
                 searchbar.blur();
@@ -485,7 +487,7 @@ function useFirstRender(props) {
         window.addEventListener("touchmove", cancelFocus);
         window.addEventListener("touchstart", cancelFocus);
         window.addEventListener("scroll", ()=>{
-            if (!observingElement || !searchSection) return;
+            if (!observingElement || !searchSection || !searchbar) return;
             const navbarHeight = Number(style.getPropertyValue("--navbar-height").replace("px", ""));
             const distanceFromTop = observingElement.getBoundingClientRect().top;
             if (distanceFromTop <= navbarHeight && currState == false) {
@@ -496,6 +498,9 @@ function useFirstRender(props) {
             } else if (distanceFromTop > navbarHeight && currState == true) {
                 currState = false;
                 updateHeader(false);
+                searchSection.style.setProperty("--searching-template-rows", "1fr 1fr");
+                searchSection.style.setProperty("--searching-opacity", "1");
+                searchbar.blur();
             }
         });
     }, []);

@@ -18,8 +18,10 @@ export default function useFirstRender(props: Props) {
 
     let currState = false;
     function cancelFocus() {
-      if (!searchSection || !searchbar) return;
-      if (document.documentElement.scrollTop < 12) {
+      if (!searchSection || !searchbar || !observingElement) return;
+      const navbarHeight = Number(style.getPropertyValue("--navbar-height").replace("px", ""));
+      const distanceFromTop = observingElement.getBoundingClientRect().top;
+      if (distanceFromTop > navbarHeight && currState == true) {
         searchSection.style.setProperty("--searching-template-rows", "1fr 1fr");
         searchSection.style.setProperty("--searching-opacity", "1");
         searchbar.blur();
@@ -28,7 +30,7 @@ export default function useFirstRender(props: Props) {
     window.addEventListener("touchmove", cancelFocus);
     window.addEventListener("touchstart", cancelFocus);
     window.addEventListener("scroll", () => {
-      if (!observingElement || !searchSection) return;
+      if (!observingElement || !searchSection || !searchbar) return;
       const navbarHeight = Number(style.getPropertyValue("--navbar-height").replace("px", ""));
       const distanceFromTop = observingElement.getBoundingClientRect().top;
 
@@ -40,6 +42,9 @@ export default function useFirstRender(props: Props) {
       } else if (distanceFromTop > navbarHeight && currState == true) {
         currState = false;
         updateHeader(false);
+        searchSection.style.setProperty("--searching-template-rows", "1fr 1fr");
+        searchSection.style.setProperty("--searching-opacity", "1");
+        searchbar.blur();
       }
     });
   }, []);
