@@ -402,16 +402,16 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 5116:
+/***/ 9623:
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
 Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 408, 23));
-Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 4783));
 Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 6826));
 Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 6038));
 Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 5908));
 Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 5308));
 Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 9709));
+Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 4783));
 Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 9883))
 
 /***/ }),
@@ -469,16 +469,30 @@ function useFirstRender(props) {
     const updateHeader = props.updateHeader;
     return (0,react_experimental_.useEffect)(()=>{
         if (typeof document == "undefined") return;
-        const style = getComputedStyle(document.documentElement);
+        const searchSection = document.getElementById("searchSection");
+        const searchbar = document.getElementById("searchbar");
         const observingElement = document.getElementById("profileIcon");
+        const style = getComputedStyle(document.documentElement);
         let currState = false;
+        function cancelFocus() {
+            if (!searchSection || !searchbar) return;
+            if (document.documentElement.scrollTop < 12) {
+                searchSection.style.setProperty("--searching-template-rows", "1fr 1fr");
+                searchSection.style.setProperty("--searching-opacity", "1");
+                searchbar.blur();
+            }
+        }
+        window.addEventListener("touchmove", cancelFocus);
+        window.addEventListener("touchstart", cancelFocus);
         window.addEventListener("scroll", ()=>{
-            if (!observingElement) return;
+            if (!observingElement || !searchSection) return;
             const navbarHeight = Number(style.getPropertyValue("--navbar-height").replace("px", ""));
             const distanceFromTop = observingElement.getBoundingClientRect().top;
             if (distanceFromTop <= navbarHeight && currState == false) {
                 currState = true;
                 updateHeader(true);
+                searchSection.style.setProperty("--searching-template-rows", "1fr 0fr");
+                searchSection.style.setProperty("--searching-opacity", "1");
             } else if (distanceFromTop > navbarHeight && currState == true) {
                 currState = false;
                 updateHeader(false);
@@ -561,10 +575,8 @@ function SearchBar() {
     const searchbar = (0,react__WEBPACK_IMPORTED_MODULE_3__.useRef)(null);
     function handleFocus(newState) {
         const searchSection = document.getElementById("searchSection");
-        const docElement = document.documentElement;
         if (!searchSection) return;
         if (newState) {
-            docElement.scrollTo(0, 8);
             searchSection.style.setProperty("--searching-template-rows", "0.01fr 1fr");
             searchSection.style.setProperty("--searching-opacity", "0");
         } else {
@@ -573,14 +585,6 @@ function SearchBar() {
             searchbar.current?.blur();
         }
     }
-    (0,react__WEBPACK_IMPORTED_MODULE_3__.useEffect)(()=>{
-        function cancelFocus() {
-            handleFocus(false);
-            searchbar?.current?.blur();
-        }
-        window.addEventListener("touchmove", cancelFocus);
-        window.addEventListener("touchstart", cancelFocus);
-    }, []);
     return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
         children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
             className: (_SearchBar_module_scss__WEBPACK_IMPORTED_MODULE_4___default().container),
@@ -599,6 +603,7 @@ function SearchBar() {
                 }),
                 /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("input", {
                     ref: searchbar,
+                    id: "searchbar",
                     spellCheck: false,
                     placeholder: "Search...",
                     className: (_SearchBar_module_scss__WEBPACK_IMPORTED_MODULE_4___default().searchBar),

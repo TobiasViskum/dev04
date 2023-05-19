@@ -3,19 +3,17 @@
 import styles from "./SearchBar.module.scss";
 import Image from "next/image";
 import { search } from "@/assets/images";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 
 export default function SearchBar() {
   const searchbar = useRef<HTMLInputElement | null>(null);
 
   function handleFocus(newState: boolean) {
     const searchSection = document.getElementById("searchSection");
-    const docElement = document.documentElement;
 
     if (!searchSection) return;
 
     if (newState) {
-      docElement.scrollTo(0, 8);
       searchSection.style.setProperty("--searching-template-rows", "0.01fr 1fr");
       searchSection.style.setProperty("--searching-opacity", "0");
     } else {
@@ -24,16 +22,6 @@ export default function SearchBar() {
       searchbar.current?.blur();
     }
   }
-
-  useEffect(() => {
-    function cancelFocus() {
-      handleFocus(false);
-      searchbar?.current?.blur();
-    }
-
-    window.addEventListener("touchmove", cancelFocus);
-    window.addEventListener("touchstart", cancelFocus);
-  }, []);
 
   return (
     <>
@@ -44,6 +32,7 @@ export default function SearchBar() {
         <div className={styles.border} />
         <input
           ref={searchbar}
+          id="searchbar"
           spellCheck={false}
           placeholder="Search..."
           className={styles.searchBar}

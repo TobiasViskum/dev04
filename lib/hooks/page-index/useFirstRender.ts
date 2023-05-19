@@ -10,20 +10,33 @@ export default function useFirstRender(props: Props) {
 
   return useEffect(() => {
     if (typeof document == "undefined") return;
-    const style = getComputedStyle(document.documentElement);
-
+    const searchSection = document.getElementById("searchSection");
+    const searchbar = document.getElementById("searchbar");
     const observingElement = document.getElementById("profileIcon");
 
-    let currState = false;
+    const style = getComputedStyle(document.documentElement);
 
+    let currState = false;
+    function cancelFocus() {
+      if (!searchSection || !searchbar) return;
+      if (document.documentElement.scrollTop < 12) {
+        searchSection.style.setProperty("--searching-template-rows", "1fr 1fr");
+        searchSection.style.setProperty("--searching-opacity", "1");
+        searchbar.blur();
+      }
+    }
+    window.addEventListener("touchmove", cancelFocus);
+    window.addEventListener("touchstart", cancelFocus);
     window.addEventListener("scroll", () => {
-      if (!observingElement) return;
+      if (!observingElement || !searchSection) return;
       const navbarHeight = Number(style.getPropertyValue("--navbar-height").replace("px", ""));
       const distanceFromTop = observingElement.getBoundingClientRect().top;
 
       if (distanceFromTop <= navbarHeight && currState == false) {
         currState = true;
         updateHeader(true);
+        searchSection.style.setProperty("--searching-template-rows", "1fr 0fr");
+        searchSection.style.setProperty("--searching-opacity", "1");
       } else if (distanceFromTop > navbarHeight && currState == true) {
         currState = false;
         updateHeader(false);
