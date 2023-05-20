@@ -2,15 +2,14 @@
 
 .main {
   overflow: hidden;
-}
 
-.cardHolder {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 450px));
-  column-gap: 12px;
-  row-gap: 12px;
-}
-
-.noFavoritesFoundParagraph {
-  line-height: 0;
+  .cardHolder {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 450px));
+    column-gap: 12px;
+    row-gap: 12px;
+    .noFavoritesFoundParagraph {
+      line-height: 0;
+    }
+  }
 }

@@ -10,15 +10,18 @@ export default function SearchBar() {
 
   function handleFocus(newState: boolean) {
     const searchSection = document.getElementById("searchSection");
+    const main = document.getElementById("main");
 
-    if (!searchSection) return;
+    if (!searchSection || !main) return;
 
     if (newState) {
-      searchSection.style.setProperty("--searching-template-rows", "0.01fr 1fr");
-      searchSection.style.setProperty("--searching-opacity", "0");
+      // searchSection.style.setProperty("--searching-template-rows", "0fr 1fr");
+      // searchSection.style.setProperty("--searching-opacity", "0");
+      // main.style.setProperty("--main-template-rows", "1fr 0fr 0fr");
     } else {
-      searchSection.style.setProperty("--searching-template-rows", "1fr 1fr");
-      searchSection.style.setProperty("--searching-opacity", "1");
+      // searchSection.style.setProperty("--searching-template-rows", "1fr 1fr");
+      // searchSection.style.setProperty("--searching-opacity", "1");
+      // main.style.setProperty("--main-template-rows", "1fr 1fr 1fr");
       searchbar.current?.blur();
     }
   }

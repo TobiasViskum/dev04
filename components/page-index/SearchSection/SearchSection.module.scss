@@ -6,9 +6,9 @@
 
   margin-top: calc(var(--navbar-height) * 1.25);
   display: grid;
-  overflow: hidden;
+
   grid-template-rows: var(--searching-template-rows);
-  row-gap: 8px;
+  overflow: hidden;
 
   @include transition(grid-template-rows);
 
@@ -30,7 +30,6 @@
       }
     }
     .title {
-      line-height: 0px;
       opacity: var(--searching-opacity);
       @include transition(opacity);
     }
@@ -38,5 +37,7 @@
 }
 
 .lowerRow {
+  display: flex;
+  align-items: flex-end;
   overflow: hidden;
 }

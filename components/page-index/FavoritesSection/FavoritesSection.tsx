@@ -1,11 +1,6 @@
 import styles from "./FavoritesSection.module.scss";
 import FavoritesCard from "./FavoritesCard/FavoritesCard";
 
-interface Props {
-  profileData: ProfileData;
-  appData: AppData[];
-}
-
 function findFavorites(appData: AppData[], favorites: { [key: string]: string }) {
   let hasFoundFavorite = false;
   return appData.map((app, index) => {
@@ -21,6 +16,11 @@ function findFavorites(appData: AppData[], favorites: { [key: string]: string })
       );
     }
   });
+}
+
+interface Props {
+  profileData: ProfileData;
+  appData: AppData[];
 }
 
 export default function FavoritesSections(props: Props) {

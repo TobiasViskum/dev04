@@ -4,7 +4,9 @@
   display: flex;
   align-items: center;
 
+  width: 100%;
   max-width: calc(450px - 2px);
+  min-width: calc(300px - 2px);
   border-radius: 4px;
   border: var(--second-clr-transparent) solid 1px;
 

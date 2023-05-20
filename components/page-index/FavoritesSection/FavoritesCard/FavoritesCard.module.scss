@@ -17,10 +17,6 @@
     border-radius: 4px;
     display: grid;
     place-items: center;
-
-    .icon {
-      @include next-image(90%);
-    }
   }
   .arrowHolder {
     margin-left: auto;
@@ -33,11 +29,4 @@
       @include next-image;
     }
   }
-}
-
-.fitness {
-  background-color: var(--fitness-bg);
-}
-.dog {
-  background-color: var(--dog-bg);
 }

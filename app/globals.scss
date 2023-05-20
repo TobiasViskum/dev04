@@ -24,6 +24,9 @@ html {
   //This is colors for tabs
   --fitness-bg: rgb(250, 130, 31);
   --dog-bg: rgb(19, 177, 90);
+  --chat-bg: rgb(26, 113, 184);
+  --cardio-bg: rgb(178, 34, 197);
+  --compete-bg: rgb(241, 47, 73);
 
   /* This isn't colors */
   --transition-duration: 0.25s;
@@ -73,4 +76,20 @@ h6 {
 p {
   color: var(--second-clr);
   font-size: 1rem;
+}
+
+.fitness {
+  background-color: var(--fitness-bg);
+}
+.dog {
+  background-color: var(--dog-bg);
+}
+.chat {
+  background-color: var(--chat-bg);
+}
+.cardio {
+  background-color: var(--cardio-bg);
+}
+.compete {
+  background-color: var(--compete-bg);
 }

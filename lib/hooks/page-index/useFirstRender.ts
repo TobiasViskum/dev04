@@ -32,14 +32,14 @@ export default function useFirstRender(props: Props) {
       if (distanceFromTop <= navbarHeight && currState == false) {
         currState = true;
         updateHeader(true);
-        searchSection.style.setProperty("--searching-template-rows", "1fr 0fr");
-        searchSection.style.setProperty("--searching-opacity", "1");
+        // searchSection.style.setProperty("--searching-template-rows", "1fr 0fr");
+        // searchSection.style.setProperty("--searching-opacity", "1");
         searchbar.blur();
       } else if (distanceFromTop > navbarHeight && currState == true) {
         currState = false;
         updateHeader(false);
-        searchSection.style.setProperty("--searching-template-rows", "1fr 1fr");
-        searchSection.style.setProperty("--searching-opacity", "1");
+        // searchSection.style.setProperty("--searching-template-rows", "1fr 1fr");
+        // searchSection.style.setProperty("--searching-opacity", "1");
         searchbar.blur();
       }
     });

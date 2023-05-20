@@ -351,7 +351,7 @@ __webpack_require__.r(__webpack_exports__);
         '',
         {
         children: ['__PAGE__', {}, {
-          page: [() => Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 8562)), "C:\\Users\\tobia\\Personal\\Development\\React\\dev04\\app\\page.tsx"],
+          page: [() => Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 9149)), "C:\\Users\\tobia\\Personal\\Development\\React\\dev04\\app\\page.tsx"],
           metadata: {
     icon: [(async (props) => (await Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 4756))).default(props))],
     apple: [],
@@ -402,18 +402,21 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 7409:
+/***/ 8352:
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 9883));
 Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 408, 23));
-Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 4783));
 Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 6826));
-Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 5308));
-Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 5908));
 Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 6038));
 Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 302));
-Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 1515))
+Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 5308));
+Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 5908));
+Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 1515));
+Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 1660));
+Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 8594));
+Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 1954));
+Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 4783));
+Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 9883))
 
 /***/ }),
 
@@ -431,6 +434,12 @@ Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_re
 /* harmony import */ var _arrow_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(5308);
 /* harmony import */ var _fitness_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(302);
 /* harmony import */ var _dog_png__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(1515);
+/* harmony import */ var _chat_png__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(1660);
+/* harmony import */ var _cardio_png__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(8594);
+/* harmony import */ var _compete_png__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(1954);
+
+
+
 
 
 
@@ -490,14 +499,14 @@ function useFirstRender(props) {
             if (distanceFromTop <= navbarHeight && currState == false) {
                 currState = true;
                 updateHeader(true);
-                searchSection.style.setProperty("--searching-template-rows", "1fr 0fr");
-                searchSection.style.setProperty("--searching-opacity", "1");
+                // searchSection.style.setProperty("--searching-template-rows", "1fr 0fr");
+                // searchSection.style.setProperty("--searching-opacity", "1");
                 searchbar.blur();
             } else if (distanceFromTop > navbarHeight && currState == true) {
                 currState = false;
                 updateHeader(false);
-                searchSection.style.setProperty("--searching-template-rows", "1fr 1fr");
-                searchSection.style.setProperty("--searching-opacity", "1");
+                // searchSection.style.setProperty("--searching-template-rows", "1fr 1fr");
+                // searchSection.style.setProperty("--searching-opacity", "1");
                 searchbar.blur();
             }
         });
@@ -578,13 +587,16 @@ function SearchBar() {
     const searchbar = (0,react__WEBPACK_IMPORTED_MODULE_3__.useRef)(null);
     function handleFocus(newState) {
         const searchSection = document.getElementById("searchSection");
-        if (!searchSection) return;
+        const main = document.getElementById("main");
+        if (!searchSection || !main) return;
         if (newState) {
-            searchSection.style.setProperty("--searching-template-rows", "0.01fr 1fr");
-            searchSection.style.setProperty("--searching-opacity", "0");
+        // searchSection.style.setProperty("--searching-template-rows", "0fr 1fr");
+        // searchSection.style.setProperty("--searching-opacity", "0");
+        // main.style.setProperty("--main-template-rows", "1fr 0fr 0fr");
         } else {
-            searchSection.style.setProperty("--searching-template-rows", "1fr 1fr");
-            searchSection.style.setProperty("--searching-opacity", "1");
+            // searchSection.style.setProperty("--searching-template-rows", "1fr 1fr");
+            // searchSection.style.setProperty("--searching-opacity", "1");
+            // main.style.setProperty("--main-template-rows", "1fr 1fr 1fr");
             searchbar.current?.blur();
         }
     }
@@ -628,11 +640,8 @@ function SearchBar() {
 module.exports = {
 	"container": "FavoritesCard_container__4GsQh",
 	"iconHolder": "FavoritesCard_iconHolder__G0H1h",
-	"icon": "FavoritesCard_icon__7utc3",
 	"arrowHolder": "FavoritesCard_arrowHolder__L4eUb",
-	"arrow": "FavoritesCard_arrow__xDmVO",
-	"fitness": "FavoritesCard_fitness__ZI1s2",
-	"dog": "FavoritesCard_dog__OJeQ3"
+	"arrow": "FavoritesCard_arrow__xDmVO"
 };
 
 
@@ -710,18 +719,34 @@ module.exports = {
 
 /***/ }),
 
-/***/ 5258:
+/***/ 8480:
 /***/ ((module) => {
 
 // Exports
 module.exports = {
-	"main": "TabsSection_main__9AhJ3"
+	"container": "TabsCard_container__aDolx",
+	"iconHolder": "TabsCard_iconHolder__0uGki",
+	"textHolder": "TabsCard_textHolder__KgwDk",
+	"arrowHolder": "TabsCard_arrowHolder___Yk4s",
+	"arrow": "TabsCard_arrow__oQhzu"
 };
 
 
 /***/ }),
 
-/***/ 8562:
+/***/ 5258:
+/***/ ((module) => {
+
+// Exports
+module.exports = {
+	"main": "TabsSection_main__9AhJ3",
+	"cardHolder": "TabsSection_cardHolder__SHiU5"
+};
+
+
+/***/ }),
+
+/***/ 9149:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -762,6 +787,7 @@ function Main(props) {
     const appData = JSON.parse(props.appData);
     return /*#__PURE__*/ (0,jsx_runtime_.jsxs)("main", {
         className: (Main_module_default()).main,
+        id: "main",
         children: [
             /*#__PURE__*/ jsx_runtime_.jsx(SearchSection, {
                 profileData: profileData
@@ -773,15 +799,7 @@ function Main(props) {
             /*#__PURE__*/ jsx_runtime_.jsx(TabsSection, {
                 profileData: profileData,
                 appData: appData
-            }),
-            /*#__PURE__*/ jsx_runtime_.jsx("div", {
-                children: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita consectetur esse sequi nesciunt quis quisquam qui ipsa animi. Nobis ullam sint suscipit voluptatem debitis incidunt exercitationem nulla, corrupti molestias atque iusto, ab at ratione iure illo aperiam quae dignissimos fugiat asperiores eum! Pariatur, quasi earum provident hic iste fugiat veritatis quibusdam libero, neque eaque quas, autem dicta aliquid mollitia in. Placeat eos quam perferendis adipisci? Mollitia modi a velit sed ipsa nesciunt tenetur temporibus sequi culpa nemo fugit molestias eos consequatur ut dolorem odit, labore nobis architecto accusamus! Molestias rem vero aliquid excepturi omnis obcaecati nisi eos expedita fugit. Porro."
-            }),
-            /*#__PURE__*/ jsx_runtime_.jsx("div", {
-                id: "testscroll",
-                children: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates sit tempora laborum voluptatibus illum rerum maiores! Dolores quos, atque impedit officia cum enim earum sapiente natus mollitia aperiam, magni beatae esse facilis assumenda quas repellendus, voluptatem explicabo aspernatur exercitationem fugit vitae repellat accusantium veniam. In velit illo distinctio illum quo quibusdam? Necessitatibus pariatur odio quaerat placeat? Quam placeat exercitationem molestias odio at nobis nostrum iste ipsa. Similique iste, eos temporibus accusamus consequuntur earum ab, error quas, atque eaque minus mollitia fugit! Ad voluptatem, et aperiam perspiciatis maiores fugit corporis harum culpa deserunt recusandae incidunt veritatis necessitatibus maxime velit earum eius ducimus laborum porro iusto soluta praesentium alias hic minima cum? Rem consequuntur obcaecati repellat laborum magnam tenetur! Dolores cupiditate sunt quo ut nulla libero, debitis culpa animi, unde eius nisi tempore magni nihil, explicabo ex aliquam assumenda? Nostrum corrupti maxime eligendi natus voluptatibus reprehenderit vero accusamus adipisci quis. Facilis perspiciatis omnis non delectus, voluptate itaque soluta totam hic incidunt dolore sunt, ratione numquam sequi laborum enim nesciunt, neque blanditiis necessitatibus molestiae nostrum odio. Doloremque temporibus itaque earum officia eum, ducimus voluptate et? Aliquam, harum. Consequuntur, eveniet? Alias iusto similique facere id pariatur? Labore repudiandae quisquam iste sapiente, optio corrupti rem."
-            }),
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, nesciunt possimus. Aliquam, sunt consequatur. Ipsum facilis exercitationem rem suscipit consectetur temporibus nam? Error optio, ut a fugit exercitationem tempora temporibus inventore laboriosam. Ratione delectus voluptatum, facere quis sint cupiditate omnis ipsam atque cumque perferendis nulla nam aut ipsum. Dolorem provident deserunt obcaecati possimus. Dolores assumenda quibusdam at tenetur magnam? Facilis enim quo ad inventore error quia iste ipsum sapiente molestias in dolorem fugiat ducimus nemo excepturi doloremque, fuga dicta voluptas fugit iure modi omnis dolorum voluptatibus quod quas! Corrupti labore quidem quos sequi vitae fugit tempora dolores dolorum possimus numquam."
+            })
         ]
     });
 }
@@ -812,7 +830,16 @@ var image_default = /*#__PURE__*/__webpack_require__.n(next_image);
 /* harmony default export */ const fitness = ({"src":"/_next/static/media/fitness.3f76836a.png","height":2500,"width":2500,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAQAAABuBnYAAAAAX0lEQVR42l2NsQ1AUBiEj5hAL1GzEhUj0ImOwiwMgcQEaoXSEF/k/QnFa+6Su3x3IkSIAGHuJKNARFQkSKSsnNY+zMRi4uCiY+Bmp/mCntGC1iHbjywOETmljdY26t++IRtS8O0A3fAAAAAASUVORK5CYII=","blurWidth":8,"blurHeight":8});
 ;// CONCATENATED MODULE: ./assets/images/dog.png
 /* harmony default export */ const dog = ({"src":"/_next/static/media/dog.529f19a1.png","height":1200,"width":1200,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAQAAABuBnYAAAAAYUlEQVR42mMAgX9MQMz5T5cBAv4xArHUv7P//v9LhAiwAnHwv/9AeAOmnPXfrn///z355wkTWAGWfwwzwwHMvf/v4j9OiED1v/f/Hv479+/YPz2YGpl/4v+0/yn8k2BgAAAenz1vctevFgAAAABJRU5ErkJggg==","blurWidth":8,"blurHeight":8});
+;// CONCATENATED MODULE: ./assets/images/chat.png
+/* harmony default export */ const chat = ({"src":"/_next/static/media/chat.ecd36975.png","height":982,"width":980,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAQAAABuBnYAAAAAaklEQVR42k3LoQ5BYQAG0G8EmugZvInNE6ieQbO7CZLCS8iqSaYppBu0G8SrC3Z+ze5OPkkstWjMRS8q5W8m8fX21KgVV4ni5a528/EwjmOnrJxipFUUrcpWiaG9qYWds2ITfREDawcXkx/hjmcym6GfSQAAAABJRU5ErkJggg==","blurWidth":8,"blurHeight":8});
+;// CONCATENATED MODULE: ./assets/images/cardio.png
+/* harmony default export */ const cardio = ({"src":"/_next/static/media/cardio.dd697219.png","height":512,"width":512,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAQAAABuBnYAAAAAfUlEQVR42h3JsQnCABQE0EthxnAAxQ2MgugEWrqCE7hEEMcQLK2cwdJOBNHaNAkkufu55OAfvH8AmOnMjHOduMBARahU4xaXUB7BvR5m5cvBra7c6WL8+wmAjsaBK930BJx2Kumul4p6bL5Hfk3CaWfAJwWSr4trboBfiqQDK2pRr8Hh8WAAAAAASUVORK5CYII=","blurWidth":8,"blurHeight":8});
+;// CONCATENATED MODULE: ./assets/images/compete.png
+/* harmony default export */ const compete = ({"src":"/_next/static/media/compete.6e615f1c.png","height":512,"width":512,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAQAAABuBnYAAAAAX0lEQVR42iXIvQmAMABE4fNnKXfQBbR2lLSCRUbQKhM4SFrBLUR48SB8zbsTLTuJ05KrFYGHUrmCiIzO14oripWDUrlWIRYyn2VmJBp6xGZyNaJDDNw24FWPicsmRPcDIn1fnqEwXJcAAAAASUVORK5CYII=","blurWidth":8,"blurHeight":8});
 ;// CONCATENATED MODULE: ./assets/images/index.ts
+
+
+
 
 
 
@@ -906,10 +933,24 @@ const translator = (sentence)=>{
 
 const appImages = {
     fitness: {
-        image: fitness
+        image: fitness,
+        size: 90
     },
     dog: {
-        image: dog
+        image: dog,
+        size: 90
+    },
+    cardio: {
+        image: cardio,
+        size: 80
+    },
+    compete: {
+        image: compete,
+        size: 80
+    },
+    chat: {
+        image: chat,
+        size: 80
     }
 };
 
@@ -992,11 +1033,14 @@ function FavoritesCard(props) {
         className: (FavoritesCard_module_default()).container,
         children: [
             /*#__PURE__*/ jsx_runtime_.jsx("div", {
-                className: (FavoritesCard_module_default()).iconHolder + " " + (FavoritesCard_module_default())[appData.name_id],
+                className: (FavoritesCard_module_default()).iconHolder + " " + appData.name_id,
                 children: /*#__PURE__*/ jsx_runtime_.jsx((image_default()), {
                     src: appImageData.image,
                     alt: "icon",
-                    className: (FavoritesCard_module_default()).icon
+                    style: {
+                        height: `${appImageData.size}%`,
+                        width: `${appImageData.size}%`
+                    }
                 })
             }),
             /*#__PURE__*/ jsx_runtime_.jsx("h3", {
@@ -1057,18 +1101,78 @@ function FavoritesSections(props) {
 // EXTERNAL MODULE: ./components/page-index/TabsSection/TabsSection.module.scss
 var TabsSection_module = __webpack_require__(5258);
 var TabsSection_module_default = /*#__PURE__*/__webpack_require__.n(TabsSection_module);
+// EXTERNAL MODULE: ./components/page-index/TabsSection/TabsCard/TabsCard.module.scss
+var TabsCard_module = __webpack_require__(8480);
+var TabsCard_module_default = /*#__PURE__*/__webpack_require__.n(TabsCard_module);
+;// CONCATENATED MODULE: ./components/page-index/TabsSection/TabsCard/TabsCard.tsx
+
+
+
+
+
+function TabsCard(props) {
+    const appData = props.appData;
+    const appImageData = appImages[appData.name_id];
+    return /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+        className: (TabsCard_module_default()).container,
+        children: [
+            /*#__PURE__*/ jsx_runtime_.jsx("div", {
+                className: (TabsCard_module_default()).iconHolder + " " + appData.name_id,
+                children: /*#__PURE__*/ jsx_runtime_.jsx((image_default()), {
+                    src: appImageData.image,
+                    alt: "icon",
+                    style: {
+                        height: `${appImageData.size}%`,
+                        width: `${appImageData.size}%`
+                    }
+                })
+            }),
+            /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+                className: (TabsCard_module_default()).textHolder,
+                children: [
+                    /*#__PURE__*/ jsx_runtime_.jsx("h3", {
+                        children: appData.name
+                    }),
+                    /*#__PURE__*/ jsx_runtime_.jsx("p", {
+                        children: appData.category
+                    })
+                ]
+            }),
+            /*#__PURE__*/ jsx_runtime_.jsx("div", {
+                className: (TabsCard_module_default()).arrowHolder,
+                children: /*#__PURE__*/ jsx_runtime_.jsx((image_default()), {
+                    src: arrow,
+                    alt: "icon",
+                    className: (TabsCard_module_default()).arrow
+                })
+            })
+        ]
+    });
+}
+
 ;// CONCATENATED MODULE: ./components/page-index/TabsSection/TabsSection.tsx
 
 
+
+function findTabs(appData) {
+    return appData.map((app, index)=>{
+        return /*#__PURE__*/ jsx_runtime_.jsx(TabsCard, {
+            appData: app
+        }, index);
+    });
+}
 function TabsSection(props) {
+    const appData = props.appData;
+    const result = findTabs(appData);
     return /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
         className: (TabsSection_module_default()).main,
         children: [
             /*#__PURE__*/ jsx_runtime_.jsx("h2", {
                 children: "Tabs"
             }),
-            /*#__PURE__*/ jsx_runtime_.jsx("p", {
-                children: "Here is all tabs going to be displayed!"
+            /*#__PURE__*/ jsx_runtime_.jsx("div", {
+                className: (TabsSection_module_default()).cardHolder,
+                children: result
             })
         ]
     });
@@ -1116,6 +1220,42 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({"src":"/_next/static/media/arrow.759f964b.png","height":512,"width":512,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAQAAABuBnYAAAAAR0lEQVR42mNgYPhn9e/7XzkgzcrAAAT/GYHMef++/pUA0iwMQAIoACTn/vv3VxJIM4OF/gOpfxP+ffsnxcCALoCpBdNQdGsBhkoyc3iuZLMAAAAASUVORK5CYII=","blurWidth":8,"blurHeight":8});
+
+/***/ }),
+
+/***/ 8594:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({"src":"/_next/static/media/cardio.dd697219.png","height":512,"width":512,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAQAAABuBnYAAAAAfUlEQVR42h3JsQnCABQE0EthxnAAxQ2MgugEWrqCE7hEEMcQLK2cwdJOBNHaNAkkufu55OAfvH8AmOnMjHOduMBARahU4xaXUB7BvR5m5cvBra7c6WL8+wmAjsaBK930BJx2Kumul4p6bL5Hfk3CaWfAJwWSr4trboBfiqQDK2pRr8Hh8WAAAAAASUVORK5CYII=","blurWidth":8,"blurHeight":8});
+
+/***/ }),
+
+/***/ 1660:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({"src":"/_next/static/media/chat.ecd36975.png","height":982,"width":980,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAQAAABuBnYAAAAAaklEQVR42k3LoQ5BYQAG0G8EmugZvInNE6ieQbO7CZLCS8iqSaYppBu0G8SrC3Z+ze5OPkkstWjMRS8q5W8m8fX21KgVV4ni5a528/EwjmOnrJxipFUUrcpWiaG9qYWds2ITfREDawcXkx/hjmcym6GfSQAAAABJRU5ErkJggg==","blurWidth":8,"blurHeight":8});
+
+/***/ }),
+
+/***/ 1954:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({"src":"/_next/static/media/compete.6e615f1c.png","height":512,"width":512,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAQAAABuBnYAAAAAX0lEQVR42iXIvQmAMABE4fNnKXfQBbR2lLSCRUbQKhM4SFrBLUR48SB8zbsTLTuJ05KrFYGHUrmCiIzO14oripWDUrlWIRYyn2VmJBp6xGZyNaJDDNw24FWPicsmRPcDIn1fnqEwXJcAAAAASUVORK5CYII=","blurWidth":8,"blurHeight":8});
 
 /***/ }),
 
