@@ -2,7 +2,6 @@
   "theme_color": "#000000",
   "background_color": "#000000",
   "display": "standalone",
-  "start_url": "/?uid=d5141240-33e2-4d7a-807e-e5df34b64d71",
   "name": "NextJS PWA",
   "short_name": "nextjs pwa",
   "description": "By Tobias",
