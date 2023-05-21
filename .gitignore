@@ -12,7 +12,9 @@ copy_node.bat
 copy_next.bat
 
 # next.js
-# /.next/
+/.next/
+.next
+/.next
 /out/
 
 # production
