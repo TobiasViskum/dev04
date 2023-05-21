@@ -52,7 +52,7 @@ module.exports = require("next/dist/compiled/react-server-dom-webpack-experiment
 
 /***/ }),
 
-/***/ 5232:
+/***/ 1090:
 /***/ ((module) => {
 
 "use strict";
@@ -301,7 +301,7 @@ __webpack_require__.r(__webpack_exports__);
         'login',
         {
         children: ['__PAGE__', {}, {
-          page: [() => Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 2506)), "C:\\Users\\tobia\\Personal\\Development\\React\\dev04\\app\\viskum-app\\login\\page.tsx"],
+          page: [() => Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 7350)), "C:\\Users\\tobia\\Personal\\Development\\React\\dev04\\app\\viskum-app\\login\\page.tsx"],
           
         }]
       },
@@ -364,12 +364,12 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 4417:
+/***/ 7825:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 
 const actions = {
-'9d6730dd7d99202904b3ffa7d0767c0f7e0527ab': () => Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 2506)).then(mod => mod["$$ACTION_0"]),
+'e589cd97ec9394088810c331b625ffe0f8e76d81': () => Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 524)).then(mod => mod["$$ACTION_0"]),
 }
 
 async function endpoint(id, ...args) {
@@ -379,13 +379,13 @@ async function endpoint(id, ...args) {
 
 // Using CJS to avoid this to be tree-shaken away due to unused exports.
 module.exports = {
-  '9d6730dd7d99202904b3ffa7d0767c0f7e0527ab': endpoint.bind(null, '9d6730dd7d99202904b3ffa7d0767c0f7e0527ab'),
+  'e589cd97ec9394088810c331b625ffe0f8e76d81': endpoint.bind(null, 'e589cd97ec9394088810c331b625ffe0f8e76d81'),
 }
 
 
 /***/ }),
 
-/***/ 7747:
+/***/ 7297:
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
 Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 3280, 23));
@@ -402,6 +402,69 @@ Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_
 module.exports = {
 	"main": "page_main__ULmTe"
 };
+
+
+/***/ }),
+
+/***/ 524:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+// ESM COMPAT FLAG
+__webpack_require__.r(__webpack_exports__);
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  "$$ACTION_0": () => (/* binding */ $$ACTION_0),
+  "default": () => (/* binding */ SubmitAction)
+});
+
+// EXTERNAL MODULE: external "next/dist/compiled/react-experimental/jsx-runtime"
+var jsx_runtime_ = __webpack_require__(6931);
+// EXTERNAL MODULE: ./node_modules/next/dist/build/webpack/loaders/next-flight-loader/action-proxy.js
+var action_proxy = __webpack_require__(2855);
+// EXTERNAL MODULE: ./lib/viskum-app/auth/userAuth.ts
+var userAuth = __webpack_require__(3308);
+;// CONCATENATED MODULE: ./lib/viskum-app/auth/index.ts
+
+
+
+// EXTERNAL MODULE: ./node_modules/next/navigation.js
+var navigation = __webpack_require__(117);
+;// CONCATENATED MODULE: ./app/viskum-app/login/SubmitAction.tsx
+/* __next_internal_action_entry_do_not_use__ $$ACTION_0 */ 
+
+
+
+function SubmitAction() {
+    async function handleLogin(...args) {
+        return $$ACTION_0.apply(null, (handleLogin.$$bound || []).concat(args));
+    }
+    (0,action_proxy/* default */.Z)("e589cd97ec9394088810c331b625ffe0f8e76d81", null, handleLogin, $$ACTION_0);
+    return /*#__PURE__*/ (0,jsx_runtime_.jsxs)("form", {
+        action: handleLogin,
+        children: [
+            /*#__PURE__*/ jsx_runtime_.jsx("input", {
+                type: "text",
+                name: "password",
+                placeholder: "Enter uid",
+                spellCheck: false
+            }),
+            /*#__PURE__*/ jsx_runtime_.jsx("button", {
+                type: "submit",
+                children: "Submit"
+            })
+        ]
+    });
+}
+async function $$ACTION_0(data) {
+    const inputText = String(data.get("password"));
+    const result = await (0,userAuth/* userAuth */.l)(inputText, "check only");
+    if (result.length > 0) {
+        (0,navigation.redirect)(`/viskum-app/${inputText}`);
+    }
+    return;
+}
 
 
 /***/ }),
@@ -431,87 +494,44 @@ function RootLayout({ children  }) {
 
 /***/ }),
 
-/***/ 2506:
+/***/ 7350:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-// ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
-
-// EXPORTS
-__webpack_require__.d(__webpack_exports__, {
-  "$$ACTION_0": () => (/* binding */ $$ACTION_0),
-  "default": () => (/* binding */ page)
-});
-
-// EXTERNAL MODULE: external "next/dist/compiled/react-experimental/jsx-runtime"
-var jsx_runtime_ = __webpack_require__(6931);
-// EXTERNAL MODULE: ./node_modules/next/dist/build/webpack/loaders/next-flight-loader/action-proxy.js
-var action_proxy = __webpack_require__(2855);
-// EXTERNAL MODULE: ./app/viskum-app/login/page.module.scss
-var page_module = __webpack_require__(1094);
-var page_module_default = /*#__PURE__*/__webpack_require__.n(page_module);
-// EXTERNAL MODULE: ./lib/viskum-app/auth/userAuth.ts
-var userAuth = __webpack_require__(3308);
-;// CONCATENATED MODULE: ./lib/viskum-app/auth/index.ts
-
-
-
-// EXTERNAL MODULE: ./node_modules/next/navigation.js
-var navigation = __webpack_require__(117);
-;// CONCATENATED MODULE: ./app/viskum-app/login/page.tsx
-/* __next_internal_action_entry_do_not_use__ $$ACTION_0 */ 
-
-
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ page)
+/* harmony export */ });
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6931);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _page_module_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(1094);
+/* harmony import */ var _page_module_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_page_module_scss__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _SubmitAction__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(524);
 
 
 //import { handleLogin } from "@/lib/viskum-app/actions";
+
 function page({ params  }) {
-    async function handleLogin(...args) {
-        return $$ACTION_0.apply(null, (handleLogin.$$bound || []).concat(args));
-    }
-    (0,action_proxy/* default */.Z)("9d6730dd7d99202904b3ffa7d0767c0f7e0527ab", null, handleLogin, $$ACTION_0);
-    return /*#__PURE__*/ (0,jsx_runtime_.jsxs)("main", {
-        className: (page_module_default()).main,
+    return /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("main", {
+        className: (_page_module_scss__WEBPACK_IMPORTED_MODULE_2___default().main),
         children: [
-            /*#__PURE__*/ jsx_runtime_.jsx("br", {}),
-            /*#__PURE__*/ jsx_runtime_.jsx("br", {}),
-            /*#__PURE__*/ jsx_runtime_.jsx("h1", {
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("br", {}),
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("br", {}),
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("h1", {
                 children: "Login"
             }),
-            /*#__PURE__*/ jsx_runtime_.jsx("br", {}),
-            /*#__PURE__*/ (0,jsx_runtime_.jsxs)("p", {
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("br", {}),
+            /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("p", {
                 children: [
                     "You have entered a wrong uid",
-                    /*#__PURE__*/ jsx_runtime_.jsx("br", {}),
-                    /*#__PURE__*/ jsx_runtime_.jsx("br", {}),
+                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("br", {}),
+                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("br", {}),
                     "Please login with the right uid:"
                 ]
             }),
-            /*#__PURE__*/ (0,jsx_runtime_.jsxs)("form", {
-                action: handleLogin,
-                children: [
-                    /*#__PURE__*/ jsx_runtime_.jsx("input", {
-                        type: "text",
-                        name: "password",
-                        placeholder: "Enter uid",
-                        spellCheck: false
-                    }),
-                    /*#__PURE__*/ jsx_runtime_.jsx("button", {
-                        type: "submit",
-                        children: "Submit"
-                    })
-                ]
-            })
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_SubmitAction__WEBPACK_IMPORTED_MODULE_1__["default"], {})
         ]
     });
-}
-async function $$ACTION_0(data) {
-    const inputText = String(data.get("password"));
-    const result = await (0,userAuth/* userAuth */.l)(inputText, "check only");
-    if (result.length > 0) {
-        (0,navigation.redirect)(`/viskum-app/${inputText}`);
-    }
 }
 
 

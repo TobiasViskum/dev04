@@ -1,13 +1,13 @@
 {
+  "/page": "app/page.js",
   "/favicon.ico/route": "app/favicon.ico/route.js",
   "/_not-found": "app/_not-found.js",
-  "/page": "app/page.js",
   "/viskum-app/page": "app/viskum-app/page.js",
-  "/viskum-app/[uid]/page": "app/viskum-app/[uid]/page.js",
   "/viskum-app/login/page": "app/viskum-app/login/page.js",
+  "/viskum-app/[uid]/page": "app/viskum-app/[uid]/page.js",
   "/viskum-app/[uid]/cardio/page": "app/viskum-app/[uid]/cardio/page.js",
-  "/viskum-app/[uid]/chat/page": "app/viskum-app/[uid]/chat/page.js",
-  "/viskum-app/[uid]/dog/page": "app/viskum-app/[uid]/dog/page.js",
   "/viskum-app/[uid]/compete/page": "app/viskum-app/[uid]/compete/page.js",
-  "/viskum-app/[uid]/fitness/page": "app/viskum-app/[uid]/fitness/page.js"
+  "/viskum-app/[uid]/dog/page": "app/viskum-app/[uid]/dog/page.js",
+  "/viskum-app/[uid]/fitness/page": "app/viskum-app/[uid]/fitness/page.js",
+  "/viskum-app/[uid]/chat/page": "app/viskum-app/[uid]/chat/page.js"
 }

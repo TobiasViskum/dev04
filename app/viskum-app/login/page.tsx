@@ -2,18 +2,9 @@ import styles from "./page.module.scss";
 import { userAuth } from "@/lib/viskum-app/auth";
 import { redirect } from "next/navigation";
 //import { handleLogin } from "@/lib/viskum-app/actions";
+import SubmitAction from "./SubmitAction";
 
 export default function page({ params }: ViskumAppParams) {
-  async function handleLogin(data: FormData) {
-    "use server";
-    const inputText = String(data.get("password"));
-    const result = await userAuth(inputText, "check only");
-
-    if (result.length > 0) {
-      redirect(`/viskum-app/${inputText}`);
-    }
-  }
-
   return (
     <main className={styles.main}>
       <br />
@@ -26,10 +17,7 @@ export default function page({ params }: ViskumAppParams) {
         <br />
         Please login with the right uid:
       </p>
-      <form action={handleLogin}>
-        <input type="text" name="password" placeholder="Enter uid" spellCheck={false} />
-        <button type="submit">Submit</button>
-      </form>
+      <SubmitAction />
     </main>
   );
 }
