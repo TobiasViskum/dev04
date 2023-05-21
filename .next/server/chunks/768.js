@@ -698,7 +698,7 @@ exports.revalidateTag = cacheExports.revalidateTag;
 
 /***/ }),
 
-/***/ 3881:
+/***/ 1999:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
@@ -889,7 +889,7 @@ function unstable_cache(cb, keyParts, options = {}) {
 
 "use strict";
 
-module.exports = __webpack_require__(3881);
+module.exports = __webpack_require__(1999);
 
 
 /***/ }),

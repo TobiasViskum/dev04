@@ -1,58 +1,104 @@
 {
   "pages": {
+    "/page": [
+      "static/chunks/webpack-b615e7e06acd09cf.js",
+      "static/chunks/b7dfe19b-4f91d84de192b5e5.js",
+      "static/chunks/474-87fca73e23826d88.js",
+      "static/chunks/main-app-199cde7d66c72255.js",
+      "static/chunks/app/page-d09bce67b8e41ca1.js"
+    ],
     "/layout": [
-      "static/chunks/webpack-927f88b7ac739006.js",
+      "static/chunks/webpack-b615e7e06acd09cf.js",
       "static/chunks/b7dfe19b-4f91d84de192b5e5.js",
       "static/chunks/474-87fca73e23826d88.js",
       "static/chunks/main-app-199cde7d66c72255.js",
       "static/css/f34e473870a06d42.css",
-      "static/chunks/app/layout-4d95f6f30278b249.js"
+      "static/chunks/app/layout-7d271a5a4b3f16dd.js"
     ],
     "/error": [
-      "static/chunks/webpack-927f88b7ac739006.js",
+      "static/chunks/webpack-b615e7e06acd09cf.js",
       "static/chunks/b7dfe19b-4f91d84de192b5e5.js",
       "static/chunks/474-87fca73e23826d88.js",
       "static/chunks/main-app-199cde7d66c72255.js",
       "static/chunks/app/error-14dd200e1eb5bc20.js"
     ],
     "/not-found": [
-      "static/chunks/webpack-927f88b7ac739006.js",
+      "static/chunks/webpack-b615e7e06acd09cf.js",
       "static/chunks/b7dfe19b-4f91d84de192b5e5.js",
       "static/chunks/474-87fca73e23826d88.js",
       "static/chunks/main-app-199cde7d66c72255.js",
-      "static/chunks/app/not-found-28da22717238de0f.js"
+      "static/chunks/app/not-found-6591b807af3bd58d.js"
     ],
-    "/page": [
-      "static/chunks/webpack-927f88b7ac739006.js",
+    "/viskum-app/[uid]/page": [
+      "static/chunks/webpack-b615e7e06acd09cf.js",
       "static/chunks/b7dfe19b-4f91d84de192b5e5.js",
       "static/chunks/474-87fca73e23826d88.js",
       "static/chunks/main-app-199cde7d66c72255.js",
       "static/chunks/391-2c9c86981a6589cb.js",
-      "static/css/317c4b0e4ac0de8c.css",
-      "static/chunks/app/page-b223fd9d514dc302.js"
+      "static/css/4b9c7fcbdbe4e107.css",
+      "static/chunks/app/viskum-app/[uid]/page-a95a1983ea12aece.js"
     ],
-    "/fitness/page": [
-      "static/chunks/webpack-927f88b7ac739006.js",
+    "/viskum-app/[uid]/layout": [
+      "static/chunks/webpack-b615e7e06acd09cf.js",
+      "static/chunks/b7dfe19b-4f91d84de192b5e5.js",
+      "static/chunks/474-87fca73e23826d88.js",
+      "static/chunks/main-app-199cde7d66c72255.js",
+      "static/chunks/app/viskum-app/[uid]/layout-bbebc4caebd58094.js"
+    ],
+    "/viskum-app/login/page": [
+      "static/chunks/webpack-b615e7e06acd09cf.js",
+      "static/chunks/b7dfe19b-4f91d84de192b5e5.js",
+      "static/chunks/474-87fca73e23826d88.js",
+      "static/chunks/main-app-199cde7d66c72255.js",
+      "static/css/6b04ebe5b2c656cc.css",
+      "static/chunks/app/viskum-app/login/page-fcc8d532d930edd9.js"
+    ],
+    "/viskum-app/login/layout": [
+      "static/chunks/webpack-b615e7e06acd09cf.js",
+      "static/chunks/b7dfe19b-4f91d84de192b5e5.js",
+      "static/chunks/474-87fca73e23826d88.js",
+      "static/chunks/main-app-199cde7d66c72255.js",
+      "static/chunks/app/viskum-app/login/layout-73fb7bd583075a8c.js"
+    ],
+    "/viskum-app/[uid]/dog/page": [
+      "static/chunks/webpack-b615e7e06acd09cf.js",
       "static/chunks/b7dfe19b-4f91d84de192b5e5.js",
       "static/chunks/474-87fca73e23826d88.js",
       "static/chunks/main-app-199cde7d66c72255.js",
       "static/chunks/391-2c9c86981a6589cb.js",
-      "static/chunks/app/fitness/page-b59c217fab4981b7.js"
+      "static/chunks/app/viskum-app/[uid]/dog/page-84a856a1e405a817.js"
     ],
-    "/login/page": [
-      "static/chunks/webpack-927f88b7ac739006.js",
+    "/viskum-app/[uid]/cardio/page": [
+      "static/chunks/webpack-b615e7e06acd09cf.js",
       "static/chunks/b7dfe19b-4f91d84de192b5e5.js",
       "static/chunks/474-87fca73e23826d88.js",
       "static/chunks/main-app-199cde7d66c72255.js",
-      "static/css/1f2d4ec93f036d2b.css",
-      "static/chunks/app/login/page-059457afc20093b6.js"
+      "static/chunks/391-2c9c86981a6589cb.js",
+      "static/chunks/app/viskum-app/[uid]/cardio/page-c4e1a211a9183475.js"
     ],
-    "/login/layout": [
-      "static/chunks/webpack-927f88b7ac739006.js",
+    "/viskum-app/[uid]/chat/page": [
+      "static/chunks/webpack-b615e7e06acd09cf.js",
       "static/chunks/b7dfe19b-4f91d84de192b5e5.js",
       "static/chunks/474-87fca73e23826d88.js",
       "static/chunks/main-app-199cde7d66c72255.js",
-      "static/chunks/app/login/layout-2a42f6a35c9f330c.js"
+      "static/chunks/391-2c9c86981a6589cb.js",
+      "static/chunks/app/viskum-app/[uid]/chat/page-e80e66e3140d21be.js"
+    ],
+    "/viskum-app/[uid]/compete/page": [
+      "static/chunks/webpack-b615e7e06acd09cf.js",
+      "static/chunks/b7dfe19b-4f91d84de192b5e5.js",
+      "static/chunks/474-87fca73e23826d88.js",
+      "static/chunks/main-app-199cde7d66c72255.js",
+      "static/chunks/391-2c9c86981a6589cb.js",
+      "static/chunks/app/viskum-app/[uid]/compete/page-69213df405aff388.js"
+    ],
+    "/viskum-app/[uid]/fitness/page": [
+      "static/chunks/webpack-b615e7e06acd09cf.js",
+      "static/chunks/b7dfe19b-4f91d84de192b5e5.js",
+      "static/chunks/474-87fca73e23826d88.js",
+      "static/chunks/main-app-199cde7d66c72255.js",
+      "static/chunks/391-2c9c86981a6589cb.js",
+      "static/chunks/app/viskum-app/[uid]/fitness/page-a158b84a439f5dff.js"
     ]
   }
 }

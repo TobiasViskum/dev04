@@ -1213,7 +1213,7 @@ module.exports = {
     "cp950": {
         type: "_dbcs",
         table: function() {
-            return __webpack_require__(7783);
+            return __webpack_require__(4116);
         }
     },
     // Big5 has many variations and is an extension of cp950. We use Encoding Standard's as a consensus.
@@ -1221,7 +1221,7 @@ module.exports = {
     "big5hkscs": {
         type: "_dbcs",
         table: function() {
-            return (__webpack_require__(7783).concat)(__webpack_require__(5099));
+            return (__webpack_require__(4116).concat)(__webpack_require__(5099));
         },
         encodeSkipVals: [
             // Although Encoding Standard says we should avoid encoding to HKSCS area (See Step 1 of
@@ -15922,12 +15922,12 @@ module.exports = safer;
 
 "use strict";
 
-module.exports = __webpack_require__(9389);
+module.exports = __webpack_require__(6820);
 
 
 /***/ }),
 
-/***/ 9389:
+/***/ 6820:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
@@ -19711,7 +19711,7 @@ module.exports = JSON.parse('[["0","\\u0000",127],["8141","갂갃갅갆갋",4,"�
 
 /***/ }),
 
-/***/ 7783:
+/***/ 4116:
 /***/ ((module) => {
 
 "use strict";

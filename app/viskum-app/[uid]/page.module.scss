@@ -1,0 +1,11 @@
+@import "/app/mixins.scss";
+
+.main {
+  display: grid;
+  grid-template-rows: min-content min-content min-content;
+  row-gap: 24px;
+
+  box-sizing: border-box;
+
+  @include transition(grid-template-rows);
+}

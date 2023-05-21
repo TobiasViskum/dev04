@@ -5,7 +5,7 @@ exports.id = 155;
 exports.ids = [155];
 exports.modules = {
 
-/***/ 683:
+/***/ 7783:
 /***/ ((module) => {
 
 module.exports = require("next/dist/compiled/@edge-runtime/cookies");
