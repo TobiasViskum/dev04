@@ -24,7 +24,7 @@ export default function FavoritesCard(props: Props) {
       <div className={styles.rightIcons}>
         <form>
           <button className={styles.favoriteIconHolder}>
-            <img src={star_full.src} alt="icon" className={styles.favoriteIcon} />
+            <Image src={star_full} alt="icon" className={styles.favoriteIcon} />
           </button>
         </form>
         <form>
