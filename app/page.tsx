@@ -2,6 +2,7 @@ import styles from "./page.module.scss";
 import { getProfileData, getAppData } from "@/lib/db";
 import { Header, Main, Footer } from "@/components/page-index";
 import { userAuth } from "@/lib/auth/userAuth";
+import { Metadata } from "next";
 
 export default async function page(pageProps: any) {
   const uid = pageProps.searchParams.uid;
