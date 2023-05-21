@@ -7,9 +7,10 @@ export default function page({ params }: ViskumAppParams) {
   async function handleLogin(data: FormData) {
     "use server";
     const inputText = String(data.get("password"));
-    const responseUid = await userAuth(inputText);
-    if (responseUid) {
-      redirect(`/viskum-app/${responseUid}`);
+    const result = await userAuth(inputText, "check only");
+
+    if (result.length > 0) {
+      redirect(`/viskum-app/${inputText}`);
     }
   }
 

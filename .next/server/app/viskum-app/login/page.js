@@ -508,9 +508,9 @@ function page({ params  }) {
 }
 async function $$ACTION_0(data) {
     const inputText = String(data.get("password"));
-    const responseUid = await (0,userAuth/* userAuth */.l)(inputText);
-    if (responseUid) {
-        (0,navigation.redirect)(`/viskum-app/${responseUid}`);
+    const result = await (0,userAuth/* userAuth */.l)(inputText, "check only");
+    if (result.length > 0) {
+        (0,navigation.redirect)(`/viskum-app/${inputText}`);
     }
 }
 

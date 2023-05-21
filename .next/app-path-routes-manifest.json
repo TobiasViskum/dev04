@@ -1,13 +1,13 @@
 {
   "/favicon.ico/route": "/favicon.ico",
-  "/page": "/",
   "/_not-found": "/_not-found",
+  "/page": "/",
   "/viskum-app/page": "/viskum-app",
   "/viskum-app/[uid]/page": "/viskum-app/[uid]",
   "/viskum-app/login/page": "/viskum-app/login",
-  "/viskum-app/[uid]/compete/page": "/viskum-app/[uid]/compete",
-  "/viskum-app/[uid]/dog/page": "/viskum-app/[uid]/dog",
-  "/viskum-app/[uid]/fitness/page": "/viskum-app/[uid]/fitness",
   "/viskum-app/[uid]/cardio/page": "/viskum-app/[uid]/cardio",
-  "/viskum-app/[uid]/chat/page": "/viskum-app/[uid]/chat"
+  "/viskum-app/[uid]/chat/page": "/viskum-app/[uid]/chat",
+  "/viskum-app/[uid]/dog/page": "/viskum-app/[uid]/dog",
+  "/viskum-app/[uid]/compete/page": "/viskum-app/[uid]/compete",
+  "/viskum-app/[uid]/fitness/page": "/viskum-app/[uid]/fitness"
 }

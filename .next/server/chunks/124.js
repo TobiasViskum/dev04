@@ -70,17 +70,17 @@ async function execute(q, val) {
 /* harmony import */ var next_navigation__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_navigation__WEBPACK_IMPORTED_MODULE_1__);
 
 
-async function userAuth(uid) {
+async function userAuth(uid, specialAction) {
     if (uid == undefined) (0,next_navigation__WEBPACK_IMPORTED_MODULE_1__.redirect)("/viskum-app/login");
     const q = "SELECT * FROM dim_profile WHERE uid=(?)";
     const val = [
         uid
     ];
     const result = await (0,_lib_db__WEBPACK_IMPORTED_MODULE_0__/* .execute */ .h)(q, val);
-    if (result.length == 0) {
+    if (result.length == 0 && specialAction == undefined) {
         (0,next_navigation__WEBPACK_IMPORTED_MODULE_1__.redirect)(`/viskum-app/login`);
     }
-    return uid;
+    return result;
 }
 
 
