@@ -52,7 +52,7 @@ module.exports = require("next/dist/compiled/react-server-dom-webpack-experiment
 
 /***/ }),
 
-/***/ 5232:
+/***/ 1090:
 /***/ ((module) => {
 
 "use strict";
@@ -301,7 +301,7 @@ __webpack_require__.r(__webpack_exports__);
         'login',
         {
         children: ['__PAGE__', {}, {
-          page: [() => Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 4752)), "C:\\Users\\tobia\\Personal\\Development\\React\\dev04\\app\\viskum-app\\login\\page.tsx"],
+          page: [() => Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 2506)), "C:\\Users\\tobia\\Personal\\Development\\React\\dev04\\app\\viskum-app\\login\\page.tsx"],
           
         }]
       },
@@ -364,27 +364,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 2549:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-
-const actions = {
-'4b16042e531e6012c022d4c9e79bd8dd48765ec2': () => Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 4266)).then(mod => mod["handleLogin"]),
-}
-
-async function endpoint(id, ...args) {
-  const action = await actions[id]()
-  return action.apply(null, args)
-}
-
-// Using CJS to avoid this to be tree-shaken away due to unused exports.
-module.exports = {
-  '4b16042e531e6012c022d4c9e79bd8dd48765ec2': endpoint.bind(null, '4b16042e531e6012c022d4c9e79bd8dd48765ec2'),
-}
-
-
-/***/ }),
-
 /***/ 7297:
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
@@ -431,7 +410,7 @@ function RootLayout({ children  }) {
 
 /***/ }),
 
-/***/ 4752:
+/***/ 2506:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -448,17 +427,28 @@ var jsx_runtime_ = __webpack_require__(6931);
 // EXTERNAL MODULE: ./app/viskum-app/login/page.module.scss
 var page_module = __webpack_require__(1094);
 var page_module_default = /*#__PURE__*/__webpack_require__.n(page_module);
-// EXTERNAL MODULE: ./lib/viskum-app/actions/actions.ts + 1 modules
-var actions = __webpack_require__(4266);
-;// CONCATENATED MODULE: ./lib/viskum-app/actions/index.ts
+// EXTERNAL MODULE: ./lib/viskum-app/auth/userAuth.ts
+var userAuth = __webpack_require__(3308);
+;// CONCATENATED MODULE: ./lib/viskum-app/auth/index.ts
 
 
 
+// EXTERNAL MODULE: ./node_modules/next/navigation.js
+var navigation = __webpack_require__(117);
 ;// CONCATENATED MODULE: ./app/viskum-app/login/page.tsx
 
 
 
+
+//import { handleLogin } from "@/lib/viskum-app/actions";
 function page({ params  }) {
+    async function handleLogin(data) {
+        const inputText = String(data.get("password"));
+        const responseUid = await (0,userAuth/* userAuth */.l)(inputText);
+        if (responseUid) {
+            (0,navigation.redirect)(`/viskum-app/${responseUid}`);
+        }
+    }
     return /*#__PURE__*/ (0,jsx_runtime_.jsxs)("main", {
         className: (page_module_default()).main,
         children: [
@@ -477,7 +467,7 @@ function page({ params  }) {
                 ]
             }),
             /*#__PURE__*/ (0,jsx_runtime_.jsxs)("form", {
-                action: actions.handleLogin,
+                action: handleLogin,
                 children: [
                     /*#__PURE__*/ jsx_runtime_.jsx("input", {
                         type: "text",
@@ -496,77 +486,6 @@ function page({ params  }) {
 }
 
 
-/***/ }),
-
-/***/ 4266:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-// ESM COMPAT FLAG
-__webpack_require__.r(__webpack_exports__);
-
-// EXPORTS
-__webpack_require__.d(__webpack_exports__, {
-  "handleLogin": () => (/* binding */ handleLogin)
-});
-
-// EXTERNAL MODULE: ./node_modules/next/dist/build/webpack/loaders/next-flight-loader/action-proxy.js
-var action_proxy = __webpack_require__(2855);
-// EXTERNAL MODULE: ./lib/viskum-app/auth/userAuth.ts
-var userAuth = __webpack_require__(3308);
-;// CONCATENATED MODULE: ./lib/viskum-app/auth/index.ts
-
-
-
-// EXTERNAL MODULE: ./node_modules/next/navigation.js
-var navigation = __webpack_require__(117);
-// EXTERNAL MODULE: ./node_modules/next/dist/build/webpack/loaders/next-flight-loader/action-validate.js
-var action_validate = __webpack_require__(1049);
-;// CONCATENATED MODULE: ./lib/viskum-app/actions/actions.ts
-/* __next_internal_action_entry_do_not_use__ handleLogin */ 
-
-
-async function handleLogin(data) {
-    const inputText = String(data.get("password"));
-    const responseUid = await (0,userAuth/* userAuth */.l)(inputText);
-    if (responseUid) {
-        (0,navigation.redirect)(`/viskum-app/${responseUid}`);
-    }
-}
-
-(0,action_validate/* default */.Z)([
-    handleLogin
-]);
-(0,action_proxy/* default */.Z)("4b16042e531e6012c022d4c9e79bd8dd48765ec2", null, handleLogin);
-
-
-/***/ }),
-
-/***/ 1049:
-/***/ ((__unused_webpack_module, exports) => {
-
-"use strict";
-var __webpack_unused_export__;
-
-__webpack_unused_export__ = ({
-    value: true
-});
-Object.defineProperty(exports, "Z", ({
-    enumerable: true,
-    get: function() {
-        return ensureServerEntryExports;
-    }
-}));
-function ensureServerEntryExports(actions) {
-    for(let i = 0; i < actions.length; i++){
-        const action = actions[i];
-        if (typeof action !== "function") {
-            throw new Error(`A "use server" file can only export async functions, found ${typeof action}.`);
-        }
-    }
-} //# sourceMappingURL=action-validate.js.map
-
-
 /***/ })
 
 };
@@ -576,7 +495,7 @@ function ensureServerEntryExports(actions) {
 var __webpack_require__ = require("../../../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [859,571,198,117,173,855,342,124], () => (__webpack_exec__(4602)));
+var __webpack_exports__ = __webpack_require__.X(0, [859,571,198,117,173,342,124], () => (__webpack_exec__(4602)));
 module.exports = __webpack_exports__;
 
 })();
