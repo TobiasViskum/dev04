@@ -20,7 +20,8 @@ interface ProfileData {
   greetings_statement_danish: string;
   description_statement_danish: string;
   last_name: string;
-  favorites: string;
+  favorites: { [key: string]: string };
+  password: string;
 }
 
 interface AppData {

@@ -1,15 +1,30 @@
 import Image from "next/image";
 import styles from "./TabsCard.module.scss";
-import { arrow } from "@/assets/images";
+import { arrow, star_full, star_outline } from "@/assets/images";
 import { appImages } from "@/lib/util";
+import { updateFavorite } from "@/lib/db";
 
 interface Props {
   appData: AppData;
+  profileData: ProfileData;
 }
 
 export default function TabsCard(props: Props) {
+  const profileData = props.profileData;
   const appData = props.appData;
+  const favorites: any = profileData.favorites;
+  const isFavorite: string | undefined = favorites[appData.name_id];
+  const name_id = appData.name_id;
   const appImageData = appImages[appData.name_id];
+
+  async function handleFavoriteClick() {
+    "use server";
+    const newState = isFavorite ? true : false;
+    updateFavorite(name_id, newState);
+  }
+  async function handleArrowClick() {
+    "use server";
+  }
 
   return (
     <div className={styles.container}>
@@ -24,8 +39,21 @@ export default function TabsCard(props: Props) {
         <h3>{appData.name}</h3>
         <p>{appData.category}</p>
       </div>
-      <div className={styles.arrowHolder}>
-        <Image src={arrow} alt="icon" className={styles.arrow} />
+      <div className={styles.rightIcons}>
+        <form action={handleFavoriteClick}>
+          <button type="submit" className={styles.favoriteIconHolder}>
+            <Image
+              src={isFavorite ? star_full : star_outline}
+              alt="icon"
+              className={styles.favoriteIcon}
+            />
+          </button>
+        </form>
+        <form action={handleArrowClick}>
+          <button type="submit" className={styles.arrowHolder}>
+            <Image src={arrow} alt="icon" className={styles.arrow} />
+          </button>
+        </form>
       </div>
     </div>
   );

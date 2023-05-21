@@ -40,7 +40,7 @@ module.exports = require("next/dist/compiled/ua-parser-js");
 
 /***/ }),
 
-/***/ 8174:
+/***/ 4021:
 /***/ ((module) => {
 
 module.exports = import("next/dist/compiled/@vercel/og/index.node.js");;
@@ -136,7 +136,7 @@ const dynamic = 'force-static'
 var __webpack_require__ = require("../../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [859,109], () => (__webpack_exec__(2145)));
+var __webpack_exports__ = __webpack_require__.X(0, [859,198,109], () => (__webpack_exec__(2145)));
 module.exports = __webpack_exports__;
 
 })();

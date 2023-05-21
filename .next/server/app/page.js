@@ -52,7 +52,7 @@ module.exports = require("next/dist/compiled/react-server-dom-webpack-experiment
 
 /***/ }),
 
-/***/ 1090:
+/***/ 5232:
 /***/ ((module) => {
 
 "use strict";
@@ -108,7 +108,7 @@ module.exports = require("next/dist/shared/lib/hooks-client-context.js");
 
 /***/ }),
 
-/***/ 6795:
+/***/ 4486:
 /***/ ((module) => {
 
 "use strict";
@@ -140,11 +140,27 @@ module.exports = require("next/dist/shared/lib/image-loader");
 
 /***/ }),
 
+/***/ 4964:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/router-context.js");
+
+/***/ }),
+
 /***/ 1751:
 /***/ ((module) => {
 
 "use strict";
 module.exports = require("next/dist/shared/lib/router/utils/add-path-prefix.js");
+
+/***/ }),
+
+/***/ 3938:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/router/utils/format-url.js");
 
 /***/ }),
 
@@ -164,6 +180,14 @@ module.exports = require("next/dist/shared/lib/router/utils/is-bot.js");
 
 /***/ }),
 
+/***/ 1109:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/router/utils/is-local-url.js");
+
+/***/ }),
+
 /***/ 8854:
 /***/ ((module) => {
 
@@ -180,6 +204,14 @@ module.exports = require("next/dist/shared/lib/router/utils/remove-trailing-slas
 
 /***/ }),
 
+/***/ 7782:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/router/utils/resolve-href.js");
+
+/***/ }),
+
 /***/ 3349:
 /***/ ((module) => {
 
@@ -193,6 +225,14 @@ module.exports = require("next/dist/shared/lib/server-inserted-html.js");
 
 "use strict";
 module.exports = require("next/dist/shared/lib/side-effect.js");
+
+/***/ }),
+
+/***/ 9232:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/utils.js");
 
 /***/ }),
 
@@ -228,14 +268,6 @@ module.exports = require("events");
 
 /***/ }),
 
-/***/ 7147:
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("fs");
-
-/***/ }),
-
 /***/ 1808:
 /***/ ((module) => {
 
@@ -252,11 +284,27 @@ module.exports = require("path");
 
 /***/ }),
 
+/***/ 7282:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("process");
+
+/***/ }),
+
 /***/ 2781:
 /***/ ((module) => {
 
 "use strict";
 module.exports = require("stream");
+
+/***/ }),
+
+/***/ 1576:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("string_decoder");
 
 /***/ }),
 
@@ -289,6 +337,14 @@ module.exports = require("url");
 
 "use strict";
 module.exports = require("util");
+
+/***/ }),
+
+/***/ 9796:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("zlib");
 
 /***/ }),
 
@@ -351,7 +407,7 @@ __webpack_require__.r(__webpack_exports__);
         '',
         {
         children: ['__PAGE__', {}, {
-          page: [() => Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 9149)), "C:\\Users\\tobia\\Personal\\Development\\React\\dev04\\app\\page.tsx"],
+          page: [() => Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 2683)), "C:\\Users\\tobia\\Personal\\Development\\React\\dev04\\app\\page.tsx"],
           metadata: {
     icon: [(async (props) => (await Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 4756))).default(props))],
     apple: [],
@@ -402,21 +458,52 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 8352:
+/***/ 6020:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+
+const actions = {
+'e6c4ef28f1a8b6c57347165d1b286752fbb74497': () => Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 7432)).then(mod => mod["$$ACTION_0"]),
+'b75c94a03b14251e9332519a0be36b305cdbed8b': () => Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 7432)).then(mod => mod["$$ACTION_1"]),
+}
+
+async function endpoint(id, ...args) {
+  const action = await actions[id]()
+  return action.apply(null, args)
+}
+
+// Using CJS to avoid this to be tree-shaken away due to unused exports.
+module.exports = {
+  'e6c4ef28f1a8b6c57347165d1b286752fbb74497': endpoint.bind(null, 'e6c4ef28f1a8b6c57347165d1b286752fbb74497'),
+  'b75c94a03b14251e9332519a0be36b305cdbed8b': endpoint.bind(null, 'b75c94a03b14251e9332519a0be36b305cdbed8b'),
+}
+
+
+/***/ }),
+
+/***/ 7664:
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
+Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 3280, 23));
+Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 9274, 23));
+Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 3349, 23));
+Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 2144, 23));
+Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 9883));
 Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 408, 23));
+Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 5908));
 Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 6826));
 Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 6038));
-Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 302));
 Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 5308));
-Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 5908));
+Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 302));
 Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 1515));
 Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 1660));
 Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 8594));
 Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 1954));
+Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 1995));
+Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 1491));
 Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 4783));
-Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 9883))
+Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 8701));
+Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 53, 23))
 
 /***/ }),
 
@@ -425,7 +512,14 @@ Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_re
 
 "use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "$e": () => (/* reexport safe */ _compete_png__WEBPACK_IMPORTED_MODULE_8__["default"]),
+/* harmony export */   "AR": () => (/* reexport safe */ _fitness_png__WEBPACK_IMPORTED_MODULE_4__["default"]),
+/* harmony export */   "Eq": () => (/* reexport safe */ _dog_png__WEBPACK_IMPORTED_MODULE_5__["default"]),
+/* harmony export */   "P": () => (/* reexport safe */ _star_full_png__WEBPACK_IMPORTED_MODULE_9__["default"]),
+/* harmony export */   "W6": () => (/* reexport safe */ _chat_png__WEBPACK_IMPORTED_MODULE_6__["default"]),
+/* harmony export */   "pU": () => (/* reexport safe */ _cardio_png__WEBPACK_IMPORTED_MODULE_7__["default"]),
 /* harmony export */   "uy": () => (/* reexport safe */ _settings_png__WEBPACK_IMPORTED_MODULE_1__["default"]),
+/* harmony export */   "x7": () => (/* reexport safe */ _arrow_png__WEBPACK_IMPORTED_MODULE_3__["default"]),
 /* harmony export */   "yC": () => (/* reexport safe */ _search_png__WEBPACK_IMPORTED_MODULE_2__["default"])
 /* harmony export */ });
 /* harmony import */ var _profileTobias_png__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6826);
@@ -437,6 +531,8 @@ Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_re
 /* harmony import */ var _chat_png__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(1660);
 /* harmony import */ var _cardio_png__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(8594);
 /* harmony import */ var _compete_png__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(1954);
+/* harmony import */ var _star_full_png__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(1995);
+/* harmony import */ var _star_outline_png__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(1491);
 
 
 
@@ -447,6 +543,114 @@ Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_re
 
 
 
+
+
+
+
+/***/ }),
+
+/***/ 8701:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+// ESM COMPAT FLAG
+__webpack_require__.r(__webpack_exports__);
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  "default": () => (/* binding */ FavoritesCard)
+});
+
+// EXTERNAL MODULE: external "next/dist/compiled/react-experimental/jsx-runtime"
+var jsx_runtime_ = __webpack_require__(6931);
+// EXTERNAL MODULE: ./node_modules/next/image.js
+var next_image = __webpack_require__(8421);
+var image_default = /*#__PURE__*/__webpack_require__.n(next_image);
+// EXTERNAL MODULE: ./components/page-index/FavoritesSection/FavoritesCard/FavoritesCard.module.scss
+var FavoritesCard_module = __webpack_require__(4574);
+var FavoritesCard_module_default = /*#__PURE__*/__webpack_require__.n(FavoritesCard_module);
+// EXTERNAL MODULE: ./assets/images/index.ts
+var assets_images = __webpack_require__(5049);
+;// CONCATENATED MODULE: ./lib/util/appImages.ts
+
+const appImages = {
+    fitness: {
+        image: assets_images/* fitness */.AR,
+        size: 90
+    },
+    dog: {
+        image: assets_images/* dog */.Eq,
+        size: 90
+    },
+    cardio: {
+        image: assets_images/* cardio */.pU,
+        size: 80
+    },
+    compete: {
+        image: assets_images/* compete */.$e,
+        size: 80
+    },
+    chat: {
+        image: assets_images/* chat */.W6,
+        size: 80
+    }
+};
+
+;// CONCATENATED MODULE: ./lib/util/index.ts
+
+
+
+
+;// CONCATENATED MODULE: ./components/page-index/FavoritesSection/FavoritesCard/FavoritesCard.tsx
+/* __next_internal_client_entry_do_not_use__ default auto */ 
+
+
+
+
+function FavoritesCard(props) {
+    const appData = props.appData;
+    const appImageData = appImages[appData.name_id];
+    return /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+        className: (FavoritesCard_module_default()).container,
+        children: [
+            /*#__PURE__*/ jsx_runtime_.jsx("div", {
+                className: (FavoritesCard_module_default()).iconHolder + " " + appData.name_id,
+                children: /*#__PURE__*/ jsx_runtime_.jsx((image_default()), {
+                    src: appImageData.image,
+                    alt: "icon",
+                    style: {
+                        height: `${appImageData.size}%`,
+                        width: `${appImageData.size}%`
+                    }
+                })
+            }),
+            /*#__PURE__*/ jsx_runtime_.jsx("h3", {
+                children: appData.name
+            }),
+            /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+                className: (FavoritesCard_module_default()).rightIcons,
+                children: [
+                    /*#__PURE__*/ jsx_runtime_.jsx("button", {
+                        className: (FavoritesCard_module_default()).favoriteIconHolder,
+                        children: /*#__PURE__*/ jsx_runtime_.jsx((image_default()), {
+                            src: assets_images/* star_full */.P,
+                            alt: "icon",
+                            className: (FavoritesCard_module_default()).favoriteIcon
+                        })
+                    }),
+                    /*#__PURE__*/ jsx_runtime_.jsx("button", {
+                        className: (FavoritesCard_module_default()).arrowHolder,
+                        children: /*#__PURE__*/ jsx_runtime_.jsx((image_default()), {
+                            src: assets_images/* arrow */.x7,
+                            alt: "icon",
+                            className: (FavoritesCard_module_default()).arrow
+                        })
+                    })
+                ]
+            })
+        ]
+    });
+}
 
 
 /***/ }),
@@ -633,13 +837,16 @@ function SearchBar() {
 
 /***/ }),
 
-/***/ 259:
+/***/ 4574:
 /***/ ((module) => {
 
 // Exports
 module.exports = {
 	"container": "FavoritesCard_container__4GsQh",
 	"iconHolder": "FavoritesCard_iconHolder__G0H1h",
+	"rightIcons": "FavoritesCard_rightIcons__5qXRc",
+	"favoriteIconHolder": "FavoritesCard_favoriteIconHolder__u74YK",
+	"favoriteIcon": "FavoritesCard_favoriteIcon__dYDii",
 	"arrowHolder": "FavoritesCard_arrowHolder__L4eUb",
 	"arrow": "FavoritesCard_arrow__xDmVO"
 };
@@ -727,6 +934,9 @@ module.exports = {
 	"container": "TabsCard_container__aDolx",
 	"iconHolder": "TabsCard_iconHolder__0uGki",
 	"textHolder": "TabsCard_textHolder__KgwDk",
+	"rightIcons": "TabsCard_rightIcons__RGkXX",
+	"favoriteIconHolder": "TabsCard_favoriteIconHolder__8bxoD",
+	"favoriteIcon": "TabsCard_favoriteIcon__cy87K",
 	"arrowHolder": "TabsCard_arrowHolder___Yk4s",
 	"arrow": "TabsCard_arrow__oQhzu"
 };
@@ -734,7 +944,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 5258:
+/***/ 4835:
 /***/ ((module) => {
 
 // Exports
@@ -746,7 +956,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 9149:
+/***/ 2683:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -755,13 +965,13 @@ __webpack_require__.r(__webpack_exports__);
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "default": () => (/* binding */ Home)
+  "default": () => (/* binding */ page)
 });
 
 // EXTERNAL MODULE: external "next/dist/compiled/react-experimental/jsx-runtime"
 var jsx_runtime_ = __webpack_require__(6931);
-// EXTERNAL MODULE: ./lib/db/index.ts + 3 modules
-var db = __webpack_require__(4486);
+// EXTERNAL MODULE: ./lib/db/index.ts + 4 modules
+var db = __webpack_require__(7105);
 // EXTERNAL MODULE: ./node_modules/next/dist/build/webpack/loaders/next-flight-loader/module-proxy.js
 var module_proxy = __webpack_require__(5985);
 ;// CONCATENATED MODULE: ./components/page-index/Header/Header.tsx
@@ -818,24 +1028,246 @@ var SearchSection_module_default = /*#__PURE__*/__webpack_require__.n(SearchSect
 // EXTERNAL MODULE: ./node_modules/next/image.js
 var next_image = __webpack_require__(2208);
 var image_default = /*#__PURE__*/__webpack_require__.n(next_image);
+// EXTERNAL MODULE: ./assets/images/index.ts + 11 modules
+var assets_images = __webpack_require__(2684);
+// EXTERNAL MODULE: ./lib/util/index.ts + 2 modules
+var util = __webpack_require__(6129);
+;// CONCATENATED MODULE: ./components/page-index/SearchSection/SearchBar/SearchBar.tsx
+
+const SearchBar_proxy = (0,module_proxy.createProxy)(String.raw`C:\Users\tobia\Personal\Development\React\dev04\components\page-index\SearchSection\SearchBar\SearchBar.tsx`)
+
+// Accessing the __esModule property and exporting $$typeof are required here.
+// The __esModule getter forces the proxy target to create the default export
+// and the $$typeof value is for rendering logic to determine if the module
+// is a client boundary.
+const { __esModule: SearchBar_esModule, $$typeof: SearchBar_$$typeof } = SearchBar_proxy;
+/* harmony default export */ const SearchBar = (SearchBar_proxy.default);
+
+;// CONCATENATED MODULE: ./components/page-index/SearchSection/SearchSection.tsx
+
+
+
+
+
+
+function SearchSection(props) {
+    const profileData = props.profileData;
+    return /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+        className: (SearchSection_module_default()).searchSection,
+        id: "searchSection",
+        children: [
+            /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+                className: (SearchSection_module_default()).upperRow,
+                children: [
+                    /*#__PURE__*/ jsx_runtime_.jsx("div", {
+                        className: (SearchSection_module_default()).profileHolder,
+                        id: "profileIcon",
+                        children: /*#__PURE__*/ jsx_runtime_.jsx((image_default()), {
+                            src: assets_images/* profileTobias */.Ht,
+                            alt: "profile",
+                            className: (SearchSection_module_default()).profileIcon
+                        })
+                    }),
+                    /*#__PURE__*/ (0,jsx_runtime_.jsxs)("h1", {
+                        id: "title",
+                        className: (SearchSection_module_default()).title,
+                        children: [
+                            (0,util/* translator */.O)("Family"),
+                            ", ",
+                            profileData.last_name
+                        ]
+                    })
+                ]
+            }),
+            /*#__PURE__*/ jsx_runtime_.jsx("div", {
+                className: (SearchSection_module_default()).lowerRow,
+                children: /*#__PURE__*/ jsx_runtime_.jsx(SearchBar, {})
+            })
+        ]
+    });
+}
+
+// EXTERNAL MODULE: ./components/page-index/FavoritesSection/FavoritesSection.module.scss
+var FavoritesSection_module = __webpack_require__(1192);
+var FavoritesSection_module_default = /*#__PURE__*/__webpack_require__.n(FavoritesSection_module);
+;// CONCATENATED MODULE: ./components/page-index/FavoritesSection/FavoritesCard/FavoritesCard.tsx
+
+const FavoritesCard_proxy = (0,module_proxy.createProxy)(String.raw`C:\Users\tobia\Personal\Development\React\dev04\components\page-index\FavoritesSection\FavoritesCard\FavoritesCard.tsx`)
+
+// Accessing the __esModule property and exporting $$typeof are required here.
+// The __esModule getter forces the proxy target to create the default export
+// and the $$typeof value is for rendering logic to determine if the module
+// is a client boundary.
+const { __esModule: FavoritesCard_esModule, $$typeof: FavoritesCard_$$typeof } = FavoritesCard_proxy;
+/* harmony default export */ const FavoritesCard = (FavoritesCard_proxy.default);
+
+;// CONCATENATED MODULE: ./components/page-index/FavoritesSection/FavoritesSection.tsx
+
+
+
+function findFavorites(appData, favorites) {
+    let hasFoundFavorite = false;
+    return appData.map((app, index)=>{
+        if (favorites[app.name_id] != undefined) {
+            hasFoundFavorite = true;
+            return /*#__PURE__*/ jsx_runtime_.jsx(FavoritesCard, {
+                appData: app
+            }, index);
+        }
+        if (appData.length == index + 1 && hasFoundFavorite == false) {
+            return /*#__PURE__*/ jsx_runtime_.jsx("p", {
+                className: (FavoritesSection_module_default()).noFavoritesFoundParagraph,
+                children: "You dont have any favorites yet!"
+            }, index);
+        }
+    });
+}
+function FavoritesSections(props) {
+    const profileData = props.profileData;
+    const appData = props.appData;
+    const result = findFavorites(appData, profileData.favorites);
+    return /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+        className: (FavoritesSection_module_default()).main,
+        children: [
+            /*#__PURE__*/ jsx_runtime_.jsx("h2", {
+                children: "Favorites"
+            }),
+            /*#__PURE__*/ jsx_runtime_.jsx("div", {
+                className: (FavoritesSection_module_default()).cardHolder,
+                children: result
+            })
+        ]
+    });
+}
+
+// EXTERNAL MODULE: ./components/page-index/TabsSection/TabsSection.module.scss
+var TabsSection_module = __webpack_require__(4835);
+var TabsSection_module_default = /*#__PURE__*/__webpack_require__.n(TabsSection_module);
+// EXTERNAL MODULE: ./components/page-index/TabsSection/TabsCard/TabsCard.tsx
+var TabsCard = __webpack_require__(7432);
+// EXTERNAL MODULE: ./node_modules/next/link.js
+var next_link = __webpack_require__(2585);
+var link_default = /*#__PURE__*/__webpack_require__.n(next_link);
+;// CONCATENATED MODULE: ./components/page-index/TabsSection/TabsSection.tsx
+
+
+
+
+function findTabs(appData, profileData) {
+    return appData.map((app, index)=>{
+        return /*#__PURE__*/ jsx_runtime_.jsx(TabsCard["default"], {
+            appData: app,
+            profileData: profileData
+        }, index);
+    });
+}
+function TabsSection(props) {
+    const appData = props.appData;
+    const profileData = props.profileData;
+    const result = findTabs(appData, profileData);
+    return /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+        className: (TabsSection_module_default()).main,
+        children: [
+            /*#__PURE__*/ jsx_runtime_.jsx("h2", {
+                children: "Tabs"
+            }),
+            /*#__PURE__*/ jsx_runtime_.jsx("div", {
+                className: (TabsSection_module_default()).cardHolder,
+                children: result
+            }),
+            /*#__PURE__*/ jsx_runtime_.jsx((link_default()), {
+                href: {
+                    pathname: "/fitness",
+                    query: {
+                        uid: "d5141240-33e2-4d7a-807e-e5df34b64d71"
+                    }
+                },
+                children: "Navigate"
+            })
+        ]
+    });
+}
+
+;// CONCATENATED MODULE: ./components/page-index/index.ts
+
+
+
+
+
+
+
+
+// EXTERNAL MODULE: ./lib/auth/userAuth.ts
+var userAuth = __webpack_require__(6323);
+;// CONCATENATED MODULE: ./app/page.tsx
+
+
+
+
+async function page(pageProps) {
+    const uid = pageProps.searchParams.uid;
+    await (0,userAuth/* userAuth */.l)(uid);
+    const [[profileData], appData] = await Promise.all([
+        (0,db/* getProfileData */.$y)(uid),
+        (0,db/* getAppData */.$s)()
+    ]);
+    return /*#__PURE__*/ (0,jsx_runtime_.jsxs)(jsx_runtime_.Fragment, {
+        children: [
+            /*#__PURE__*/ jsx_runtime_.jsx(Header, {}),
+            /*#__PURE__*/ jsx_runtime_.jsx(Main, {
+                profileData: JSON.stringify(profileData),
+                appData: JSON.stringify(appData)
+            }),
+            /*#__PURE__*/ jsx_runtime_.jsx(Footer, {})
+        ]
+    });
+}
+
+
+/***/ }),
+
+/***/ 2684:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  "x7": () => (/* reexport */ arrow),
+  "pU": () => (/* reexport */ cardio),
+  "W6": () => (/* reexport */ chat),
+  "$e": () => (/* reexport */ compete),
+  "Eq": () => (/* reexport */ dog),
+  "AR": () => (/* reexport */ fitness),
+  "Ht": () => (/* reexport */ profileTobias),
+  "P": () => (/* reexport */ star_full),
+  "YO": () => (/* reexport */ star_outline)
+});
+
+// UNUSED EXPORTS: search, settingsPng
+
 ;// CONCATENATED MODULE: ./assets/images/profileTobias.png
-/* harmony default export */ const profileTobias = ({"src":"/_next/static/media/profileTobias.56bde7f5.png","height":246,"width":244,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAABBklEQVR42g3Mu07CUBwH4F//HA6SWrmEFCHhEi8LDDqIGu3iru/gZHwkH0RdnL3MJpgYQwyDFUm1hbbp7fQc2b982t3DfV0vFC6SpXeVCXHS67ZUf6unaVS29VprwJTE28J3m5/vE3x7EcbjD21/2JO1htleW5+cszSTTREF0rWn4OAkshJenl9RMxswu/1r5vuBSkNBrlAoUo6vmYMgBw2piMqmPGV/Sx8bnKPNy4hTicUKVjjh6HAEo9UBs237MalXLUMvSeE61NRL6HSr8tjaWw27RFGs3czmIYI4BeOA8zvHzuiA9IpBoTf9oTNr+9bQmB1HCUUqUzkUwih5YmXz0nEKg3+/nnKkPQVrugAAAABJRU5ErkJggg==","blurWidth":8,"blurHeight":8});
+/* harmony default export */ const profileTobias = ({"src":"/_next/static/media/profileTobias.56bde7f5.png","height":246,"width":244,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAMAAADz0U65AAAAdVBMVEWFcXDz8/NtWFdqeIOQnJyupZ/z7uKgoqO5sqqxpZ12gYNyc4KOmJqxt7WUeHS/vLeGYmB+YlzRzMN8YWSpp6aagnrv5NS+vMH///9hV1uAbGprZWZdV16SlZWZj4x+d3vQxrr///x2gYyvtreFX2KIgYD37+BowS8VAAAAGnRSTlP+FfxdFLzp/P79s+b26/xg/v5a/rL6+Pxi/N9CH/EAAAAJcEhZcwAACxMAAAsTAQCanBgAAABHSURBVHicBcEFEoAwEASwbaniDnN17P9PJIEYpMmfYuhMTK/NM25LBMQVOjjnfdJoNcg7e6AO/bNse0F1YeSmKIiGJi5P9gOltwRmEc1nFwAAAABJRU5ErkJggg==","blurWidth":8,"blurHeight":8});
 ;// CONCATENATED MODULE: ./assets/images/settings.png
-/* harmony default export */ const settings = ({"src":"/_next/static/media/settings.0ba832d2.png","height":512,"width":512,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAMAAADz0U65AAAAUVBMVEUEdP4Ec/4EdP4Ec/4EdP4Fc/4Ec/4EdP4Ec/4FdP4Ec/4Ec/4Ec/4Ec/4EdP4Fc/4Ec/4EdP4Ec/4FdP4Ec/4Fc/4EdP4FdP4EdP4Fc/4Ec/6O3LfsAAAAF3RSTlMAACkpKioqKyzCwsPE7u/v8Pn5+/v8/h0GiB4AAAA/SURBVHjaLcbJAYAgEATB8UbAC1ZpyD9QP9SrpMVnC27QegHldvIkeEqU1QYN0/v1xJIgsWs7K3CM0hyy+Uk/m60ER2KC+/8AAAAASUVORK5CYII=","blurWidth":8,"blurHeight":8});
+/* harmony default export */ const settings = ({"src":"/_next/static/media/settings.0ba832d2.png","height":512,"width":512,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAMAAADz0U65AAAAGFBMVEUFdv8FdP8Fdv9MaXEFdv8FdP8Fcf8FdP6iXQ3OAAAACHRSTlP9L7IA67UytrDnEDsAAAAJcEhZcwAACxMAAAsTAQCanBgAAAAtSURBVHicNcvJCQAwDAPBlc/+Ow6xk9fAIuFK6HIUAFHYFYwJfLY9asdi7ik/Db0AWuWmh/sAAAAASUVORK5CYII=","blurWidth":8,"blurHeight":8});
 ;// CONCATENATED MODULE: ./assets/images/search.png
-/* harmony default export */ const search = ({"src":"/_next/static/media/search.f6c519d6.png","height":512,"width":512,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAQAAABuBnYAAAAAV0lEQVR42mMAgX9MQMz1jw/EgnFt/035N/mfOwME/GP/N+MfB5Ce8o8fpqLnn+A/5n+T//FCuP7/Dv/r/TfjnxNEQ+K///+CQcbCDD3+LxXCBGIIQGYCAOe6LXptdS1iAAAAAElFTkSuQmCC","blurWidth":8,"blurHeight":8});
+/* harmony default export */ const search = ({"src":"/_next/static/media/search.f6c519d6.png","height":512,"width":512,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAMAAADz0U65AAAAHlBMVEVMaXH////////////////////////////////////Z6AnKAAAACXRSTlMAjBEIRb9XamQzNomPAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAL0lEQVR4nD2LyQ0AIAzDnF7A/gujUolPHOUAwKwVQoqmy1ydfVM51T7FG+eaCz68DO4AYDTgUBcAAAAASUVORK5CYII=","blurWidth":8,"blurHeight":8});
 ;// CONCATENATED MODULE: ./assets/images/arrow.png
-/* harmony default export */ const arrow = ({"src":"/_next/static/media/arrow.759f964b.png","height":512,"width":512,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAQAAABuBnYAAAAAR0lEQVR42mNgYPhn9e/7XzkgzcrAAAT/GYHMef++/pUA0iwMQAIoACTn/vv3VxJIM4OF/gOpfxP+ffsnxcCALoCpBdNQdGsBhkoyc3iuZLMAAAAASUVORK5CYII=","blurWidth":8,"blurHeight":8});
+/* harmony default export */ const arrow = ({"src":"/_next/static/media/arrow.759f964b.png","height":512,"width":512,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAMAAADz0U65AAAAElBMVEVMaXH+/v7////8/Pz///////+E85erAAAABnRSTlMA55cnOx4vekd9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAG0lEQVR4nGNgYGFkZoAAJqwsVlQGTApGQ7UDAAggADmkx2zeAAAAAElFTkSuQmCC","blurWidth":8,"blurHeight":8});
 ;// CONCATENATED MODULE: ./assets/images/fitness.png
-/* harmony default export */ const fitness = ({"src":"/_next/static/media/fitness.3f76836a.png","height":2500,"width":2500,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAQAAABuBnYAAAAAX0lEQVR42l2NsQ1AUBiEj5hAL1GzEhUj0ImOwiwMgcQEaoXSEF/k/QnFa+6Su3x3IkSIAGHuJKNARFQkSKSsnNY+zMRi4uCiY+Bmp/mCntGC1iHbjywOETmljdY26t++IRtS8O0A3fAAAAAASUVORK5CYII=","blurWidth":8,"blurHeight":8});
+/* harmony default export */ const fitness = ({"src":"/_next/static/media/fitness.3f76836a.png","height":2500,"width":2500,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAMAAADz0U65AAAAJ1BMVEVMaXH////////////////////////////////////////////////c+C/6AAAADXRSTlMA2CEtxwi+fYasYWpZf1eUHgAAAAlwSFlzAAALEwAACxMBAJqcGAAAAC5JREFUeJxjYIADZh4GVi4mBgZmNjYGVkZOJgZ2FkYODkYWbhCDHcyAS8EVwwAAHnQA2Mk7bzAAAAAASUVORK5CYII=","blurWidth":8,"blurHeight":8});
 ;// CONCATENATED MODULE: ./assets/images/dog.png
-/* harmony default export */ const dog = ({"src":"/_next/static/media/dog.529f19a1.png","height":1200,"width":1200,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAQAAABuBnYAAAAAYUlEQVR42mMAgX9MQMz5T5cBAv4xArHUv7P//v9LhAiwAnHwv/9AeAOmnPXfrn///z355wkTWAGWfwwzwwHMvf/v4j9OiED1v/f/Hv479+/YPz2YGpl/4v+0/yn8k2BgAAAenz1vctevFgAAAABJRU5ErkJggg==","blurWidth":8,"blurHeight":8});
+/* harmony default export */ const dog = ({"src":"/_next/static/media/dog.529f19a1.png","height":1200,"width":1200,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAMAAADz0U65AAAAKlBMVEVMaXH////////////////////////////////////////////////////m1kuZAAAADXRSTlMADc0tGt9gRr3qIXilPl18zQAAAAlwSFlzAAALEwAACxMBAJqcGAAAADZJREFUeJwdy0sKADAIA9Gp1f5z/+sW3YQHYQBoPRfcNApDsjqW9kw8KRowpbDE3WGrsuP9OB8fCgEARkBXCwAAAABJRU5ErkJggg==","blurWidth":8,"blurHeight":8});
 ;// CONCATENATED MODULE: ./assets/images/chat.png
-/* harmony default export */ const chat = ({"src":"/_next/static/media/chat.ecd36975.png","height":982,"width":980,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAQAAABuBnYAAAAAaklEQVR42k3LoQ5BYQAG0G8EmugZvInNE6ieQbO7CZLCS8iqSaYppBu0G8SrC3Z+ze5OPkkstWjMRS8q5W8m8fX21KgVV4ni5a528/EwjmOnrJxipFUUrcpWiaG9qYWds2ITfREDawcXkx/hjmcym6GfSQAAAABJRU5ErkJggg==","blurWidth":8,"blurHeight":8});
+/* harmony default export */ const chat = ({"src":"/_next/static/media/chat.ecd36975.png","height":982,"width":980,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAMAAADz0U65AAAALVBMVEX////////////////////////////////////////////////+/v7////////ddC9sAAAAD3RSTlP/A+iC2PlUcJfNIrujqrK5CmgkAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAOUlEQVR4nBXBCRKAMAwDsbWTND2A/z+3g4Ta5JAIfkPY6eSI8spVa/NQQLxsU44oNEfPQyBJPb99AR8fAQb0181dAAAAAElFTkSuQmCC","blurWidth":8,"blurHeight":8});
 ;// CONCATENATED MODULE: ./assets/images/cardio.png
-/* harmony default export */ const cardio = ({"src":"/_next/static/media/cardio.dd697219.png","height":512,"width":512,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAQAAABuBnYAAAAAfUlEQVR42h3JsQnCABQE0EthxnAAxQ2MgugEWrqCE7hEEMcQLK2cwdJOBNHaNAkkufu55OAfvH8AmOnMjHOduMBARahU4xaXUB7BvR5m5cvBra7c6WL8+wmAjsaBK930BJx2Kumul4p6bL5Hfk3CaWfAJwWSr4trboBfiqQDK2pRr8Hh8WAAAAAASUVORK5CYII=","blurWidth":8,"blurHeight":8});
+/* harmony default export */ const cardio = ({"src":"/_next/static/media/cardio.dd697219.png","height":512,"width":512,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAMAAADz0U65AAAAJFBMVEWCgoL7+/v////////9/f3////8/Pz////////////8/Pz+/v5sNpO5AAAADHRSTlMBPvP+f7VP4CvPYaQqHUNJAAAACXBIWXMAAAsTAAALEwEAmpwYAAAANUlEQVR4nBXFyRHAMAwDsSUpyUf67zdjfAAqqQSK7URU7olTTN8vzkC5pg+w3WttANl6g94/HUgAvVVruswAAAAASUVORK5CYII=","blurWidth":8,"blurHeight":8});
 ;// CONCATENATED MODULE: ./assets/images/compete.png
-/* harmony default export */ const compete = ({"src":"/_next/static/media/compete.6e615f1c.png","height":512,"width":512,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAQAAABuBnYAAAAAX0lEQVR42iXIvQmAMABE4fNnKXfQBbR2lLSCRUbQKhM4SFrBLUR48SB8zbsTLTuJ05KrFYGHUrmCiIzO14oripWDUrlWIRYyn2VmJBp6xGZyNaJDDNw24FWPicsmRPcDIn1fnqEwXJcAAAAASUVORK5CYII=","blurWidth":8,"blurHeight":8});
+/* harmony default export */ const compete = ({"src":"/_next/static/media/compete.6e615f1c.png","height":512,"width":512,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAMAAADz0U65AAAAIVBMVEX///////////////////////////////////////////9/gMdvAAAAC3RSTlP8AaVdiNaYCUg7zdkd7G8AAAAJcEhZcwAACxMAAAsTAQCanBgAAAA1SURBVHicFcZBEgAgCAOxLRRQ//9gh5zCOLrDgwugjHOTJmMTifLBS6FRt0ZIt+pqcyKO9AEa5QDDr7gvwAAAAABJRU5ErkJggg==","blurWidth":8,"blurHeight":8});
+;// CONCATENATED MODULE: ./assets/images/star-full.png
+/* harmony default export */ const star_full = ({"src":"/_next/static/media/star-full.fa7f3b3b.png","height":512,"width":512,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAMAAADz0U65AAAAJFBMVEX///9MaXH///////////////////////////////////////+2I0voAAAADHRSTlP/AKwM2lVjBmtBgoec3i+nAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAM0lEQVR4nB3GtxHAMBDAMPKD4v77+ixUwOkYTtGsSmWvgFib4AnyLRL7T4uHKo7YN/O2HxjbALct/Ie5AAAAAElFTkSuQmCC","blurWidth":8,"blurHeight":8});
+;// CONCATENATED MODULE: ./assets/images/star-outline.png
+/* harmony default export */ const star_outline = ({"src":"/_next/static/media/star-outline.30813ab7.png","height":512,"width":512,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAMAAADz0U65AAAAIVBMVEX////////////////////////////+/v7////////////KaT/+AAAAC3RSTlMBZg+1jFfa0UF5G8uQ93MAAAAJcEhZcwAACxMAAAsTAQCanBgAAAA1SURBVHicHcrJEcAwDAOxJSnJR/8FexK8ASDx81oGtnJOtMm03RMcgWJQ3Vtfr0mmgC67mgcX+gC5bSaRZgAAAABJRU5ErkJggg==","blurWidth":8,"blurHeight":8});
 ;// CONCATENATED MODULE: ./assets/images/index.ts
 
 
@@ -847,6 +1279,136 @@ var image_default = /*#__PURE__*/__webpack_require__.n(next_image);
 
 
 
+
+
+
+
+/***/ }),
+
+/***/ 7432:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "$$ACTION_0": () => (/* binding */ $$ACTION_0),
+/* harmony export */   "$$ACTION_1": () => (/* binding */ $$ACTION_1),
+/* harmony export */   "default": () => (/* binding */ TabsCard)
+/* harmony export */ });
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6931);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var private_next_rsc_action_proxy__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2855);
+/* harmony import */ var next_image__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(2208);
+/* harmony import */ var next_image__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_image__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _TabsCard_module_scss__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(8480);
+/* harmony import */ var _TabsCard_module_scss__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_TabsCard_module_scss__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _assets_images__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(2684);
+/* harmony import */ var _lib_util__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(6129);
+/* harmony import */ var _lib_db__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(7105);
+/* __next_internal_action_entry_do_not_use__ $$ACTION_0,$$ACTION_1 */ 
+
+
+
+
+
+
+function TabsCard(props) {
+    const profileData = props.profileData;
+    const appData = props.appData;
+    const favorites = profileData.favorites;
+    const isFavorite = favorites[appData.name_id];
+    const name_id = appData.name_id;
+    const appImageData = _lib_util__WEBPACK_IMPORTED_MODULE_4__/* .appImages */ .J[appData.name_id];
+    async function handleFavoriteClick(...args) {
+        return $$ACTION_0.apply(null, (handleFavoriteClick.$$bound || []).concat(args));
+    }
+    (0,private_next_rsc_action_proxy__WEBPACK_IMPORTED_MODULE_1__/* ["default"] */ .Z)("e6c4ef28f1a8b6c57347165d1b286752fbb74497", [
+        isFavorite,
+        name_id
+    ], handleFavoriteClick, $$ACTION_0);
+    async function handleArrowClick(...args) {
+        return $$ACTION_1.apply(null, (handleArrowClick.$$bound || []).concat(args));
+    }
+    (0,private_next_rsc_action_proxy__WEBPACK_IMPORTED_MODULE_1__/* ["default"] */ .Z)("b75c94a03b14251e9332519a0be36b305cdbed8b", [
+        isFavorite,
+        name_id
+    ], handleArrowClick, $$ACTION_1);
+    return /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+        className: (_TabsCard_module_scss__WEBPACK_IMPORTED_MODULE_6___default().container),
+        children: [
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
+                className: (_TabsCard_module_scss__WEBPACK_IMPORTED_MODULE_6___default().iconHolder) + " " + appData.name_id,
+                children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_image__WEBPACK_IMPORTED_MODULE_2___default()), {
+                    src: appImageData.image,
+                    alt: "icon",
+                    style: {
+                        height: `${appImageData.size}%`,
+                        width: `${appImageData.size}%`
+                    }
+                })
+            }),
+            /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                className: (_TabsCard_module_scss__WEBPACK_IMPORTED_MODULE_6___default().textHolder),
+                children: [
+                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("h3", {
+                        children: appData.name
+                    }),
+                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("p", {
+                        children: appData.category
+                    })
+                ]
+            }),
+            /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                className: (_TabsCard_module_scss__WEBPACK_IMPORTED_MODULE_6___default().rightIcons),
+                children: [
+                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("form", {
+                        action: handleFavoriteClick,
+                        children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("button", {
+                            type: "submit",
+                            className: (_TabsCard_module_scss__WEBPACK_IMPORTED_MODULE_6___default().favoriteIconHolder),
+                            children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_image__WEBPACK_IMPORTED_MODULE_2___default()), {
+                                src: isFavorite ? _assets_images__WEBPACK_IMPORTED_MODULE_3__/* .star_full */ .P : _assets_images__WEBPACK_IMPORTED_MODULE_3__/* .star_outline */ .YO,
+                                alt: "icon",
+                                className: (_TabsCard_module_scss__WEBPACK_IMPORTED_MODULE_6___default().favoriteIcon)
+                            })
+                        })
+                    }),
+                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("form", {
+                        action: handleArrowClick,
+                        children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("button", {
+                            type: "submit",
+                            className: (_TabsCard_module_scss__WEBPACK_IMPORTED_MODULE_6___default().arrowHolder),
+                            children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_image__WEBPACK_IMPORTED_MODULE_2___default()), {
+                                src: _assets_images__WEBPACK_IMPORTED_MODULE_3__/* .arrow */ .x7,
+                                alt: "icon",
+                                className: (_TabsCard_module_scss__WEBPACK_IMPORTED_MODULE_6___default().arrow)
+                            })
+                        })
+                    })
+                ]
+            })
+        ]
+    });
+}
+async function $$ACTION_0(isFavorite, name_id) {
+    const newState = isFavorite ? true : false;
+    (0,_lib_db__WEBPACK_IMPORTED_MODULE_5__/* .updateFavorite */ .R3)(name_id, newState);
+}
+async function $$ACTION_1(isFavorite, name_id) {}
+
+
+/***/ }),
+
+/***/ 6129:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  "J": () => (/* reexport */ appImages),
+  "O": () => (/* reexport */ translator)
+});
 
 ;// CONCATENATED MODULE: ./lib/util/translator.ts
 let language = "";
@@ -929,27 +1491,29 @@ const translator = (sentence)=>{
     return findTranslationArray[sentence];
 };
 
+// EXTERNAL MODULE: ./assets/images/index.ts + 11 modules
+var assets_images = __webpack_require__(2684);
 ;// CONCATENATED MODULE: ./lib/util/appImages.ts
 
 const appImages = {
     fitness: {
-        image: fitness,
+        image: assets_images/* fitness */.AR,
         size: 90
     },
     dog: {
-        image: dog,
+        image: assets_images/* dog */.Eq,
         size: 90
     },
     cardio: {
-        image: cardio,
+        image: assets_images/* cardio */.pU,
         size: 80
     },
     compete: {
-        image: compete,
+        image: assets_images/* compete */.$e,
         size: 80
     },
     chat: {
-        image: chat,
+        image: assets_images/* chat */.W6,
         size: 80
     }
 };
@@ -958,255 +1522,6 @@ const appImages = {
 
 
 
-
-;// CONCATENATED MODULE: ./components/page-index/SearchSection/SearchBar/SearchBar.tsx
-
-const SearchBar_proxy = (0,module_proxy.createProxy)(String.raw`C:\Users\tobia\Personal\Development\React\dev04\components\page-index\SearchSection\SearchBar\SearchBar.tsx`)
-
-// Accessing the __esModule property and exporting $$typeof are required here.
-// The __esModule getter forces the proxy target to create the default export
-// and the $$typeof value is for rendering logic to determine if the module
-// is a client boundary.
-const { __esModule: SearchBar_esModule, $$typeof: SearchBar_$$typeof } = SearchBar_proxy;
-/* harmony default export */ const SearchBar = (SearchBar_proxy.default);
-
-;// CONCATENATED MODULE: ./components/page-index/SearchSection/SearchSection.tsx
-
-
-
-
-
-
-function SearchSection(props) {
-    const profileData = props.profileData;
-    return /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
-        className: (SearchSection_module_default()).searchSection,
-        id: "searchSection",
-        children: [
-            /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
-                className: (SearchSection_module_default()).upperRow,
-                children: [
-                    /*#__PURE__*/ jsx_runtime_.jsx("div", {
-                        className: (SearchSection_module_default()).profileHolder,
-                        id: "profileIcon",
-                        children: /*#__PURE__*/ jsx_runtime_.jsx((image_default()), {
-                            src: profileTobias,
-                            alt: "profile",
-                            className: (SearchSection_module_default()).profileIcon
-                        })
-                    }),
-                    /*#__PURE__*/ (0,jsx_runtime_.jsxs)("h1", {
-                        id: "title",
-                        className: (SearchSection_module_default()).title,
-                        children: [
-                            translator("Family"),
-                            ", ",
-                            profileData.last_name
-                        ]
-                    })
-                ]
-            }),
-            /*#__PURE__*/ jsx_runtime_.jsx("div", {
-                className: (SearchSection_module_default()).lowerRow,
-                children: /*#__PURE__*/ jsx_runtime_.jsx(SearchBar, {})
-            })
-        ]
-    });
-}
-
-// EXTERNAL MODULE: ./components/page-index/FavoritesSection/FavoritesSection.module.scss
-var FavoritesSection_module = __webpack_require__(1192);
-var FavoritesSection_module_default = /*#__PURE__*/__webpack_require__.n(FavoritesSection_module);
-// EXTERNAL MODULE: ./components/page-index/FavoritesSection/FavoritesCard/FavoritesCard.module.scss
-var FavoritesCard_module = __webpack_require__(259);
-var FavoritesCard_module_default = /*#__PURE__*/__webpack_require__.n(FavoritesCard_module);
-;// CONCATENATED MODULE: ./components/page-index/FavoritesSection/FavoritesCard/FavoritesCard.tsx
-
-
-
-
-
-function FavoritesCard(props) {
-    const appData = props.appData;
-    const appImageData = appImages[appData.name_id];
-    return /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
-        className: (FavoritesCard_module_default()).container,
-        children: [
-            /*#__PURE__*/ jsx_runtime_.jsx("div", {
-                className: (FavoritesCard_module_default()).iconHolder + " " + appData.name_id,
-                children: /*#__PURE__*/ jsx_runtime_.jsx((image_default()), {
-                    src: appImageData.image,
-                    alt: "icon",
-                    style: {
-                        height: `${appImageData.size}%`,
-                        width: `${appImageData.size}%`
-                    }
-                })
-            }),
-            /*#__PURE__*/ jsx_runtime_.jsx("h3", {
-                children: appData.name
-            }),
-            /*#__PURE__*/ jsx_runtime_.jsx("div", {
-                className: (FavoritesCard_module_default()).arrowHolder,
-                children: /*#__PURE__*/ jsx_runtime_.jsx((image_default()), {
-                    src: arrow,
-                    alt: "icon",
-                    className: (FavoritesCard_module_default()).arrow
-                })
-            })
-        ]
-    });
-}
-
-;// CONCATENATED MODULE: ./components/page-index/FavoritesSection/FavoritesSection.tsx
-
-
-
-function findFavorites(appData, favorites) {
-    let hasFoundFavorite = false;
-    return appData.map((app, index)=>{
-        if (favorites[app.name_id] != undefined) {
-            hasFoundFavorite = true;
-            return /*#__PURE__*/ jsx_runtime_.jsx(FavoritesCard, {
-                appData: app
-            }, index);
-        }
-        if (appData.length == index + 1 && hasFoundFavorite == false) {
-            return /*#__PURE__*/ jsx_runtime_.jsx("p", {
-                className: (FavoritesSection_module_default()).noFavoritesFoundParagraph,
-                children: "You dont have any favorites yet!"
-            }, index);
-        }
-    });
-}
-function FavoritesSections(props) {
-    const profileData = props.profileData;
-    const appData = props.appData;
-    const favorites = JSON.parse(profileData.favorites);
-    const result = findFavorites(appData, favorites);
-    return /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
-        className: (FavoritesSection_module_default()).main,
-        children: [
-            /*#__PURE__*/ jsx_runtime_.jsx("h2", {
-                children: "Favorites"
-            }),
-            /*#__PURE__*/ jsx_runtime_.jsx("div", {
-                className: (FavoritesSection_module_default()).cardHolder,
-                children: result
-            })
-        ]
-    });
-}
-
-// EXTERNAL MODULE: ./components/page-index/TabsSection/TabsSection.module.scss
-var TabsSection_module = __webpack_require__(5258);
-var TabsSection_module_default = /*#__PURE__*/__webpack_require__.n(TabsSection_module);
-// EXTERNAL MODULE: ./components/page-index/TabsSection/TabsCard/TabsCard.module.scss
-var TabsCard_module = __webpack_require__(8480);
-var TabsCard_module_default = /*#__PURE__*/__webpack_require__.n(TabsCard_module);
-;// CONCATENATED MODULE: ./components/page-index/TabsSection/TabsCard/TabsCard.tsx
-
-
-
-
-
-function TabsCard(props) {
-    const appData = props.appData;
-    const appImageData = appImages[appData.name_id];
-    return /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
-        className: (TabsCard_module_default()).container,
-        children: [
-            /*#__PURE__*/ jsx_runtime_.jsx("div", {
-                className: (TabsCard_module_default()).iconHolder + " " + appData.name_id,
-                children: /*#__PURE__*/ jsx_runtime_.jsx((image_default()), {
-                    src: appImageData.image,
-                    alt: "icon",
-                    style: {
-                        height: `${appImageData.size}%`,
-                        width: `${appImageData.size}%`
-                    }
-                })
-            }),
-            /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
-                className: (TabsCard_module_default()).textHolder,
-                children: [
-                    /*#__PURE__*/ jsx_runtime_.jsx("h3", {
-                        children: appData.name
-                    }),
-                    /*#__PURE__*/ jsx_runtime_.jsx("p", {
-                        children: appData.category
-                    })
-                ]
-            }),
-            /*#__PURE__*/ jsx_runtime_.jsx("div", {
-                className: (TabsCard_module_default()).arrowHolder,
-                children: /*#__PURE__*/ jsx_runtime_.jsx((image_default()), {
-                    src: arrow,
-                    alt: "icon",
-                    className: (TabsCard_module_default()).arrow
-                })
-            })
-        ]
-    });
-}
-
-;// CONCATENATED MODULE: ./components/page-index/TabsSection/TabsSection.tsx
-
-
-
-function findTabs(appData) {
-    return appData.map((app, index)=>{
-        return /*#__PURE__*/ jsx_runtime_.jsx(TabsCard, {
-            appData: app
-        }, index);
-    });
-}
-function TabsSection(props) {
-    const appData = props.appData;
-    const result = findTabs(appData);
-    return /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
-        className: (TabsSection_module_default()).main,
-        children: [
-            /*#__PURE__*/ jsx_runtime_.jsx("h2", {
-                children: "Tabs"
-            }),
-            /*#__PURE__*/ jsx_runtime_.jsx("div", {
-                className: (TabsSection_module_default()).cardHolder,
-                children: result
-            })
-        ]
-    });
-}
-
-;// CONCATENATED MODULE: ./components/page-index/index.ts
-
-
-
-
-
-
-
-
-;// CONCATENATED MODULE: ./app/page.tsx
-
-
-
-async function Home() {
-    const [[profileData], appData] = await Promise.all([
-        (0,db/* getProfileData */.$y)(),
-        (0,db/* getAppData */.$s)()
-    ]);
-    return /*#__PURE__*/ (0,jsx_runtime_.jsxs)(jsx_runtime_.Fragment, {
-        children: [
-            /*#__PURE__*/ jsx_runtime_.jsx(Header, {}),
-            /*#__PURE__*/ jsx_runtime_.jsx(Main, {
-                profileData: JSON.stringify(profileData),
-                appData: JSON.stringify(appData)
-            }),
-            /*#__PURE__*/ jsx_runtime_.jsx(Footer, {})
-        ]
-    });
-}
 
 
 /***/ }),
@@ -1219,7 +1534,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({"src":"/_next/static/media/arrow.759f964b.png","height":512,"width":512,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAQAAABuBnYAAAAAR0lEQVR42mNgYPhn9e/7XzkgzcrAAAT/GYHMef++/pUA0iwMQAIoACTn/vv3VxJIM4OF/gOpfxP+ffsnxcCALoCpBdNQdGsBhkoyc3iuZLMAAAAASUVORK5CYII=","blurWidth":8,"blurHeight":8});
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({"src":"/_next/static/media/arrow.759f964b.png","height":512,"width":512,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAMAAADz0U65AAAAElBMVEVMaXH+/v7////8/Pz///////+E85erAAAABnRSTlMA55cnOx4vekd9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAG0lEQVR4nGNgYGFkZoAAJqwsVlQGTApGQ7UDAAggADmkx2zeAAAAAElFTkSuQmCC","blurWidth":8,"blurHeight":8});
 
 /***/ }),
 
@@ -1231,7 +1546,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({"src":"/_next/static/media/cardio.dd697219.png","height":512,"width":512,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAQAAABuBnYAAAAAfUlEQVR42h3JsQnCABQE0EthxnAAxQ2MgugEWrqCE7hEEMcQLK2cwdJOBNHaNAkkufu55OAfvH8AmOnMjHOduMBARahU4xaXUB7BvR5m5cvBra7c6WL8+wmAjsaBK930BJx2Kumul4p6bL5Hfk3CaWfAJwWSr4trboBfiqQDK2pRr8Hh8WAAAAAASUVORK5CYII=","blurWidth":8,"blurHeight":8});
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({"src":"/_next/static/media/cardio.dd697219.png","height":512,"width":512,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAMAAADz0U65AAAAJFBMVEWCgoL7+/v////////9/f3////8/Pz////////////8/Pz+/v5sNpO5AAAADHRSTlMBPvP+f7VP4CvPYaQqHUNJAAAACXBIWXMAAAsTAAALEwEAmpwYAAAANUlEQVR4nBXFyRHAMAwDsSUpyUf67zdjfAAqqQSK7URU7olTTN8vzkC5pg+w3WttANl6g94/HUgAvVVruswAAAAASUVORK5CYII=","blurWidth":8,"blurHeight":8});
 
 /***/ }),
 
@@ -1243,7 +1558,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({"src":"/_next/static/media/chat.ecd36975.png","height":982,"width":980,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAQAAABuBnYAAAAAaklEQVR42k3LoQ5BYQAG0G8EmugZvInNE6ieQbO7CZLCS8iqSaYppBu0G8SrC3Z+ze5OPkkstWjMRS8q5W8m8fX21KgVV4ni5a528/EwjmOnrJxipFUUrcpWiaG9qYWds2ITfREDawcXkx/hjmcym6GfSQAAAABJRU5ErkJggg==","blurWidth":8,"blurHeight":8});
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({"src":"/_next/static/media/chat.ecd36975.png","height":982,"width":980,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAMAAADz0U65AAAALVBMVEX////////////////////////////////////////////////+/v7////////ddC9sAAAAD3RSTlP/A+iC2PlUcJfNIrujqrK5CmgkAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAOUlEQVR4nBXBCRKAMAwDsbWTND2A/z+3g4Ta5JAIfkPY6eSI8spVa/NQQLxsU44oNEfPQyBJPb99AR8fAQb0181dAAAAAElFTkSuQmCC","blurWidth":8,"blurHeight":8});
 
 /***/ }),
 
@@ -1255,7 +1570,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({"src":"/_next/static/media/compete.6e615f1c.png","height":512,"width":512,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAQAAABuBnYAAAAAX0lEQVR42iXIvQmAMABE4fNnKXfQBbR2lLSCRUbQKhM4SFrBLUR48SB8zbsTLTuJ05KrFYGHUrmCiIzO14oripWDUrlWIRYyn2VmJBp6xGZyNaJDDNw24FWPicsmRPcDIn1fnqEwXJcAAAAASUVORK5CYII=","blurWidth":8,"blurHeight":8});
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({"src":"/_next/static/media/compete.6e615f1c.png","height":512,"width":512,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAMAAADz0U65AAAAIVBMVEX///////////////////////////////////////////9/gMdvAAAAC3RSTlP8AaVdiNaYCUg7zdkd7G8AAAAJcEhZcwAACxMAAAsTAQCanBgAAAA1SURBVHicFcZBEgAgCAOxLRRQ//9gh5zCOLrDgwugjHOTJmMTifLBS6FRt0ZIt+pqcyKO9AEa5QDDr7gvwAAAAABJRU5ErkJggg==","blurWidth":8,"blurHeight":8});
 
 /***/ }),
 
@@ -1267,7 +1582,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({"src":"/_next/static/media/dog.529f19a1.png","height":1200,"width":1200,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAQAAABuBnYAAAAAYUlEQVR42mMAgX9MQMz5T5cBAv4xArHUv7P//v9LhAiwAnHwv/9AeAOmnPXfrn///z355wkTWAGWfwwzwwHMvf/v4j9OiED1v/f/Hv479+/YPz2YGpl/4v+0/yn8k2BgAAAenz1vctevFgAAAABJRU5ErkJggg==","blurWidth":8,"blurHeight":8});
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({"src":"/_next/static/media/dog.529f19a1.png","height":1200,"width":1200,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAMAAADz0U65AAAAKlBMVEVMaXH////////////////////////////////////////////////////m1kuZAAAADXRSTlMADc0tGt9gRr3qIXilPl18zQAAAAlwSFlzAAALEwAACxMBAJqcGAAAADZJREFUeJwdy0sKADAIA9Gp1f5z/+sW3YQHYQBoPRfcNApDsjqW9kw8KRowpbDE3WGrsuP9OB8fCgEARkBXCwAAAABJRU5ErkJggg==","blurWidth":8,"blurHeight":8});
 
 /***/ }),
 
@@ -1279,7 +1594,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({"src":"/_next/static/media/fitness.3f76836a.png","height":2500,"width":2500,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAQAAABuBnYAAAAAX0lEQVR42l2NsQ1AUBiEj5hAL1GzEhUj0ImOwiwMgcQEaoXSEF/k/QnFa+6Su3x3IkSIAGHuJKNARFQkSKSsnNY+zMRi4uCiY+Bmp/mCntGC1iHbjywOETmljdY26t++IRtS8O0A3fAAAAAASUVORK5CYII=","blurWidth":8,"blurHeight":8});
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({"src":"/_next/static/media/fitness.3f76836a.png","height":2500,"width":2500,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAMAAADz0U65AAAAJ1BMVEVMaXH////////////////////////////////////////////////c+C/6AAAADXRSTlMA2CEtxwi+fYasYWpZf1eUHgAAAAlwSFlzAAALEwAACxMBAJqcGAAAAC5JREFUeJxjYIADZh4GVi4mBgZmNjYGVkZOJgZ2FkYODkYWbhCDHcyAS8EVwwAAHnQA2Mk7bzAAAAAASUVORK5CYII=","blurWidth":8,"blurHeight":8});
 
 /***/ }),
 
@@ -1291,7 +1606,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({"src":"/_next/static/media/profileTobias.56bde7f5.png","height":246,"width":244,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAABBklEQVR42g3Mu07CUBwH4F//HA6SWrmEFCHhEi8LDDqIGu3iru/gZHwkH0RdnL3MJpgYQwyDFUm1hbbp7fQc2b982t3DfV0vFC6SpXeVCXHS67ZUf6unaVS29VprwJTE28J3m5/vE3x7EcbjD21/2JO1htleW5+cszSTTREF0rWn4OAkshJenl9RMxswu/1r5vuBSkNBrlAoUo6vmYMgBw2piMqmPGV/Sx8bnKPNy4hTicUKVjjh6HAEo9UBs237MalXLUMvSeE61NRL6HSr8tjaWw27RFGs3czmIYI4BeOA8zvHzuiA9IpBoTf9oTNr+9bQmB1HCUUqUzkUwih5YmXz0nEKg3+/nnKkPQVrugAAAABJRU5ErkJggg==","blurWidth":8,"blurHeight":8});
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({"src":"/_next/static/media/profileTobias.56bde7f5.png","height":246,"width":244,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAMAAADz0U65AAAAdVBMVEWFcXDz8/NtWFdqeIOQnJyupZ/z7uKgoqO5sqqxpZ12gYNyc4KOmJqxt7WUeHS/vLeGYmB+YlzRzMN8YWSpp6aagnrv5NS+vMH///9hV1uAbGprZWZdV16SlZWZj4x+d3vQxrr///x2gYyvtreFX2KIgYD37+BowS8VAAAAGnRSTlP+FfxdFLzp/P79s+b26/xg/v5a/rL6+Pxi/N9CH/EAAAAJcEhZcwAACxMAAAsTAQCanBgAAABHSURBVHicBcEFEoAwEASwbaniDnN17P9PJIEYpMmfYuhMTK/NM25LBMQVOjjnfdJoNcg7e6AO/bNse0F1YeSmKIiGJi5P9gOltwRmEc1nFwAAAABJRU5ErkJggg==","blurWidth":8,"blurHeight":8});
 
 /***/ }),
 
@@ -1303,7 +1618,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({"src":"/_next/static/media/search.f6c519d6.png","height":512,"width":512,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAQAAABuBnYAAAAAV0lEQVR42mMAgX9MQMz1jw/EgnFt/035N/mfOwME/GP/N+MfB5Ce8o8fpqLnn+A/5n+T//FCuP7/Dv/r/TfjnxNEQ+K///+CQcbCDD3+LxXCBGIIQGYCAOe6LXptdS1iAAAAAElFTkSuQmCC","blurWidth":8,"blurHeight":8});
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({"src":"/_next/static/media/search.f6c519d6.png","height":512,"width":512,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAMAAADz0U65AAAAHlBMVEVMaXH////////////////////////////////////Z6AnKAAAACXRSTlMAjBEIRb9XamQzNomPAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAL0lEQVR4nD2LyQ0AIAzDnF7A/gujUolPHOUAwKwVQoqmy1ydfVM51T7FG+eaCz68DO4AYDTgUBcAAAAASUVORK5CYII=","blurWidth":8,"blurHeight":8});
 
 /***/ }),
 
@@ -1315,7 +1630,31 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({"src":"/_next/static/media/settings.0ba832d2.png","height":512,"width":512,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAMAAADz0U65AAAAUVBMVEUEdP4Ec/4EdP4Ec/4EdP4Fc/4Ec/4EdP4Ec/4FdP4Ec/4Ec/4Ec/4Ec/4EdP4Fc/4Ec/4EdP4Ec/4FdP4Ec/4Fc/4EdP4FdP4EdP4Fc/4Ec/6O3LfsAAAAF3RSTlMAACkpKioqKyzCwsPE7u/v8Pn5+/v8/h0GiB4AAAA/SURBVHjaLcbJAYAgEATB8UbAC1ZpyD9QP9SrpMVnC27QegHldvIkeEqU1QYN0/v1xJIgsWs7K3CM0hyy+Uk/m60ER2KC+/8AAAAASUVORK5CYII=","blurWidth":8,"blurHeight":8});
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({"src":"/_next/static/media/settings.0ba832d2.png","height":512,"width":512,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAMAAADz0U65AAAAGFBMVEUFdv8FdP8Fdv9MaXEFdv8FdP8Fcf8FdP6iXQ3OAAAACHRSTlP9L7IA67UytrDnEDsAAAAJcEhZcwAACxMAAAsTAQCanBgAAAAtSURBVHicNcvJCQAwDAPBlc/+Ow6xk9fAIuFK6HIUAFHYFYwJfLY9asdi7ik/Db0AWuWmh/sAAAAASUVORK5CYII=","blurWidth":8,"blurHeight":8});
+
+/***/ }),
+
+/***/ 1995:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({"src":"/_next/static/media/star-full.fa7f3b3b.png","height":512,"width":512,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAMAAADz0U65AAAAJFBMVEX///9MaXH///////////////////////////////////////+2I0voAAAADHRSTlP/AKwM2lVjBmtBgoec3i+nAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAM0lEQVR4nB3GtxHAMBDAMPKD4v77+ixUwOkYTtGsSmWvgFib4AnyLRL7T4uHKo7YN/O2HxjbALct/Ie5AAAAAElFTkSuQmCC","blurWidth":8,"blurHeight":8});
+
+/***/ }),
+
+/***/ 1491:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({"src":"/_next/static/media/star-outline.30813ab7.png","height":512,"width":512,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAMAAADz0U65AAAAIVBMVEX////////////////////////////+/v7////////////KaT/+AAAAC3RSTlMBZg+1jFfa0UF5G8uQ93MAAAAJcEhZcwAACxMAAAsTAQCanBgAAAA1SURBVHicHcrJEcAwDAOxJSnJR/8FexK8ASDx81oGtnJOtMm03RMcgWJQ3Vtfr0mmgC67mgcX+gC5bSaRZgAAAABJRU5ErkJggg==","blurWidth":8,"blurHeight":8});
 
 /***/ })
 
@@ -1326,7 +1665,7 @@ __webpack_require__.r(__webpack_exports__);
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [859,571,831,286,538,486], () => (__webpack_exec__(6908)));
+var __webpack_exports__ = __webpack_require__.X(0, [859,571,198,395,462,855,286,342,644], () => (__webpack_exec__(6908)));
 module.exports = __webpack_exports__;
 
 })();

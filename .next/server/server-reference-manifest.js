@@ -1,1 +1,1 @@
-self.__RSC_SERVER_MANIFEST={"node":{},"edge":{}}
+self.__RSC_SERVER_MANIFEST={"node":{"e6c4ef28f1a8b6c57347165d1b286752fbb74497":{"workers":{"app/page":6020},"layer":{"app/page":"sc_server"}},"b75c94a03b14251e9332519a0be36b305cdbed8b":{"workers":{"app/page":6020},"layer":{"app/page":"sc_server"}},"1c6b7d4b733e183b2c9df055c7edd99147697844":{"workers":{"app/login/page":5322},"layer":{"app/login/page":"sc_server"}}},"edge":{}}

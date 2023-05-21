@@ -1,42 +1,58 @@
 {
   "pages": {
-    "/page": [
-      "static/chunks/webpack-f50e510d5d11b65a.js",
-      "static/chunks/b7dfe19b-4f91d84de192b5e5.js",
-      "static/chunks/474-87fca73e23826d88.js",
-      "static/chunks/main-app-199cde7d66c72255.js",
-      "static/css/63b6d4b6e4a5f5b9.css",
-      "static/chunks/app/page-21309b2093d9ec46.js"
-    ],
     "/layout": [
-      "static/chunks/webpack-f50e510d5d11b65a.js",
+      "static/chunks/webpack-f3f08c5f60191ef8.js",
       "static/chunks/b7dfe19b-4f91d84de192b5e5.js",
       "static/chunks/474-87fca73e23826d88.js",
       "static/chunks/main-app-199cde7d66c72255.js",
-      "static/css/872d6c3279430eb1.css",
-      "static/chunks/app/layout-e0e572af24da68d0.js"
+      "static/css/549cd9f5a992ee53.css",
+      "static/chunks/app/layout-42ff13b037490ba1.js"
     ],
     "/error": [
-      "static/chunks/webpack-f50e510d5d11b65a.js",
+      "static/chunks/webpack-f3f08c5f60191ef8.js",
       "static/chunks/b7dfe19b-4f91d84de192b5e5.js",
       "static/chunks/474-87fca73e23826d88.js",
       "static/chunks/main-app-199cde7d66c72255.js",
-      "static/chunks/app/error-4f5cf4f9172ae421.js"
+      "static/chunks/app/error-14dd200e1eb5bc20.js"
     ],
     "/not-found": [
-      "static/chunks/webpack-f50e510d5d11b65a.js",
+      "static/chunks/webpack-f3f08c5f60191ef8.js",
       "static/chunks/b7dfe19b-4f91d84de192b5e5.js",
       "static/chunks/474-87fca73e23826d88.js",
       "static/chunks/main-app-199cde7d66c72255.js",
-      "static/chunks/app/not-found-56db2e80defac7be.js"
+      "static/chunks/app/not-found-28da22717238de0f.js"
+    ],
+    "/page": [
+      "static/chunks/webpack-f3f08c5f60191ef8.js",
+      "static/chunks/b7dfe19b-4f91d84de192b5e5.js",
+      "static/chunks/474-87fca73e23826d88.js",
+      "static/chunks/main-app-199cde7d66c72255.js",
+      "static/chunks/391-2c9c86981a6589cb.js",
+      "static/css/0ab88889b60fef6d.css",
+      "static/chunks/app/page-c265eeed105ee076.js"
     ],
     "/fitness/page": [
-      "static/chunks/webpack-f50e510d5d11b65a.js",
+      "static/chunks/webpack-f3f08c5f60191ef8.js",
       "static/chunks/b7dfe19b-4f91d84de192b5e5.js",
       "static/chunks/474-87fca73e23826d88.js",
       "static/chunks/main-app-199cde7d66c72255.js",
-      "static/chunks/414-0c978932656682bf.js",
-      "static/chunks/app/fitness/page-be4619a5abed28c8.js"
+      "static/chunks/391-2c9c86981a6589cb.js",
+      "static/chunks/app/fitness/page-b59c217fab4981b7.js"
+    ],
+    "/login/layout": [
+      "static/chunks/webpack-f3f08c5f60191ef8.js",
+      "static/chunks/b7dfe19b-4f91d84de192b5e5.js",
+      "static/chunks/474-87fca73e23826d88.js",
+      "static/chunks/main-app-199cde7d66c72255.js",
+      "static/chunks/app/login/layout-2a42f6a35c9f330c.js"
+    ],
+    "/login/page": [
+      "static/chunks/webpack-f3f08c5f60191ef8.js",
+      "static/chunks/b7dfe19b-4f91d84de192b5e5.js",
+      "static/chunks/474-87fca73e23826d88.js",
+      "static/chunks/main-app-199cde7d66c72255.js",
+      "static/css/1f2d4ec93f036d2b.css",
+      "static/chunks/app/login/page-059457afc20093b6.js"
     ]
   }
 }

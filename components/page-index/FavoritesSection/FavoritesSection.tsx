@@ -26,9 +26,8 @@ interface Props {
 export default function FavoritesSections(props: Props) {
   const profileData = props.profileData;
   const appData = props.appData;
-  const favorites: { [key: string]: string } = JSON.parse(profileData.favorites);
 
-  const result = findFavorites(appData, favorites);
+  const result = findFavorites(appData, profileData.favorites);
 
   return (
     <div className={styles.main}>

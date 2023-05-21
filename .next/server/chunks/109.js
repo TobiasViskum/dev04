@@ -287,127 +287,6 @@ if ((typeof exports.default === "function" || typeof exports.default === "object
 
 /***/ }),
 
-/***/ 3716:
-/***/ ((module, exports) => {
-
-
-Object.defineProperty(exports, "__esModule", ({
-    value: true
-}));
-0 && (0);
-function _export(target, all) {
-    for(var name in all)Object.defineProperty(target, name, {
-        enumerable: true,
-        get: all[name]
-    });
-}
-_export(exports, {
-    notFound: function() {
-        return notFound;
-    },
-    isNotFoundError: function() {
-        return isNotFoundError;
-    }
-});
-const NOT_FOUND_ERROR_CODE = "NEXT_NOT_FOUND";
-function notFound() {
-    // eslint-disable-next-line no-throw-literal
-    const error = new Error(NOT_FOUND_ERROR_CODE);
-    error.digest = NOT_FOUND_ERROR_CODE;
-    throw error;
-}
-function isNotFoundError(error) {
-    return (error == null ? void 0 : error.digest) === NOT_FOUND_ERROR_CODE;
-}
-if ((typeof exports.default === "function" || typeof exports.default === "object" && exports.default !== null) && typeof exports.default.__esModule === "undefined") {
-    Object.defineProperty(exports.default, "__esModule", {
-        value: true
-    });
-    Object.assign(exports.default, exports);
-    module.exports = exports.default;
-} //# sourceMappingURL=not-found.js.map
-
-
-/***/ }),
-
-/***/ 8295:
-/***/ ((module, exports) => {
-
-
-Object.defineProperty(exports, "__esModule", ({
-    value: true
-}));
-0 && (0);
-function _export(target, all) {
-    for(var name in all)Object.defineProperty(target, name, {
-        enumerable: true,
-        get: all[name]
-    });
-}
-_export(exports, {
-    RedirectType: function() {
-        return RedirectType;
-    },
-    getRedirectError: function() {
-        return getRedirectError;
-    },
-    redirect: function() {
-        return redirect;
-    },
-    isRedirectError: function() {
-        return isRedirectError;
-    },
-    getURLFromRedirectError: function() {
-        return getURLFromRedirectError;
-    },
-    getRedirectTypeFromError: function() {
-        return getRedirectTypeFromError;
-    }
-});
-const REDIRECT_ERROR_CODE = "NEXT_REDIRECT";
-var RedirectType;
-(function(RedirectType) {
-    RedirectType["push"] = "push";
-    RedirectType["replace"] = "replace";
-})(RedirectType || (RedirectType = {}));
-function getRedirectError(url, type) {
-    // eslint-disable-next-line no-throw-literal
-    const error = new Error(REDIRECT_ERROR_CODE);
-    error.digest = REDIRECT_ERROR_CODE + ";" + type + ";" + url;
-    return error;
-}
-function redirect(url, type) {
-    if (type === void 0) type = "replace";
-    throw getRedirectError(url, type);
-}
-function isRedirectError(error) {
-    if (typeof (error == null ? void 0 : error.digest) !== "string") return false;
-    const [errorCode, type, destination] = error.digest.split(";", 3);
-    return errorCode === REDIRECT_ERROR_CODE && (type === "replace" || type === "push") && typeof destination === "string";
-}
-function getURLFromRedirectError(error) {
-    if (!isRedirectError(error)) return null;
-    // Slices off the beginning of the digest that contains the code and the
-    // separating ';'.
-    return error.digest.split(";", 3)[2];
-}
-function getRedirectTypeFromError(error) {
-    if (!isRedirectError(error)) {
-        throw new Error("Not a redirect error");
-    }
-    return error.digest.split(";", 3)[1];
-}
-if ((typeof exports.default === "function" || typeof exports.default === "object" && exports.default !== null) && typeof exports.default.__esModule === "undefined") {
-    Object.defineProperty(exports.default, "__esModule", {
-        value: true
-    });
-    Object.assign(exports.default, exports);
-    module.exports = exports.default;
-} //# sourceMappingURL=redirect.js.map
-
-
-/***/ }),
-
 /***/ 5311:
 /***/ ((module) => {
 
@@ -2444,7 +2323,7 @@ function cleanURL(urlString) {
 
 /***/ }),
 
-/***/ 6850:
+/***/ 1090:
 /***/ ((__unused_webpack_module, exports) => {
 
 
@@ -2709,7 +2588,7 @@ const _resolvehandlererror = __webpack_require__(5580);
 const _routekind = __webpack_require__(3624);
 const _log = /*#__PURE__*/ _interop_require_wildcard(__webpack_require__(6490));
 const _autoimplementmethods = __webpack_require__(9019);
-const _getnonstaticmethods = __webpack_require__(6850);
+const _getnonstaticmethods = __webpack_require__(1090);
 const _requestcookies = __webpack_require__(127);
 const _cookies = __webpack_require__(8306);
 const _headers = __webpack_require__(1778);
@@ -4581,7 +4460,7 @@ class ImageResponse {
             const readable = new ReadableStream({
                 async start (controller) {
                     const OGImageResponse = // as the auto resolving is not working
-                    (await Promise.resolve(/* import() */).then(__webpack_require__.bind(__webpack_require__, 8174))).ImageResponse;
+                    (await Promise.resolve(/* import() */).then(__webpack_require__.bind(__webpack_require__, 4021))).ImageResponse;
                     const imageResponse = new OGImageResponse(...args);
                     if (!imageResponse.body) {
                         return controller.close();

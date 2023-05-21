@@ -7,5 +7,19 @@ import dog from "./dog.png";
 import chat from "./chat.png";
 import cardio from "./cardio.png";
 import compete from "./compete.png";
+import star_full from "./star-full.png";
+import star_outline from "./star-outline.png";
 
-export { profileTobias, settingsPng, search, arrow, fitness, dog, chat, cardio, compete };
+export {
+  profileTobias,
+  settingsPng,
+  search,
+  arrow,
+  fitness,
+  dog,
+  chat,
+  cardio,
+  compete,
+  star_full,
+  star_outline,
+};

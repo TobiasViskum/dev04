@@ -1,6 +1,5 @@
 import "./globals.scss";
 import { Inter } from "next/font/google";
-import { Metadata } from "next";
 import PwaActions from "./PwaActions";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -16,8 +15,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         <link rel="manifest" href="/manifest.json" />
       </head>
-      <body className={inter.className}>{children}</body>
-      <PwaActions />
+      <body className={inter.className}>
+        {children}
+        <PwaActions />
+      </body>
     </html>
   );
 }

@@ -1,0 +1,39 @@
+@import "/app/mixins.scss";
+
+.main {
+  display: grid;
+  place-items: center;
+  text-align: center;
+
+  form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 2rem;
+
+    input {
+      margin-top: 0.5rem;
+      text-align: center;
+      font-size: 0.9rem;
+      width: 70svw;
+      min-width: 300px;
+      max-width: 450px;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      @include theme-box;
+    }
+    button {
+      --multi: 0.75;
+      border-radius: 4px;
+      color: var(--active-btn-text);
+      background-color: var(--active-btn-bg);
+      width: calc(70svw * var(--multi));
+      min-width: calc(300px * var(--multi));
+      max-width: calc(450px * var(--multi));
+      font-weight: 600;
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+      font-size: 1.5rem;
+    }
+  }
+}

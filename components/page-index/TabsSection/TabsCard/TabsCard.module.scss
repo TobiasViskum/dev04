@@ -30,15 +30,37 @@
     }
   }
 
-  .arrowHolder {
+  .rightIcons {
+    display: flex;
     margin-left: auto;
     margin-right: 4px;
-    width: calc(var(--icon-size) * 0.5);
-    height: calc(var(--icon-size) * 0.5);
+    column-gap: 32px;
 
-    .arrow {
-      @include image-bg;
-      @include next-image;
+    > form > button {
+      border: 0;
+      background: transparent;
+    }
+
+    .favoriteIconHolder {
+      right: 0;
+      height: calc(var(--icon-size) * 0.5);
+
+      .favoriteIcon {
+        @include image-bg-active;
+        @include next-image;
+      }
+    }
+
+    .arrowHolder {
+      display: flex;
+      margin-left: auto;
+
+      height: calc(var(--icon-size) * 0.5);
+
+      .arrow {
+        @include image-bg;
+        @include next-image;
+      }
     }
   }
 }
