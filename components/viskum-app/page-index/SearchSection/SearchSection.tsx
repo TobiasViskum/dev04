@@ -18,7 +18,7 @@ export default function SearchSection(props: Props) {
           <Image src={profileTobias} alt="profile" className={styles.profileIcon} />
         </div>
         <h1 id="title" className={styles.title}>
-          {translator("Family")}, {profileData.last_name}
+          {profileData.name} {profileData.last_name}
         </h1>
       </div>
       <div className={styles.lowerRow}>

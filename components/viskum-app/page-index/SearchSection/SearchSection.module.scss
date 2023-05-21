@@ -1,11 +1,12 @@
 @import "/app/mixins.scss";
 
 .searchSection {
-  --searching-template-rows: 1fr 1fr;
+  --searching-template-rows: min-content min-content;
   --searching-opacity: 1;
 
   margin-top: calc(var(--navbar-height) * 1.25);
   display: grid;
+  row-gap: 8px;
 
   grid-template-rows: var(--searching-template-rows);
   overflow: hidden;
@@ -15,12 +16,13 @@
   .upperRow {
     overflow: hidden;
     display: flex;
-    align-items: flex-start;
     column-gap: 16px;
+    align-items: center;
 
     .profileHolder {
       width: clamp(36px, calc(var(--icon-size) * 1.1), 42px);
       height: clamp(36px, calc(var(--icon-size) * 1.1), 42px);
+      aspect-ratio: 1 / 1;
       opacity: var(--searching-opacity);
       @include transition(opacity);
 
@@ -32,6 +34,8 @@
     .title {
       opacity: var(--searching-opacity);
       @include transition(opacity);
+
+      white-space: nowrap;
     }
   }
 }

@@ -60,7 +60,7 @@ module.exports = require("next/dist/compiled/react-server-dom-webpack-experiment
 
 /***/ }),
 
-/***/ 1090:
+/***/ 5232:
 /***/ ((module) => {
 
 "use strict";
@@ -421,7 +421,7 @@ __webpack_require__.r(__webpack_exports__);
         '[uid]',
         {
         children: ['__PAGE__', {}, {
-          page: [() => Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 7388)), "C:\\Users\\tobia\\Personal\\Development\\React\\dev04\\app\\viskum-app\\[uid]\\page.tsx"],
+          page: [() => Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 7245)), "C:\\Users\\tobia\\Personal\\Development\\React\\dev04\\app\\viskum-app\\[uid]\\page.tsx"],
           
         }]
       },
@@ -484,12 +484,13 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 5244:
+/***/ 5324:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 
 const actions = {
 'c1ed50eee9ceebed4fc568a42e6375a0a9727705': () => Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 914)).then(mod => mod["$$ACTION_0"]),
+'4ddf90cffbfd70303bff931a956ec89d7ee8f608': () => Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 6134)).then(mod => mod["$$ACTION_0"]),
 }
 
 async function endpoint(id, ...args) {
@@ -500,12 +501,13 @@ async function endpoint(id, ...args) {
 // Using CJS to avoid this to be tree-shaken away due to unused exports.
 module.exports = {
   'c1ed50eee9ceebed4fc568a42e6375a0a9727705': endpoint.bind(null, 'c1ed50eee9ceebed4fc568a42e6375a0a9727705'),
+  '4ddf90cffbfd70303bff931a956ec89d7ee8f608': endpoint.bind(null, '4ddf90cffbfd70303bff931a956ec89d7ee8f608'),
 }
 
 
 /***/ }),
 
-/***/ 4000:
+/***/ 6453:
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
 Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 3280, 23));
@@ -513,20 +515,20 @@ Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_
 Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 3349, 23));
 Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 2144, 23));
 Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 8095));
+Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 53, 23));
 Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 408, 23));
-Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 6826));
 Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 5308));
-Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 5908));
-Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 302));
 Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 6038));
 Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 1515));
-Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 1660));
-Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 1995));
+Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 302));
+Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 6826));
+Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 5908));
 Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 8594));
-Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 1954));
+Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 1995));
+Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 1660));
 Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 1491));
-Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 9975));
-Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 53, 23))
+Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 1954));
+Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 9975))
 
 /***/ }),
 
@@ -866,7 +868,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 7388:
+/***/ 7245:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -915,8 +917,6 @@ var next_image = __webpack_require__(2208);
 var image_default = /*#__PURE__*/__webpack_require__.n(next_image);
 // EXTERNAL MODULE: ./assets/images/index.ts + 11 modules
 var assets_images = __webpack_require__(2684);
-// EXTERNAL MODULE: ./lib/viskum-app/util/index.ts + 3 modules
-var util = __webpack_require__(8193);
 ;// CONCATENATED MODULE: ./components/viskum-app/page-index/SearchSection/SearchBar/SearchBar.tsx
 
 const SearchBar_proxy = (0,module_proxy.createProxy)(String.raw`C:\Users\tobia\Personal\Development\React\dev04\components\viskum-app\page-index\SearchSection\SearchBar\SearchBar.tsx`)
@@ -929,7 +929,6 @@ const { __esModule: SearchBar_esModule, $$typeof: SearchBar_$$typeof } = SearchB
 /* harmony default export */ const SearchBar = (SearchBar_proxy.default);
 
 ;// CONCATENATED MODULE: ./components/viskum-app/page-index/SearchSection/SearchSection.tsx
-
 
 
 
@@ -957,8 +956,8 @@ function SearchSection(props) {
                         id: "title",
                         className: (SearchSection_module_default()).title,
                         children: [
-                            (0,util/* translator */.OK)("Family"),
-                            ", ",
+                            profileData.name,
+                            " ",
                             profileData.last_name
                         ]
                     })
@@ -975,70 +974,16 @@ function SearchSection(props) {
 // EXTERNAL MODULE: ./components/viskum-app/page-index/FavoritesSection/FavoritesSection.module.scss
 var FavoritesSection_module = __webpack_require__(1898);
 var FavoritesSection_module_default = /*#__PURE__*/__webpack_require__.n(FavoritesSection_module);
-// EXTERNAL MODULE: ./components/viskum-app/page-index/FavoritesSection/FavoritesCard/FavoritesCard.module.scss
-var FavoritesCard_module = __webpack_require__(8846);
-var FavoritesCard_module_default = /*#__PURE__*/__webpack_require__.n(FavoritesCard_module);
-;// CONCATENATED MODULE: ./components/viskum-app/page-index/FavoritesSection/FavoritesCard/FavoritesCard.tsx
-
-
-
-
-
-function FavoritesCard(props) {
-    const appData = props.appData;
-    const appImageData = util/* appImages */.J7[appData.name_id];
-    return /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
-        className: (FavoritesCard_module_default()).container,
-        children: [
-            /*#__PURE__*/ jsx_runtime_.jsx("div", {
-                className: (FavoritesCard_module_default()).iconHolder + " " + appData.name_id,
-                children: /*#__PURE__*/ jsx_runtime_.jsx((image_default()), {
-                    src: appImageData.image,
-                    alt: "icon",
-                    style: {
-                        height: `${appImageData.size}%`,
-                        width: `${appImageData.size}%`
-                    }
-                })
-            }),
-            /*#__PURE__*/ jsx_runtime_.jsx("h3", {
-                children: appData.name
-            }),
-            /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
-                className: (FavoritesCard_module_default()).rightIcons,
-                children: [
-                    /*#__PURE__*/ jsx_runtime_.jsx("form", {
-                        children: /*#__PURE__*/ jsx_runtime_.jsx("button", {
-                            className: (FavoritesCard_module_default()).favoriteIconHolder,
-                            children: /*#__PURE__*/ jsx_runtime_.jsx((image_default()), {
-                                src: assets_images/* star_full */.P,
-                                alt: "icon",
-                                className: (FavoritesCard_module_default()).favoriteIcon
-                            })
-                        })
-                    }),
-                    /*#__PURE__*/ jsx_runtime_.jsx("form", {
-                        children: /*#__PURE__*/ jsx_runtime_.jsx("button", {
-                            className: (FavoritesCard_module_default()).arrowHolder,
-                            children: /*#__PURE__*/ jsx_runtime_.jsx((image_default()), {
-                                src: assets_images/* arrow */.x7,
-                                alt: "icon",
-                                className: (FavoritesCard_module_default()).arrow
-                            })
-                        })
-                    })
-                ]
-            })
-        ]
-    });
-}
-
+// EXTERNAL MODULE: ./components/viskum-app/page-index/FavoritesSection/FavoritesCard/FavoritesCard.tsx
+var FavoritesCard = __webpack_require__(6134);
 ;// CONCATENATED MODULE: ./components/viskum-app/page-index/FavoritesSection/FavoritesSection.tsx
 
 
 
 
-function findFavorites(uid, appData, favorites) {
+function findFavorites(appData, profileData) {
+    const uid = profileData.uid;
+    const favorites = profileData.favorites;
     let hasFoundFavorite = false;
     if (favorites == null) {
         (0,db_calls/* updateFavorite */.R3)(uid, false, {}, favorites);
@@ -1047,8 +992,9 @@ function findFavorites(uid, appData, favorites) {
     return appData.map((app, index)=>{
         if (favorites[app.name_id] != undefined) {
             hasFoundFavorite = true;
-            return /*#__PURE__*/ jsx_runtime_.jsx(FavoritesCard, {
-                appData: app
+            return /*#__PURE__*/ jsx_runtime_.jsx(FavoritesCard["default"], {
+                appData: app,
+                profileData: profileData
             }, index);
         }
         if (appData.length == index + 1 && hasFoundFavorite == false) {
@@ -1062,7 +1008,7 @@ function findFavorites(uid, appData, favorites) {
 function FavoritesSections(props) {
     const profileData = props.profileData;
     const appData = props.appData;
-    const result = findFavorites(profileData.uid, appData, profileData.favorites);
+    const result = findFavorites(appData, profileData);
     return /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
         className: (FavoritesSection_module_default()).main,
         children: [
@@ -1169,6 +1115,108 @@ async function page({ params  }) {
 
 /***/ }),
 
+/***/ 6134:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "$$ACTION_0": () => (/* binding */ $$ACTION_0),
+/* harmony export */   "default": () => (/* binding */ FavoritesCard)
+/* harmony export */ });
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6931);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var private_next_rsc_action_proxy__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2855);
+/* harmony import */ var next_image__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(2208);
+/* harmony import */ var next_image__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_image__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _FavoritesCard_module_scss__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(8846);
+/* harmony import */ var _FavoritesCard_module_scss__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_FavoritesCard_module_scss__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _assets_images__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(2684);
+/* harmony import */ var _lib_viskum_app_util__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(6300);
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(2585);
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _lib_viskum_app_db_calls__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(8431);
+/* harmony import */ var next_cache__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(7433);
+/* harmony import */ var next_cache__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(next_cache__WEBPACK_IMPORTED_MODULE_7__);
+/* __next_internal_action_entry_do_not_use__ $$ACTION_0 */ 
+
+
+
+
+
+
+
+
+function FavoritesCard(props) {
+    const profileData = props.profileData;
+    const appData = props.appData;
+    const uid = profileData.uid;
+    const favorites = profileData.favorites;
+    const name_id = appData.name_id;
+    const appImageData = _lib_viskum_app_util__WEBPACK_IMPORTED_MODULE_4__/* .appImages */ .J7[appData.name_id];
+    async function handleFavoriteClick(...args) {
+        return $$ACTION_0.apply(null, (handleFavoriteClick.$$bound || []).concat(args));
+    }
+    (0,private_next_rsc_action_proxy__WEBPACK_IMPORTED_MODULE_1__/* ["default"] */ .Z)("4ddf90cffbfd70303bff931a956ec89d7ee8f608", [
+        uid,
+        name_id,
+        favorites
+    ], handleFavoriteClick, $$ACTION_0);
+    return /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+        className: (_FavoritesCard_module_scss__WEBPACK_IMPORTED_MODULE_8___default().container),
+        children: [
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
+                className: (_FavoritesCard_module_scss__WEBPACK_IMPORTED_MODULE_8___default().iconHolder) + " " + appData.name_id,
+                children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_image__WEBPACK_IMPORTED_MODULE_2___default()), {
+                    src: appImageData.image,
+                    alt: "icon",
+                    style: {
+                        height: `${appImageData.size}%`,
+                        width: `${appImageData.size}%`
+                    }
+                })
+            }),
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("h3", {
+                children: appData.name
+            }),
+            /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                className: (_FavoritesCard_module_scss__WEBPACK_IMPORTED_MODULE_8___default().rightIcons),
+                children: [
+                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("form", {
+                        action: handleFavoriteClick,
+                        children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("button", {
+                            type: "submit",
+                            className: (_FavoritesCard_module_scss__WEBPACK_IMPORTED_MODULE_8___default().favoriteIconHolder),
+                            children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_image__WEBPACK_IMPORTED_MODULE_2___default()), {
+                                src: _assets_images__WEBPACK_IMPORTED_MODULE_3__/* .star_full */ .P,
+                                alt: "icon",
+                                className: (_FavoritesCard_module_scss__WEBPACK_IMPORTED_MODULE_8___default().favoriteIcon)
+                            })
+                        })
+                    }),
+                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_link__WEBPACK_IMPORTED_MODULE_5___default()), {
+                        className: (_FavoritesCard_module_scss__WEBPACK_IMPORTED_MODULE_8___default().arrowHolder),
+                        href: `/viskum-app/${uid}/${appData.name_id}`,
+                        children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_image__WEBPACK_IMPORTED_MODULE_2___default()), {
+                            src: _assets_images__WEBPACK_IMPORTED_MODULE_3__/* .arrow */ .x7,
+                            alt: "icon",
+                            className: (_FavoritesCard_module_scss__WEBPACK_IMPORTED_MODULE_8___default().arrow)
+                        })
+                    })
+                ]
+            })
+        ]
+    });
+}
+async function $$ACTION_0(uid, name_id, favorites) {
+    await (0,_lib_viskum_app_db_calls__WEBPACK_IMPORTED_MODULE_6__/* .updateFavorite */ .R3)(uid, false, name_id, favorites);
+    (0,next_cache__WEBPACK_IMPORTED_MODULE_7__.revalidatePath)("/");
+    return;
+}
+
+
+/***/ }),
+
 /***/ 914:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -1186,7 +1234,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _TabsCard_module_scss__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(6320);
 /* harmony import */ var _TabsCard_module_scss__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_TabsCard_module_scss__WEBPACK_IMPORTED_MODULE_8__);
 /* harmony import */ var _assets_images__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(2684);
-/* harmony import */ var _lib_viskum_app_util__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(8193);
+/* harmony import */ var _lib_viskum_app_util__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(6300);
 /* harmony import */ var _lib_viskum_app_db_calls__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(8431);
 /* harmony import */ var next_cache__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(7433);
 /* harmony import */ var next_cache__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(next_cache__WEBPACK_IMPORTED_MODULE_6__);
@@ -1386,7 +1434,7 @@ async function updateFavorite(uid, newState, name_id, prevFavortiesState) {
 var __webpack_require__ = require("../../../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [859,571,198,117,173,462,110,855,768,538,124,258], () => (__webpack_exec__(3881)));
+var __webpack_exports__ = __webpack_require__.X(0, [859,571,198,117,173,462,110,855,768,342,124,509], () => (__webpack_exec__(3881)));
 module.exports = __webpack_exports__;
 
 })();

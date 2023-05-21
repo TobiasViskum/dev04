@@ -2,14 +2,29 @@ import Image from "next/image";
 import styles from "./FavoritesCard.module.scss";
 import { arrow, star_full } from "@/assets/images";
 import { appImages } from "@/lib/viskum-app/util";
+import Link from "next/link";
+import { updateFavorite } from "@/lib/viskum-app/db-calls";
+import { revalidatePath } from "next/cache";
 
 interface Props {
   appData: AppData;
+  profileData: ProfileData;
 }
 
 export default function FavoritesCard(props: Props) {
+  const profileData = props.profileData;
   const appData = props.appData;
+  const uid = profileData.uid;
+  const favorites: any = profileData.favorites;
+  const name_id = appData.name_id;
   const appImageData = appImages[appData.name_id];
+
+  async function handleFavoriteClick() {
+    "use server";
+    await updateFavorite(uid, false, name_id, favorites);
+    revalidatePath("/");
+    return;
+  }
 
   return (
     <div className={styles.container}>
@@ -22,16 +37,14 @@ export default function FavoritesCard(props: Props) {
       </div>
       <h3>{appData.name}</h3>
       <div className={styles.rightIcons}>
-        <form>
-          <button className={styles.favoriteIconHolder}>
+        <form action={handleFavoriteClick}>
+          <button type="submit" className={styles.favoriteIconHolder}>
             <Image src={star_full} alt="icon" className={styles.favoriteIcon} />
           </button>
         </form>
-        <form>
-          <button className={styles.arrowHolder}>
-            <Image src={arrow} alt="icon" className={styles.arrow} />
-          </button>
-        </form>
+        <Link className={styles.arrowHolder} href={`/viskum-app/${uid}/${appData.name_id}`}>
+          <Image src={arrow} alt="icon" className={styles.arrow} />
+        </Link>
       </div>
     </div>
   );

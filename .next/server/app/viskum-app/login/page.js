@@ -52,7 +52,7 @@ module.exports = require("next/dist/compiled/react-server-dom-webpack-experiment
 
 /***/ }),
 
-/***/ 1090:
+/***/ 5232:
 /***/ ((module) => {
 
 "use strict";
@@ -458,7 +458,7 @@ var actions = __webpack_require__(4266);
 
 
 
-function page(pageProps) {
+function page({ params  }) {
     return /*#__PURE__*/ (0,jsx_runtime_.jsxs)("main", {
         className: (page_module_default()).main,
         children: [
@@ -576,7 +576,7 @@ function ensureServerEntryExports(actions) {
 var __webpack_require__ = require("../../../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [859,571,198,117,173,855,538,124], () => (__webpack_exec__(4602)));
+var __webpack_exports__ = __webpack_require__.X(0, [859,571,198,117,173,855,342,124], () => (__webpack_exec__(4602)));
 module.exports = __webpack_exports__;
 
 })();

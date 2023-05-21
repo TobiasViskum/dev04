@@ -15563,12 +15563,12 @@ module.exports = safer;
 
 "use strict";
 
-module.exports = __webpack_require__(6820);
+module.exports = __webpack_require__(9389);
 
 
 /***/ }),
 
-/***/ 6820:
+/***/ 9389:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";

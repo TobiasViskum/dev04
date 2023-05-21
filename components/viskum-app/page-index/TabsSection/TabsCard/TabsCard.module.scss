@@ -32,14 +32,16 @@
 
   .rightIcons {
     display: flex;
+    align-items: center;
     margin-left: auto;
     margin-right: 4px;
-    column-gap: 32px;
+    column-gap: 16px;
 
     .favoriteIconHolder {
       background: transparent;
-      width: calc(var(--icon-size) * 0.5);
-      height: calc(var(--icon-size) * 0.5);
+      width: calc(var(--icon-size) * 1);
+      height: calc(var(--icon-size) * 1);
+      padding: calc(var(--icon-size) * 0.25);
       .favoriteIcon {
         @include image-bg-active;
         @include next-image;
@@ -48,14 +50,16 @@
 
     .arrowHolder {
       display: flex;
+      justify-content: flex-end;
+      align-items: center;
       margin-left: auto;
       background-color: transparent;
-      width: calc(var(--icon-size) * 0.5);
-      height: calc(var(--icon-size) * 0.5);
+      width: calc(var(--icon-size) * 1);
+      height: calc(var(--icon-size) * 1);
 
       .arrow {
         @include image-bg;
-        @include next-image;
+        @include next-image(50%);
       }
     }
   }

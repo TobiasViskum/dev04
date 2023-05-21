@@ -47,7 +47,7 @@ module.exports = require("next/dist/compiled/react-server-dom-webpack-experiment
 
 /***/ }),
 
-/***/ 1090:
+/***/ 5232:
 /***/ ((module) => {
 
 module.exports = require("next/dist/server/app-render/get-segment-param.js");
@@ -420,7 +420,7 @@ async function page({ params  }) {
 var __webpack_require__ = require("../../../../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [859,571,198,117,173,462,538,124,463], () => (__webpack_exec__(7863)));
+var __webpack_exports__ = __webpack_require__.X(0, [859,571,198,117,173,462,342,124,463], () => (__webpack_exec__(7863)));
 module.exports = __webpack_exports__;
 
 })();

@@ -1,7 +1,7 @@
 import styles from "./page.module.scss";
 import { handleLogin } from "@/lib/viskum-app/actions";
 
-export default function page(pageProps: any) {
+export default function page({ params }: ViskumAppParams) {
   return (
     <main className={styles.main}>
       <br />
