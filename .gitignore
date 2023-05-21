@@ -8,10 +8,10 @@ node_modules
 
 # testing
 /coverage
-copy_files
+copy_files.bat
 
 # next.js
-/.next/
+# /.next/
 /out/
 
 # production
@@ -35,7 +35,6 @@ yarn-error.log*
 
 # vercel
 .vercel
-.bat
 
 # typescript
 *.tsbuildinfo
