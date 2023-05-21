@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "copy": "copy_files.bat",
-    "github": "git add . && sleep 1 && git commit -m 'new commit' && sleep 1 && git push"
+    "github": "git add . && timeout /t 1 /nobreak && git commit -m 'new commit' && timeout /t 1 /nobreak && git push"
   },
   "dependencies": {
     "@types/node": "20.1.3",
