@@ -1,16 +1,16 @@
 import styles from "./page.module.scss";
 import { userAuth } from "@/lib/viskum-app/auth";
 import { redirect } from "next/navigation";
-//import { handleLogin } from "@/lib/viskum-app/actions";
+import { handleLogin } from "@/lib/viskum-app/actions";
 
 export default function page({ params }: ViskumAppParams) {
-  async function handleLogin(data: FormData) {
-    const inputText = String(data.get("password"));
-    const responseUid = await userAuth(inputText);
-    if (responseUid) {
-      redirect(`/viskum-app/${responseUid}`);
-    }
-  }
+  // async function handleLogin(data: FormData) {
+  //   const inputText = String(data.get("password"));
+  //   const responseUid = await userAuth(inputText);
+  //   if (responseUid) {
+  //     redirect(`/viskum-app/${responseUid}`);
+  //   }
+  // }
 
   return (
     <main className={styles.main}>

@@ -60,7 +60,7 @@ module.exports = require("next/dist/compiled/react-server-dom-webpack-experiment
 
 /***/ }),
 
-/***/ 5232:
+/***/ 1090:
 /***/ ((module) => {
 
 "use strict";
@@ -507,7 +507,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 9084:
+/***/ 486:
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
 Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 3280, 23));
@@ -517,17 +517,17 @@ Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_
 Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 8095));
 Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 408, 23));
 Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 53, 23));
-Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 5908));
 Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 6826));
 Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 6038));
 Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 5308));
 Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 302));
 Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 1515));
 Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 1660));
+Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 8594));
 Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 1954));
 Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 1995));
-Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 8594));
 Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 1491));
+Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 5908));
 Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 9975))
 
 /***/ }),
@@ -1434,7 +1434,7 @@ async function updateFavorite(uid, newState, name_id, prevFavortiesState) {
 var __webpack_require__ = require("../../../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [859,571,198,117,173,462,110,913,342,124,509], () => (__webpack_exec__(3881)));
+var __webpack_exports__ = __webpack_require__.X(0, [859,571,198,117,173,462,110,855,768,342,124,509], () => (__webpack_exec__(3881)));
 module.exports = __webpack_exports__;
 
 })();
