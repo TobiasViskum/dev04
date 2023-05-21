@@ -52,7 +52,7 @@ module.exports = require("next/dist/compiled/react-server-dom-webpack-experiment
 
 /***/ }),
 
-/***/ 1090:
+/***/ 5232:
 /***/ ((module) => {
 
 "use strict";
@@ -413,7 +413,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 2958:
+/***/ 9939:
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
 Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 53, 23));
@@ -429,8 +429,8 @@ Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_re
 Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 1515));
 Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 8594));
 Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 1660));
-Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 1995));
 Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 1954));
+Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 1995));
 Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 1491))
 
 /***/ }),

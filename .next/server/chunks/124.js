@@ -32,7 +32,7 @@ var promise = __webpack_require__(6729);
 ;// CONCATENATED MODULE: ./lib/db/db.ts
 
 const db = promise.createPool({
-    host: "192.168.2.20",
+    host: "192.168.2.35",
     database: "fitness_db",
     user: "tobias",
     password: "fitness",
