@@ -3,6 +3,7 @@ import styles from "./TabsCard.module.scss";
 import { arrow, star_full, star_outline } from "@/assets/images";
 import { appImages } from "@/lib/util";
 import { updateFavorite } from "@/lib/db";
+import { revalidatePath } from "next/cache";
 
 interface Props {
   appData: AppData;
@@ -12,6 +13,7 @@ interface Props {
 export default function TabsCard(props: Props) {
   const profileData = props.profileData;
   const appData = props.appData;
+  const uid = profileData.uid;
   const favorites: any = profileData.favorites;
   const isFavorite: string | undefined = favorites[appData.name_id];
   const name_id = appData.name_id;
@@ -19,8 +21,10 @@ export default function TabsCard(props: Props) {
 
   async function handleFavoriteClick() {
     "use server";
-    const newState = isFavorite ? true : false;
-    updateFavorite(name_id, newState);
+    const newState = isFavorite ? false : true;
+    await updateFavorite(uid, newState, name_id, favorites);
+    revalidatePath("/");
+    return;
   }
   async function handleArrowClick() {
     "use server";

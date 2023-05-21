@@ -4,6 +4,14 @@ exports.id = 931;
 exports.ids = [931];
 exports.modules = {
 
+/***/ 8530:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/compiled/@opentelemetry/api");
+
+/***/ }),
+
 /***/ 252:
 /***/ ((module) => {
 
@@ -52,7 +60,7 @@ module.exports = require("next/dist/compiled/react-server-dom-webpack-experiment
 
 /***/ }),
 
-/***/ 5232:
+/***/ 1090:
 /***/ ((module) => {
 
 "use strict";
@@ -481,40 +489,29 @@ module.exports = {
 
 /***/ }),
 
-/***/ 7143:
+/***/ 8028:
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 3349, 23));
 Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 3280, 23));
 Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 9274, 23));
+Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 3349, 23));
 Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 2144, 23));
+Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 9883));
 Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 408, 23));
-Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 4783));
-Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 5308));
-Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 6826));
-Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 302));
-Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 5908));
 Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 6038));
-Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 8594));
-Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 1660));
-Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 1491));
+Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 5908));
+Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 302));
+Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 6826));
+Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 5308));
 Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 1515));
-Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 1995));
+Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 1660));
 Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 1954));
-Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 8701));
+Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 8594));
+Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 1491));
+Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 1995));
+Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 4783));
 Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 53, 23));
-Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 9883))
-
-/***/ }),
-
-/***/ 9093:
-/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
-
-Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 3751, 23));
-Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 9222, 23));
-Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 5192, 23));
-Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 8301, 23));
-Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 4765, 23))
+Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 8701))
 
 /***/ }),
 
@@ -1094,8 +1091,13 @@ const { __esModule: FavoritesCard_esModule, $$typeof: FavoritesCard_$$typeof } =
 
 
 
-function findFavorites(appData, favorites) {
+
+function findFavorites(uid, appData, favorites) {
     let hasFoundFavorite = false;
+    if (favorites == null) {
+        (0,db/* updateFavorite */.R3)(uid, false, {}, favorites);
+        return;
+    }
     return appData.map((app, index)=>{
         if (favorites[app.name_id] != undefined) {
             hasFoundFavorite = true;
@@ -1114,7 +1116,7 @@ function findFavorites(appData, favorites) {
 function FavoritesSections(props) {
     const profileData = props.profileData;
     const appData = props.appData;
-    const result = findFavorites(appData, profileData.favorites);
+    const result = findFavorites(profileData.uid, appData, profileData.favorites);
     return /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
         className: (FavoritesSection_module_default()).main,
         children: [
@@ -1302,12 +1304,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var private_next_rsc_action_proxy__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2855);
 /* harmony import */ var next_image__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(2208);
 /* harmony import */ var next_image__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_image__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _TabsCard_module_scss__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(8480);
-/* harmony import */ var _TabsCard_module_scss__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_TabsCard_module_scss__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _TabsCard_module_scss__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(8480);
+/* harmony import */ var _TabsCard_module_scss__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_TabsCard_module_scss__WEBPACK_IMPORTED_MODULE_7__);
 /* harmony import */ var _assets_images__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(2684);
 /* harmony import */ var _lib_util__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(6129);
 /* harmony import */ var _lib_db__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(7105);
+/* harmony import */ var next_cache__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(7433);
+/* harmony import */ var next_cache__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(next_cache__WEBPACK_IMPORTED_MODULE_6__);
 /* __next_internal_action_entry_do_not_use__ $$ACTION_0,$$ACTION_1 */ 
+
 
 
 
@@ -1317,6 +1322,7 @@ __webpack_require__.r(__webpack_exports__);
 function TabsCard(props) {
     const profileData = props.profileData;
     const appData = props.appData;
+    const uid = profileData.uid;
     const favorites = profileData.favorites;
     const isFavorite = favorites[appData.name_id];
     const name_id = appData.name_id;
@@ -1326,20 +1332,24 @@ function TabsCard(props) {
     }
     (0,private_next_rsc_action_proxy__WEBPACK_IMPORTED_MODULE_1__/* ["default"] */ .Z)("e6c4ef28f1a8b6c57347165d1b286752fbb74497", [
         isFavorite,
-        name_id
+        uid,
+        name_id,
+        favorites
     ], handleFavoriteClick, $$ACTION_0);
     async function handleArrowClick(...args) {
         return $$ACTION_1.apply(null, (handleArrowClick.$$bound || []).concat(args));
     }
     (0,private_next_rsc_action_proxy__WEBPACK_IMPORTED_MODULE_1__/* ["default"] */ .Z)("b75c94a03b14251e9332519a0be36b305cdbed8b", [
         isFavorite,
-        name_id
+        uid,
+        name_id,
+        favorites
     ], handleArrowClick, $$ACTION_1);
     return /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
-        className: (_TabsCard_module_scss__WEBPACK_IMPORTED_MODULE_6___default().container),
+        className: (_TabsCard_module_scss__WEBPACK_IMPORTED_MODULE_7___default().container),
         children: [
             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
-                className: (_TabsCard_module_scss__WEBPACK_IMPORTED_MODULE_6___default().iconHolder) + " " + appData.name_id,
+                className: (_TabsCard_module_scss__WEBPACK_IMPORTED_MODULE_7___default().iconHolder) + " " + appData.name_id,
                 children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_image__WEBPACK_IMPORTED_MODULE_2___default()), {
                     src: appImageData.image,
                     alt: "icon",
@@ -1350,7 +1360,7 @@ function TabsCard(props) {
                 })
             }),
             /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
-                className: (_TabsCard_module_scss__WEBPACK_IMPORTED_MODULE_6___default().textHolder),
+                className: (_TabsCard_module_scss__WEBPACK_IMPORTED_MODULE_7___default().textHolder),
                 children: [
                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("h3", {
                         children: appData.name
@@ -1361,17 +1371,17 @@ function TabsCard(props) {
                 ]
             }),
             /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
-                className: (_TabsCard_module_scss__WEBPACK_IMPORTED_MODULE_6___default().rightIcons),
+                className: (_TabsCard_module_scss__WEBPACK_IMPORTED_MODULE_7___default().rightIcons),
                 children: [
                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("form", {
                         action: handleFavoriteClick,
                         children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("button", {
                             type: "submit",
-                            className: (_TabsCard_module_scss__WEBPACK_IMPORTED_MODULE_6___default().favoriteIconHolder),
+                            className: (_TabsCard_module_scss__WEBPACK_IMPORTED_MODULE_7___default().favoriteIconHolder),
                             children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_image__WEBPACK_IMPORTED_MODULE_2___default()), {
                                 src: isFavorite ? _assets_images__WEBPACK_IMPORTED_MODULE_3__/* .star_full */ .P : _assets_images__WEBPACK_IMPORTED_MODULE_3__/* .star_outline */ .YO,
                                 alt: "icon",
-                                className: (_TabsCard_module_scss__WEBPACK_IMPORTED_MODULE_6___default().favoriteIcon)
+                                className: (_TabsCard_module_scss__WEBPACK_IMPORTED_MODULE_7___default().favoriteIcon)
                             })
                         })
                     }),
@@ -1379,11 +1389,11 @@ function TabsCard(props) {
                         action: handleArrowClick,
                         children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("button", {
                             type: "submit",
-                            className: (_TabsCard_module_scss__WEBPACK_IMPORTED_MODULE_6___default().arrowHolder),
+                            className: (_TabsCard_module_scss__WEBPACK_IMPORTED_MODULE_7___default().arrowHolder),
                             children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_image__WEBPACK_IMPORTED_MODULE_2___default()), {
                                 src: _assets_images__WEBPACK_IMPORTED_MODULE_3__/* .arrow */ .x7,
                                 alt: "icon",
-                                className: (_TabsCard_module_scss__WEBPACK_IMPORTED_MODULE_6___default().arrow)
+                                className: (_TabsCard_module_scss__WEBPACK_IMPORTED_MODULE_7___default().arrow)
                             })
                         })
                     })
@@ -1392,11 +1402,13 @@ function TabsCard(props) {
         ]
     });
 }
-async function $$ACTION_0(isFavorite, name_id) {
-    const newState = isFavorite ? true : false;
-    (0,_lib_db__WEBPACK_IMPORTED_MODULE_5__/* .updateFavorite */ .R3)(name_id, newState);
+async function $$ACTION_0(isFavorite, uid, name_id, favorites) {
+    const newState = isFavorite ? false : true;
+    await (0,_lib_db__WEBPACK_IMPORTED_MODULE_5__/* .updateFavorite */ .R3)(uid, newState, name_id, favorites);
+    (0,next_cache__WEBPACK_IMPORTED_MODULE_6__.revalidatePath)("/");
+    return;
 }
-async function $$ACTION_1(isFavorite, name_id) {}
+async function $$ACTION_1(isFavorite, uid, name_id, favorites) {}
 
 
 /***/ }),
@@ -1667,7 +1679,7 @@ __webpack_require__.r(__webpack_exports__);
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [859,187,198,395,462,855,286,648,644], () => (__webpack_exec__(6908)));
+var __webpack_exports__ = __webpack_require__.X(0, [859,571,198,395,110,462,855,768,342,644], () => (__webpack_exec__(6908)));
 module.exports = __webpack_exports__;
 
 })();

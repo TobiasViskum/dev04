@@ -5,7 +5,7 @@ exports.id = 155;
 exports.ids = [155];
 exports.modules = {
 
-/***/ 7783:
+/***/ 683:
 /***/ ((module) => {
 
 module.exports = require("next/dist/compiled/@edge-runtime/cookies");
@@ -136,7 +136,7 @@ const dynamic = 'force-static'
 var __webpack_require__ = require("../../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [859,198,109], () => (__webpack_exec__(2145)));
+var __webpack_exports__ = __webpack_require__.X(0, [859,198,110,109], () => (__webpack_exec__(2145)));
 module.exports = __webpack_exports__;
 
 })();
