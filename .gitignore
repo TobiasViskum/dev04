@@ -8,7 +8,8 @@ node_modules
 
 # testing
 /coverage
-copy_files.bat
+copy_node.bat
+copy_next.bat
 
 # next.js
 # /.next/
