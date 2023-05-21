@@ -18,9 +18,9 @@ export const metadata: Metadata = {
   title: "Viskum App",
 };
 
-export async function generateStaticParams() {
-  return indexStaticPages();
-}
+// export async function generateStaticParams() {
+//   return indexStaticPages();
+// }
 
 export default async function page({ params }: ViskumAppParams) {
   const uid = params.uid;
