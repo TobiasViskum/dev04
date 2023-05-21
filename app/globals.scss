@@ -31,7 +31,7 @@ html {
   /* This isn't colors */
   --transition-duration: 0.25s;
 
-  --touch-actions: pan-y;
+  --touch-actions: pinch-zoom pan-y;
   --navbar-height: 48px;
   --icon-size: 32px;
 
@@ -68,6 +68,7 @@ input,
 button {
   border: 0;
   outline: 0;
+  padding: 0;
 }
 
 h1,

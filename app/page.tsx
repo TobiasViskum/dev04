@@ -1,8 +1,13 @@
 import styles from "./page.module.scss";
 import { getProfileData, getAppData } from "@/lib/db";
-import { Header, Main, Footer } from "@/components/page-index";
+import {
+  Header,
+  Footer,
+  SearchSection,
+  FavoritesSections,
+  TabsSection,
+} from "@/components/page-index";
 import { userAuth } from "@/lib/auth/userAuth";
-import { Metadata } from "next";
 
 export default async function page(pageProps: any) {
   const uid = pageProps.searchParams.uid;
@@ -13,7 +18,11 @@ export default async function page(pageProps: any) {
   return (
     <>
       <Header />
-      <Main profileData={JSON.stringify(profileData)} appData={JSON.stringify(appData)} />
+      <main className={styles.main} id="main">
+        <SearchSection profileData={profileData} />
+        <FavoritesSections profileData={profileData} appData={appData} />
+        <TabsSection profileData={profileData} appData={appData} />
+      </main>
       <Footer />
     </>
   );

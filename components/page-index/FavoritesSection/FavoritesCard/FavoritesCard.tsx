@@ -24,12 +24,16 @@ export default function FavoritesCard(props: Props) {
       </div>
       <h3>{appData.name}</h3>
       <div className={styles.rightIcons}>
-        <button className={styles.favoriteIconHolder}>
-          <Image src={star_full} alt="icon" className={styles.favoriteIcon} />
-        </button>
-        <button className={styles.arrowHolder}>
-          <Image src={arrow} alt="icon" className={styles.arrow} />
-        </button>
+        <form>
+          <button className={styles.favoriteIconHolder}>
+            <img src={star_full.src} alt="icon" className={styles.favoriteIcon} />
+          </button>
+        </form>
+        <form>
+          <button className={styles.arrowHolder}>
+            <Image src={arrow} alt="icon" className={styles.arrow} />
+          </button>
+        </form>
       </div>
     </div>
   );

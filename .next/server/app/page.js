@@ -407,7 +407,7 @@ __webpack_require__.r(__webpack_exports__);
         '',
         {
         children: ['__PAGE__', {}, {
-          page: [() => Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 2683)), "C:\\Users\\tobia\\Personal\\Development\\React\\dev04\\app\\page.tsx"],
+          page: [() => Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 8451)), "C:\\Users\\tobia\\Personal\\Development\\React\\dev04\\app\\page.tsx"],
           metadata: {
     icon: [(async (props) => (await Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 4756))).default(props))],
     apple: [],
@@ -481,40 +481,40 @@ module.exports = {
 
 /***/ }),
 
-/***/ 1613:
+/***/ 7143:
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 9222, 23));
-Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 4765, 23));
-Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 8301, 23));
-Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 3751, 23));
-Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 5192, 23))
-
-/***/ }),
-
-/***/ 1930:
-/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
-
+Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 3349, 23));
 Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 3280, 23));
 Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 9274, 23));
-Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 3349, 23));
 Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 2144, 23));
-Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 9883));
 Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 408, 23));
 Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 4783));
 Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 5308));
-Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 5908));
-Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 1515));
-Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 6038));
+Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 6826));
 Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 302));
-Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 1954));
+Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 5908));
+Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 6038));
 Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 8594));
 Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 1660));
-Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 6826));
-Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 1995));
 Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 1491));
+Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 1515));
+Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 1995));
+Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 1954));
+Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 8701));
 Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 53, 23));
-Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 8701))
+Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 9883))
+
+/***/ }),
+
+/***/ 9093:
+/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
+
+Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 3751, 23));
+Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 9222, 23));
+Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 5192, 23));
+Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 8301, 23));
+Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 4765, 23))
 
 /***/ }),
 
@@ -641,20 +641,24 @@ function FavoritesCard(props) {
             /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
                 className: (FavoritesCard_module_default()).rightIcons,
                 children: [
-                    /*#__PURE__*/ jsx_runtime_.jsx("button", {
-                        className: (FavoritesCard_module_default()).favoriteIconHolder,
-                        children: /*#__PURE__*/ jsx_runtime_.jsx((image_default()), {
-                            src: assets_images/* star_full */.P,
-                            alt: "icon",
-                            className: (FavoritesCard_module_default()).favoriteIcon
+                    /*#__PURE__*/ jsx_runtime_.jsx("form", {
+                        children: /*#__PURE__*/ jsx_runtime_.jsx("button", {
+                            className: (FavoritesCard_module_default()).favoriteIconHolder,
+                            children: /*#__PURE__*/ jsx_runtime_.jsx("img", {
+                                src: assets_images/* star_full.src */.P.src,
+                                alt: "icon",
+                                className: (FavoritesCard_module_default()).favoriteIcon
+                            })
                         })
                     }),
-                    /*#__PURE__*/ jsx_runtime_.jsx("button", {
-                        className: (FavoritesCard_module_default()).arrowHolder,
-                        children: /*#__PURE__*/ jsx_runtime_.jsx((image_default()), {
-                            src: assets_images/* arrow */.x7,
-                            alt: "icon",
-                            className: (FavoritesCard_module_default()).arrow
+                    /*#__PURE__*/ jsx_runtime_.jsx("form", {
+                        children: /*#__PURE__*/ jsx_runtime_.jsx("button", {
+                            className: (FavoritesCard_module_default()).arrowHolder,
+                            children: /*#__PURE__*/ jsx_runtime_.jsx((image_default()), {
+                                src: assets_images/* arrow */.x7,
+                                alt: "icon",
+                                className: (FavoritesCard_module_default()).arrow
+                            })
                         })
                     })
                 ]
@@ -848,6 +852,17 @@ function SearchBar() {
 
 /***/ }),
 
+/***/ 4901:
+/***/ ((module) => {
+
+// Exports
+module.exports = {
+	"main": "page_main__FWdGo"
+};
+
+
+/***/ }),
+
 /***/ 4574:
 /***/ ((module) => {
 
@@ -890,17 +905,6 @@ module.exports = {
 	"title": "Header_title__7V0zf",
 	"headerActive": "Header_headerActive__vrC5s",
 	"intersector": "Header_intersector__wCl6f"
-};
-
-
-/***/ }),
-
-/***/ 3977:
-/***/ ((module) => {
-
-// Exports
-module.exports = {
-	"main": "Main_main__u8hg_"
 };
 
 
@@ -967,7 +971,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 2683:
+/***/ 8451:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -981,6 +985,9 @@ __webpack_require__.d(__webpack_exports__, {
 
 // EXTERNAL MODULE: external "next/dist/compiled/react-experimental/jsx-runtime"
 var jsx_runtime_ = __webpack_require__(6931);
+// EXTERNAL MODULE: ./app/page.module.scss
+var page_module = __webpack_require__(4901);
+var page_module_default = /*#__PURE__*/__webpack_require__.n(page_module);
 // EXTERNAL MODULE: ./lib/db/index.ts + 4 modules
 var db = __webpack_require__(7105);
 // EXTERNAL MODULE: ./node_modules/next/dist/build/webpack/loaders/next-flight-loader/module-proxy.js
@@ -995,35 +1002,6 @@ const proxy = (0,module_proxy.createProxy)(String.raw`C:\Users\tobia\Personal\De
 // is a client boundary.
 const { __esModule, $$typeof } = proxy;
 /* harmony default export */ const Header = (proxy.default);
-
-// EXTERNAL MODULE: ./components/page-index/Main/Main.module.scss
-var Main_module = __webpack_require__(3977);
-var Main_module_default = /*#__PURE__*/__webpack_require__.n(Main_module);
-;// CONCATENATED MODULE: ./components/page-index/Main/Main.tsx
-
-
-
-function Main(props) {
-    const profileData = JSON.parse(props.profileData);
-    const appData = JSON.parse(props.appData);
-    return /*#__PURE__*/ (0,jsx_runtime_.jsxs)("main", {
-        className: (Main_module_default()).main,
-        id: "main",
-        children: [
-            /*#__PURE__*/ jsx_runtime_.jsx(SearchSection, {
-                profileData: profileData
-            }),
-            /*#__PURE__*/ jsx_runtime_.jsx(FavoritesSections, {
-                profileData: profileData,
-                appData: appData
-            }),
-            /*#__PURE__*/ jsx_runtime_.jsx(TabsSection, {
-                profileData: profileData,
-                appData: appData
-            })
-        ]
-    });
-}
 
 ;// CONCATENATED MODULE: ./components/page-index/Footer/Footer.tsx
 
@@ -1207,10 +1185,10 @@ function TabsSection(props) {
 
 
 
-
 // EXTERNAL MODULE: ./lib/auth/userAuth.ts
 var userAuth = __webpack_require__(6323);
 ;// CONCATENATED MODULE: ./app/page.tsx
+
 
 
 
@@ -1225,9 +1203,22 @@ async function page(pageProps) {
     return /*#__PURE__*/ (0,jsx_runtime_.jsxs)(jsx_runtime_.Fragment, {
         children: [
             /*#__PURE__*/ jsx_runtime_.jsx(Header, {}),
-            /*#__PURE__*/ jsx_runtime_.jsx(Main, {
-                profileData: JSON.stringify(profileData),
-                appData: JSON.stringify(appData)
+            /*#__PURE__*/ (0,jsx_runtime_.jsxs)("main", {
+                className: (page_module_default()).main,
+                id: "main",
+                children: [
+                    /*#__PURE__*/ jsx_runtime_.jsx(SearchSection, {
+                        profileData: profileData
+                    }),
+                    /*#__PURE__*/ jsx_runtime_.jsx(FavoritesSections, {
+                        profileData: profileData,
+                        appData: appData
+                    }),
+                    /*#__PURE__*/ jsx_runtime_.jsx(TabsSection, {
+                        profileData: profileData,
+                        appData: appData
+                    })
+                ]
             }),
             /*#__PURE__*/ jsx_runtime_.jsx(Footer, {})
         ]
@@ -1676,7 +1667,7 @@ __webpack_require__.r(__webpack_exports__);
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [859,571,198,395,462,855,286,648,644], () => (__webpack_exec__(6908)));
+var __webpack_exports__ = __webpack_require__.X(0, [859,187,198,395,462,855,286,648,644], () => (__webpack_exec__(6908)));
 module.exports = __webpack_exports__;
 
 })();

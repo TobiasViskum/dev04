@@ -37,14 +37,12 @@
     column-gap: 32px;
 
     > form > button {
-      border: 0;
       background: transparent;
+      width: calc(var(--icon-size) * 0.5);
+      height: calc(var(--icon-size) * 0.5);
     }
 
     .favoriteIconHolder {
-      right: 0;
-      height: calc(var(--icon-size) * 0.5);
-
       .favoriteIcon {
         @include image-bg-active;
         @include next-image;
@@ -54,8 +52,6 @@
     .arrowHolder {
       display: flex;
       margin-left: auto;
-
-      height: calc(var(--icon-size) * 0.5);
 
       .arrow {
         @include image-bg;

@@ -1,8 +1,8 @@
-1:HL["/_next/static/css/549cd9f5a992ee53.css",{"as":"style"}]
-0:[[["",{"children":["not-found",{}]},"$undefined","$undefined",true],"$L2",[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/549cd9f5a992ee53.css","precedence":"next"}]],["$L3",null]]]]
-4:I{"id":"9544","chunks":["272:static/chunks/webpack-bab37ec4c6a93ebc.js","875:static/chunks/b7dfe19b-4f91d84de192b5e5.js","474:static/chunks/474-87fca73e23826d88.js"],"name":"","async":false}
+1:HL["/_next/static/css/f34e473870a06d42.css",{"as":"style"}]
+0:[[["",{"children":["not-found",{}]},"$undefined","$undefined",true],"$L2",[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/f34e473870a06d42.css","precedence":"next"}]],["$L3",null]]]]
+4:I{"id":"9544","chunks":["272:static/chunks/webpack-f3f98cdfc14a8467.js","875:static/chunks/b7dfe19b-4f91d84de192b5e5.js","474:static/chunks/474-87fca73e23826d88.js"],"name":"","async":false}
 5:I{"id":"6310","chunks":["601:static/chunks/app/error-14dd200e1eb5bc20.js"],"name":"","async":false}
-6:I{"id":"99","chunks":["272:static/chunks/webpack-bab37ec4c6a93ebc.js","875:static/chunks/b7dfe19b-4f91d84de192b5e5.js","474:static/chunks/474-87fca73e23826d88.js"],"name":"","async":false}
-7:I{"id":"9576","chunks":["185:static/chunks/app/layout-a8ceca63b9bb451c.js"],"name":"","async":false}
+6:I{"id":"99","chunks":["272:static/chunks/webpack-f3f98cdfc14a8467.js","875:static/chunks/b7dfe19b-4f91d84de192b5e5.js","474:static/chunks/474-87fca73e23826d88.js"],"name":"","async":false}
+7:I{"id":"9576","chunks":["185:static/chunks/app/layout-7d271a5a4b3f16dd.js"],"name":"","async":false}
 2:[["$","html",null,{"lang":"en","children":[["$","head",null,{"children":["$","link",null,{"rel":"manifest","href":"/manifest.json"}]}],["$","body",null,{"className":"__className_0ec1f4","children":[["$","$L4",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$5","errorStyles":[],"loading":"$undefined","loadingStyles":"$undefined","hasLoading":false,"template":["$","$L6",null,{}],"templateStyles":"$undefined","notFound":["$","div",null,{"children":"NotFound"}],"notFoundStyles":[],"asNotFound":true,"childProp":{"current":"$undefined","segment":"not-found"},"styles":[]}],["$","$L7",null,{}]]}]]}],null]
 3:[[["$","meta",null,{"charSet":"utf-8"}],["$","title",null,{"children":"Home"}],["$","meta",null,{"name":"description","content":"Made by Tobias T. Viskum"}],null,null,null,null,null,null,null,null,["$","meta",null,{"name":"viewport","content":"width=device-width, initial-scale=1"}],null,null,null,null,null,null,null,null,null,null,[]],[null,null,null,null],null,null,[null,null,null,null,null],null,null,null,null,[null,[["$","link",null,{"rel":"icon","href":"\\favicon.ico","type":"image/x-icon","sizes":"any"}]],[],null]]
