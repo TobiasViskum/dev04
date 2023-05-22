@@ -10,8 +10,7 @@ lib/auth/generateSessionKey.ts
 
 # testing
 /coverage
-copy_node.bat
-copy_next.bat
+*.bat
 
 # next.js
 /.next/
