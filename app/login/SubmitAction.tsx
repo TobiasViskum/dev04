@@ -18,7 +18,7 @@ export function SubmitAction() {
     if (data.redirect) {
       router.push(data.redirect);
     } else {
-      setSubmitResponse(<p>User doesn't exist!</p>);
+      setSubmitResponse(<p>User doesn{"'"}t exist!</p>);
     }
   }
 
