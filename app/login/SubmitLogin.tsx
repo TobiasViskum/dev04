@@ -2,21 +2,39 @@
 import { useEffect, useState, useRef } from "react";
 import { useRouter } from "next/navigation";
 
-export function SubmitAction() {
+export function SubmitLogin() {
   const [submitResponse, setSubmitResponse] = useState(<p></p>);
   const [inputText, setInputText] = useState("");
   const isFirstRender = useRef(false);
-
   const router = useRouter();
 
   async function handleClick() {
-    const response = await fetch(`/api/login?input=${inputText}`, {
+    const responseInput = await fetch(`/api/login?input=${inputText}`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
     });
-    const data: { redirect: string | null } = await response.json();
-    if (data.redirect) {
-      router.push(data.redirect);
+    const dataInput: { passed: boolean; status: string } = await responseInput.json();
+
+    if (dataInput.passed) {
+      const sessionKey = localStorage.getItem("sessionKey");
+
+      const responseConfirm = await fetch(
+        `/api/login/confirm?uid=${inputText}&sessionKey=${sessionKey}`,
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+        }
+      );
+      const dataConfirm: { newRedirect: string; passed: boolean; status: string } =
+        await responseConfirm.json();
+
+      if (dataConfirm.status == "error") {
+        setSubmitResponse(<p>An error happened</p>);
+      } else {
+        router.push(dataConfirm.newRedirect);
+      }
+    } else if (dataInput.status == "error") {
+      setSubmitResponse(<p>An error happened</p>);
     } else {
       setSubmitResponse(<p>User doesn{"'"}t exist!</p>);
     }

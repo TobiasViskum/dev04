@@ -1,7 +1,7 @@
 import { execute } from "@/lib/db";
 import { redirect } from "next/navigation";
 
-export async function userAuth(uid: string, specialAction?: string) {
+export async function userAuthServer(uid: string) {
   if (uid == undefined) redirect("/login");
 
   const q = "SELECT * FROM dim_profile WHERE uid=(?)";
@@ -9,7 +9,7 @@ export async function userAuth(uid: string, specialAction?: string) {
 
   const result = await execute(q, val);
 
-  if (result.length == 0 && specialAction == undefined) {
+  if (result.length == 0) {
     redirect(`/login`);
   }
 

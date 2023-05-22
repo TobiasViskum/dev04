@@ -1,5 +1,5 @@
 import styles from "./page.module.scss";
-import { SubmitAction } from "./SubmitAction";
+import { SubmitLogin } from "./SubmitLogin";
 
 export const metadata = {
   title: "Login",
@@ -12,14 +12,8 @@ export default async function page({ params }: ViskumAppParams) {
       <br />
       <br />
       <h1>Login</h1>
-      <br />
-      <p>
-        You have entered a wrong uid
-        <br />
-        <br />
-        Please login with the right uid:
-      </p>
-      <SubmitAction />
+      <p>Please login with your uid:</p>
+      <SubmitLogin />
     </main>
   );
 }

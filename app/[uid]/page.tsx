@@ -7,13 +7,8 @@ import {
   FavoritesSections,
   TabsSection,
 } from "@/components/viskum-app/page-index";
-import { indexStaticPages } from "@/lib/util";
-
-import { userAuth } from "@/lib/auth";
-import { revalidatePath } from "next/cache";
-import { redirect } from "next/navigation";
+// import { indexStaticPages } from "@/lib/util";
 import { Metadata } from "next";
-
 export const metadata: Metadata = {
   title: "Viskum App",
 };
@@ -24,7 +19,6 @@ export const metadata: Metadata = {
 
 export default async function page({ params }: ViskumAppParams) {
   const uid = params.uid;
-  await userAuth(uid);
 
   const [[profileData], appData] = await Promise.all([getProfileData(uid), getAppData()]);
 

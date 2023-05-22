@@ -12,6 +12,7 @@ interface ProfilesNoJoin {
   is_animations_enabled: number;
   favorites: object;
   role: string;
+  password: string;
 }
 
 interface ProfileData {
@@ -38,6 +39,7 @@ interface ProfileData {
   last_name: string;
   favorites: { [key: string]: string } | null;
   role: string;
+  password: string;
 }
 
 interface AppData {

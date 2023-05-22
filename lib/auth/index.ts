@@ -1,3 +1,5 @@
-import { userAuth } from "./userAuth";
+import generateSessionKey from "./generateSessionKey";
+import { userAuthServer } from "./userAuthServer";
+import { UserAuthClient } from "./UserAuthClient";
 
-export { userAuth };
+export { userAuthServer, UserAuthClient, generateSessionKey };

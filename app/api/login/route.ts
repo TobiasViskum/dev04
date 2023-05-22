@@ -10,10 +10,10 @@ export async function POST(request: Request) {
 
   const result: ProfilesNoJoin[] = await execute(q, val);
 
-  let redirect = null;
+  let passed = false;
   if (result.length > 0) {
-    redirect = `/${input}`;
+    passed = true;
   }
 
-  return NextResponse.json({ redirect: redirect });
+  return NextResponse.json({ passed: passed, status: "succes" });
 }
