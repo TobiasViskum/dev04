@@ -17,13 +17,6 @@ copy_next.bat
 /.next/
 /out/
 
-# production
-/build
-dist
-dist-ssr
-distClient
-distServer
-
 # misc
 .DS_Store
 *.pem
