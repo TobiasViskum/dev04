@@ -3,8 +3,11 @@ import { userAuth } from "@/lib/auth";
 import { redirect } from "next/navigation";
 //import { handleLogin } from "@/lib/viskum-app/actions";
 import { SubmitAction } from "./SubmitAction";
+import { execute } from "@/lib/db";
 
-export default function page({ params }: ViskumAppParams) {
+export default async function page({ params }: ViskumAppParams) {
+  const profiles: ProfilesNoJoin[] = await execute("SELECT * FROM dim_profile", [""]);
+
   return (
     <main className={styles.main}>
       <br />
@@ -17,7 +20,7 @@ export default function page({ params }: ViskumAppParams) {
         <br />
         Please login with the right uid:
       </p>
-      <SubmitAction />
+      <SubmitAction profiles={profiles} />
     </main>
   );
 }

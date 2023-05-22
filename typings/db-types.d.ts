@@ -1,3 +1,19 @@
+interface ProfilesNoJoin {
+  id: number;
+  name: string;
+  mail: string;
+  uid: string;
+  profile_group_id: number;
+  is_reps_default: number;
+  is_text_centered: number;
+  language: string;
+  show_vas_fitness: number;
+  show_vas_cardio: number;
+  is_animations_enabled: number;
+  favorites: object;
+  role: string;
+}
+
 interface ProfileData {
   id: number;
   name: string;

@@ -9,8 +9,6 @@ export async function handleLogin(inputText: string | undefined) {
 
   const result = await execute(q, val);
 
-  console.log(result.length);
-
   if (result.length > 0) {
     const dest = `/${inputText}`;
     redirect(dest);
