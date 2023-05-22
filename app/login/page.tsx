@@ -1,8 +1,8 @@
 import styles from "./page.module.scss";
-import { userAuth } from "@/lib/viskum-app/auth";
+import { userAuth } from "@/lib/auth";
 import { redirect } from "next/navigation";
 //import { handleLogin } from "@/lib/viskum-app/actions";
-import SubmitAction from "./SubmitAction";
+import { SubmitAction } from "./SubmitAction";
 
 export default function page({ params }: ViskumAppParams) {
   return (

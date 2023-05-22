@@ -1,8 +1,8 @@
 import Image from "next/image";
 import styles from "./TabsCard.module.scss";
 import { arrow, star_full, star_outline } from "@/assets/images";
-import { appImages } from "@/lib/viskum-app/util";
-import { updateFavorite } from "@/lib/viskum-app/db-calls";
+import { appImages } from "@/lib/util";
+import { updateFavorite } from "@/lib/db";
 import { revalidatePath } from "next/cache";
 import Link from "next/link";
 
@@ -51,7 +51,7 @@ export default function TabsCard(props: Props) {
             />
           </button>
         </form>
-        <Link className={styles.arrowHolder} href={`/viskum-app/${uid}/${appData.name_id}`}>
+        <Link className={styles.arrowHolder} href={`/${uid}/${appData.name_id}`}>
           <Image src={arrow} alt="icon" className={styles.arrow} />
         </Link>
       </div>

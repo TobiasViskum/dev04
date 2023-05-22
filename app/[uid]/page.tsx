@@ -1,5 +1,5 @@
 import styles from "./page.module.scss";
-import { getProfileData, getAppData } from "@/lib/viskum-app/db-calls";
+import { getProfileData, getAppData } from "@/lib/db";
 import {
   Header,
   Footer,
@@ -7,9 +7,9 @@ import {
   FavoritesSections,
   TabsSection,
 } from "@/components/viskum-app/page-index";
-import { indexStaticPages } from "@/lib/viskum-app/util";
+import { indexStaticPages } from "@/lib/util";
 
-import { userAuth } from "@/lib/viskum-app/auth/userAuth";
+import { userAuth } from "@/lib/auth";
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 import { Metadata } from "next";

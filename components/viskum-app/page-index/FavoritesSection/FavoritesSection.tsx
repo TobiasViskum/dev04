@@ -1,6 +1,6 @@
 import styles from "./FavoritesSection.module.scss";
 import FavoritesCard from "./FavoritesCard/FavoritesCard";
-import { updateFavorite } from "@/lib/viskum-app/db-calls";
+import { updateFavorite } from "@/lib/db";
 
 function findFavorites(appData: AppData[], profileData: ProfileData) {
   const uid = profileData.uid;

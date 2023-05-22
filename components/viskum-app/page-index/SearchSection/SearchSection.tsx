@@ -1,7 +1,7 @@
 import styles from "./SearchSection.module.scss";
 import Image from "next/image";
 import { profileTobias } from "@/assets/images";
-import { translator } from "@/lib/viskum-app/util";
+import { translator } from "@/lib/util";
 import SearchBar from "./SearchBar/SearchBar";
 
 interface Props {

@@ -1,9 +1,9 @@
 import Image from "next/image";
 import styles from "./FavoritesCard.module.scss";
 import { arrow, star_full } from "@/assets/images";
-import { appImages } from "@/lib/viskum-app/util";
+import { appImages } from "@/lib/util";
 import Link from "next/link";
-import { updateFavorite } from "@/lib/viskum-app/db-calls";
+import { updateFavorite } from "@/lib/db";
 import { revalidatePath } from "next/cache";
 
 interface Props {
@@ -42,7 +42,7 @@ export default function FavoritesCard(props: Props) {
             <Image src={star_full} alt="icon" className={styles.favoriteIcon} />
           </button>
         </form>
-        <Link className={styles.arrowHolder} href={`/viskum-app/${uid}/${appData.name_id}`}>
+        <Link className={styles.arrowHolder} href={`/${uid}/${appData.name_id}`}>
           <Image src={arrow} alt="icon" className={styles.arrow} />
         </Link>
       </div>

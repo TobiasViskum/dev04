@@ -4,7 +4,7 @@ import styles from "./Header.module.scss";
 import { settingsPng } from "@/assets/images";
 import Image from "next/image";
 import { useState } from "react";
-import { hooks } from "@/lib/viskum-app/hooks/page-index";
+import { hooks } from "@/lib/hooks/page-index";
 
 export default function Header() {
   const [isHeaderActive, setIsHeaderActive] = useState(false);
