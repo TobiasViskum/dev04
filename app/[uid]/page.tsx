@@ -10,7 +10,7 @@ import {
 // import { indexStaticPages } from "@/lib/util";
 import { Metadata } from "next";
 export const metadata: Metadata = {
-  title: "Viskum App",
+  title: "Home",
 };
 
 // export async function generateStaticParams() {

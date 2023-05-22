@@ -4,12 +4,7 @@ import PwaActions from "./PwaActions";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata = {
-  title: "Home",
-  description: "Made by Tobias T. Viskum",
-};
-
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default async function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <head>

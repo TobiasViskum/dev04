@@ -7,9 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "copy_next": "copy_next.bat",
-    "copy_node": "copy_node.bat",
-    "copy_important": "copy_important.bat"
+    "copy_deploy": "copy_next.bat && copy_important.bat",
+    "copy_node": "copy_node.bat"
   },
   "dependencies": {
     "@types/node": "20.1.3",
