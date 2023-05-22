@@ -13,13 +13,13 @@ export function SubmitLogin() {
       method: "POST",
       headers: { "Content-Type": "application/json" },
     });
-    const dataInput: { passed: boolean; status: string } = await responseInput.json();
+    const dataInput: { passed: boolean; uid: string; status: string } = await responseInput.json();
 
     if (dataInput.passed) {
       const sessionKey = localStorage.getItem("sessionKey");
 
       const responseConfirm = await fetch(
-        `/api/login/confirm?uid=${inputText}&sessionKey=${sessionKey}`,
+        `/api/login/confirm?uid=${dataInput.uid}&sessionKey=${sessionKey}`,
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -52,7 +52,7 @@ export function SubmitLogin() {
     <>
       <div>
         <input
-          placeholder="Enter uid"
+          placeholder="Enter e-mail"
           spellCheck={false}
           onChange={(e) => setInputText(e.target.value)}
           defaultValue={inputText}
