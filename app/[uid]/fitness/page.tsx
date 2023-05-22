@@ -1,10 +1,5 @@
 import Link from "next/link";
-import { userAuth } from "@/lib/viskum-app/auth/userAuth";
-import { indexStaticPages } from "@/lib/viskum-app/util";
-
-export async function generateStaticParams() {
-  return indexStaticPages();
-}
+import { userAuth } from "@/lib/auth";
 
 export default async function page({ params }: ViskumAppParams) {
   const uid = params.uid;
