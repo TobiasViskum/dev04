@@ -1,13 +1,12 @@
 import styles from "./page.module.scss";
-import { userAuth } from "@/lib/auth";
-import { redirect } from "next/navigation";
-//import { handleLogin } from "@/lib/viskum-app/actions";
 import { SubmitAction } from "./SubmitAction";
-import { execute } from "@/lib/db";
+
+export const metadata = {
+  title: "Login",
+  description: "Made by Tobias T. Viskum",
+};
 
 export default async function page({ params }: ViskumAppParams) {
-  const profiles: ProfilesNoJoin[] = await execute("SELECT * FROM dim_profile", [""]);
-
   return (
     <main className={styles.main}>
       <br />
@@ -20,7 +19,7 @@ export default async function page({ params }: ViskumAppParams) {
         <br />
         Please login with the right uid:
       </p>
-      <SubmitAction profiles={profiles} />
+      <SubmitAction />
     </main>
   );
 }

@@ -9,7 +9,6 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    row-gap: 2rem;
 
     input {
       margin-top: 0.5rem;
@@ -22,8 +21,13 @@
       padding-bottom: 1rem;
       @include theme-box;
     }
+    p {
+      color: var(--alert-bg);
+      line-height: 0;
+    }
     button {
       --multi: 0.75;
+      margin-top: 0.5rem;
       border-radius: 4px;
       color: var(--active-btn-text);
       background-color: var(--active-btn-bg);

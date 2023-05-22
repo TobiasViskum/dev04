@@ -1,37 +1,47 @@
 "use client";
-
-import { useRef } from "react";
+import { useEffect, useState, useRef } from "react";
 import { useRouter } from "next/navigation";
 
-interface Props {
-  profiles: ProfilesNoJoin[];
-}
+export function SubmitAction() {
+  const [submitResponse, setSubmitResponse] = useState(<p></p>);
+  const [inputText, setInputText] = useState("");
+  const isFirstRender = useRef(false);
 
-export function SubmitAction(props: Props) {
   const router = useRouter();
-  const inputElement = useRef<HTMLInputElement | null>(null);
-  const profiles = props.profiles;
 
-  function handleClick() {
-    if (!inputElement.current) return;
-    const inputText = inputElement.current.value;
-    let foundProfile = false;
-    for (let i = 0; i < profiles.length; i++) {
-      if (profiles[i].uid === inputText) {
-        foundProfile = true;
-        break;
-      }
+  async function handleClick() {
+    const response = await fetch(`/api/login?input=${inputText}`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+    });
+    const data: { redirect: string | null } = await response.json();
+    if (data.redirect) {
+      router.push(data.redirect);
+    } else {
+      setSubmitResponse(<p>User doesn't exist!</p>);
     }
-    if (foundProfile) {
-      router.push(`/${inputText}`);
-    }
-    return;
   }
 
+  useEffect(() => {
+    if (isFirstRender.current == false) {
+      isFirstRender.current = true;
+    } else {
+      setSubmitResponse(<p></p>);
+    }
+  }, [inputText]);
+
   return (
-    <div>
-      <input placeholder="Enter uid" spellCheck={false} ref={inputElement} />
-      <button onClick={handleClick}>Submit</button>
-    </div>
+    <>
+      <div>
+        <input
+          placeholder="Enter uid"
+          spellCheck={false}
+          onChange={(e) => setInputText(e.target.value)}
+          defaultValue={inputText}
+        />
+        {submitResponse}
+        <button onClick={handleClick}>Submit</button>
+      </div>
+    </>
   );
 }
