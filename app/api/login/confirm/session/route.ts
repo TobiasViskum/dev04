@@ -7,7 +7,7 @@ export async function POST(request: Request) {
   const input = searchParams.get("input");
   const uid = searchParams.get("uid");
 
-  const [response]: { password: string }[] = await execute(
+  const [response]: { password: string }[] = await execute<{ password: string }[]>(
     "SELECT password FROM dim_profile WHERE uid=?",
     [uid]
   );

@@ -8,7 +8,7 @@ export async function POST(request: Request) {
   const q = "SELECT * FROM dim_profile WHERE mail=(?)";
   const val = [input];
 
-  const result: ProfilesNoJoin[] = await execute(q, val);
+  const result = await execute<ProfilesNoJoin[]>(q, val);
   let uid = "";
 
   let passed = false;

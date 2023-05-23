@@ -7,7 +7,7 @@ export async function userAuthServer(uid: string) {
   const q = "SELECT * FROM dim_profile WHERE uid=(?)";
   const val = [uid];
 
-  const result = await execute(q, val);
+  const result = await execute<ProfilesNoJoin[]>(q, val);
 
   if (result.length == 0) {
     redirect(`/login`);
