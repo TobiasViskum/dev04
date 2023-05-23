@@ -9,7 +9,6 @@ export default function page({ params }: ViskumAppParams) {
       <br />
       <br />
       <h1>Verification</h1>
-      <br />
       <p>
         It seems to be a long time since you last logged in...
         <br />

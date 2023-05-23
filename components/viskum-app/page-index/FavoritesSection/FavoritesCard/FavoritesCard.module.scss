@@ -17,6 +17,7 @@
     border-radius: 4px;
     display: grid;
     place-items: center;
+    aspect-ratio: 1 / 1;
   }
 
   .rightIcons {
@@ -31,6 +32,7 @@
       width: calc(var(--icon-size) * 1);
       height: calc(var(--icon-size) * 1);
       padding: calc(var(--icon-size) * 0.25);
+      aspect-ratio: 1 / 1;
       .favoriteIcon {
         @include image-bg-active;
         @include next-image;
@@ -43,6 +45,7 @@
       align-items: center;
       margin-left: auto;
       background-color: transparent;
+      aspect-ratio: 1 / 1;
       width: calc(var(--icon-size) * 1);
       height: calc(var(--icon-size) * 1);
 

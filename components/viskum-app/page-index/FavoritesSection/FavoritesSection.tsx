@@ -4,37 +4,36 @@ import { updateFavorite } from "@/lib/db";
 
 function findFavorites(appData: AppData[], profileData: ProfileData) {
   const uid = profileData.uid;
-  const favorites = profileData.favorites;
 
   let hasFoundFavorite = false;
-  if (favorites == null) {
-    updateFavorite(uid, false, {}, favorites);
+  if (profileData.favorites == null) {
+    updateFavorite(uid, false, {}, profileData.favorites);
     return;
+  } else {
+    return appData.map((app, index) => {
+      if (profileData.favorites && profileData.favorites[app.name_id] != undefined) {
+        hasFoundFavorite = true;
+        return <FavoritesCard key={index} appData={app} profileData={profileData} />;
+      }
+      if (appData.length == index + 1 && hasFoundFavorite == false) {
+        return (
+          <p key={index} className={styles.noFavoritesFoundParagraph}>
+            You dont have any favorites yet!
+          </p>
+        );
+      }
+    });
   }
-
-  return appData.map((app, index) => {
-    if (favorites[app.name_id] != undefined) {
-      hasFoundFavorite = true;
-      return <FavoritesCard key={index} appData={app} profileData={profileData} />;
-    }
-    if (appData.length == index + 1 && hasFoundFavorite == false) {
-      return (
-        <p key={index} className={styles.noFavoritesFoundParagraph}>
-          You dont have any favorites yet!
-        </p>
-      );
-    }
-  });
 }
 
 interface Props {
-  profileData: ProfileData;
-  appData: AppData[];
+  profileData: string;
+  appData: string;
 }
 
-export default function FavoritesSections(props: Props) {
-  const profileData = props.profileData;
-  const appData = props.appData;
+export default function FavoritesSection(props: Props) {
+  const profileData: ProfileData = JSON.parse(props.profileData);
+  const appData: AppData[] = JSON.parse(props.appData);
 
   const result = findFavorites(appData, profileData);
 

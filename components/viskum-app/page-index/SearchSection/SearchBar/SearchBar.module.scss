@@ -5,8 +5,8 @@
   align-items: center;
 
   width: 100%;
-  max-width: calc(450px - 2px);
-  min-width: calc(300px - 2px);
+  max-width: calc(var(--max-width) - 2px);
+  min-width: calc(var(--min-width) - 2px);
   font-size: 1rem;
 
   @include theme-box;
@@ -15,6 +15,7 @@
     padding: 2px;
     width: 28px;
     height: 28px;
+    aspect-ratio: 1 / 1;
   }
   .border {
     height: 1rem;
@@ -22,7 +23,7 @@
     border-left-width: 1px;
     border-style: solid;
     border-color: var(--second-clr);
-    width: 4px;
+    width: 8px;
   }
 
   .searchIcon {
@@ -33,8 +34,8 @@
   .searchBar {
     font-size: 1rem;
     background-color: var(--first-bg);
-    flex: 1;
     border: 0;
     outline: 0;
+    min-width: 0;
   }
 }

@@ -15,7 +15,7 @@ export default function FavoritesCard(props: Props) {
   const profileData = props.profileData;
   const appData = props.appData;
   const uid = profileData.uid;
-  const favorites: any = profileData.favorites;
+  const favorites = profileData.favorites;
   const name_id = appData.name_id;
   const appImageData = appImages[appData.name_id];
 

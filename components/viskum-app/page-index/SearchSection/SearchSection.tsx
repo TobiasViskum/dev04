@@ -1,15 +1,15 @@
 import styles from "./SearchSection.module.scss";
 import Image from "next/image";
 import { profileTobias } from "@/assets/images";
-import { translator } from "@/lib/util";
 import SearchBar from "./SearchBar/SearchBar";
+import Header from "./Header";
 
 interface Props {
-  profileData: ProfileData;
+  profileData: string;
 }
 
 export default function SearchSection(props: Props) {
-  const profileData = props.profileData;
+  const profileData: ProfileData = JSON.parse(props.profileData);
 
   return (
     <div className={styles.searchSection} id="searchSection">
@@ -17,9 +17,7 @@ export default function SearchSection(props: Props) {
         <div className={styles.profileHolder} id="profileIcon">
           <Image src={profileTobias} alt="profile" className={styles.profileIcon} />
         </div>
-        <h1 id="title" className={styles.title}>
-          {profileData.name} {profileData.last_name}
-        </h1>
+        <Header profileData={profileData} />
       </div>
       <div className={styles.lowerRow}>
         <SearchBar />

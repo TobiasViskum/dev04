@@ -34,8 +34,6 @@
     .title {
       opacity: var(--searching-opacity);
       @include transition(opacity);
-
-      white-space: nowrap;
     }
   }
 }

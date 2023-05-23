@@ -36,3 +36,20 @@
   border-radius: 4px;
   border: var(--second-clr-transparent) solid 1px;
 }
+
+@mixin margin-y($size: 0px) {
+  margin-top: $size;
+  margin-bottom: $size;
+}
+@mixin margin-x($size: 0px) {
+  margin-left: $size;
+  margin-right: $size;
+}
+@mixin padding-y($size: 0px) {
+  padding-top: $size;
+  padding-bottom: $size;
+}
+@mixin padding-x($size: 0px) {
+  padding-left: $size;
+  padding-right: $size;
+}

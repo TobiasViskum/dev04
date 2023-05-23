@@ -36,7 +36,7 @@ export function SubmitLogin() {
     } else if (dataInput.status == "error") {
       setSubmitResponse(<p>An error happened</p>);
     } else {
-      setSubmitResponse(<p>User doesn{"'"}t exist!</p>);
+      setSubmitResponse(<p>E-mail doesn{"'"}t exist!</p>);
     }
   }
 

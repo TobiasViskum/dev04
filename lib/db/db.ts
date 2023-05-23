@@ -1,20 +1,21 @@
-import mysql from "mysql2/promise";
+import mysql from "serverless-mysql";
 
-const db = mysql.createPool({
-  host: "192.168.2.35",
-  database: "fitness_db",
-  user: "tobias",
-  password: "fitness",
-  connectionLimit: 20,
+const db = mysql({
+  config: {
+    host: "192.168.2.35",
+    database: "fitness_db",
+    user: "tobias",
+    password: "fitness",
+  },
 });
 
-export async function execute(q: string, val: any[]) {
-  if (q == undefined || val[0] == undefined) return ["failed"];
+export async function execute<ReceivedType>(q: string, val: any[]): Promise<ReceivedType> {
+  if (q == undefined || val[0] == undefined) return ["failed"] as ReceivedType;
 
   try {
-    const [rows, fields] = (await db.execute(q, val)) as [any[], any[]];
-
-    return rows;
+    const results = await db.query(q, val);
+    await db.end();
+    return results as ReceivedType;
   } catch (error) {
     console.log(error);
     throw error;

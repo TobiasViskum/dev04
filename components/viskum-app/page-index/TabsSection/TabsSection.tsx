@@ -9,13 +9,13 @@ function findTabs(appData: AppData[], profileData: ProfileData) {
 }
 
 interface Props {
-  profileData: ProfileData;
-  appData: AppData[];
+  profileData: string;
+  appData: string;
 }
 
 export default function TabsSection(props: Props) {
-  const appData = props.appData;
-  const profileData = props.profileData;
+  const profileData: ProfileData = JSON.parse(props.profileData);
+  const appData: AppData[] = JSON.parse(props.appData);
 
   const result = findTabs(appData, profileData);
 

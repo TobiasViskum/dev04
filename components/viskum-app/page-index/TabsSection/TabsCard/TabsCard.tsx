@@ -15,14 +15,15 @@ export default function TabsCard(props: Props) {
   const profileData = props.profileData;
   const appData = props.appData;
   const uid = profileData.uid;
-  const favorites: any = profileData.favorites;
-  const isFavorite: string | undefined = favorites[appData.name_id];
+  const favorites = profileData.favorites;
+
+  const isFavorite = favorites == null ? false : favorites[appData.name_id] ? true : false;
   const name_id = appData.name_id;
   const appImageData = appImages[appData.name_id];
 
   async function handleFavoriteClick() {
     "use server";
-    const newState = isFavorite ? false : true;
+    const newState = !isFavorite;
     await updateFavorite(uid, newState, name_id, favorites);
     revalidatePath("/");
     return;

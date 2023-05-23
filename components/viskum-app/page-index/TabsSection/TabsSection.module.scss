@@ -4,8 +4,9 @@
   overflow: hidden;
 
   .cardHolder {
+    margin-top: 8px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 450px));
+    grid-template-columns: repeat(auto-fit, minmax(var(--min-width), var(--max-width)));
     column-gap: 12px;
     row-gap: 12px;
   }

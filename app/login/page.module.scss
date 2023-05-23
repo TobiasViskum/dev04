@@ -4,6 +4,7 @@
   display: grid;
   place-items: center;
   text-align: center;
+  row-gap: 16px;
 
   div {
     display: flex;
@@ -15,29 +16,27 @@
       text-align: center;
       font-size: 0.9rem;
       width: 70svw;
-      min-width: 300px;
-      max-width: 450px;
-      padding-top: 1rem;
-      padding-bottom: 1rem;
+      min-width: var(--min-width);
+      max-width: var(--max-width);
+      @include padding-y(1rem);
       @include theme-box;
     }
     p {
       color: var(--alert-bg);
       line-height: 0;
+      @include margin-y(1rem);
     }
     button {
-      --multi: 0.75;
-      margin-top: 0.5rem;
+      --width-factor: 0.75;
       border-radius: 4px;
       color: var(--active-btn-text);
       background-color: var(--active-btn-bg);
-      width: calc(70svw * var(--multi));
-      min-width: calc(300px * var(--multi));
-      max-width: calc(450px * var(--multi));
+      width: calc(70svw * var(--width-factor));
+      min-width: calc(var(--min-width) * var(--width-factor));
+      max-width: calc(var(--max-width) * var(--width-factor));
       font-weight: 600;
-      padding-top: 0.5rem;
-      padding-bottom: 0.5rem;
       font-size: 1.5rem;
+      @include padding-y(0.5rem);
     }
   }
 }

@@ -5,7 +5,7 @@
   left: 0;
   top: 0;
   width: 100svw;
-  min-width: 350px;
+  min-width: calc(var(--min-width) + var(--document-padding) * 2);
   z-index: 10;
 
   display: flex;

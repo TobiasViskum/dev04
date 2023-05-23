@@ -4,7 +4,7 @@ import {
   Header,
   Footer,
   SearchSection,
-  FavoritesSections,
+  FavoritesSection,
   TabsSection,
 } from "@/components/viskum-app/page-index";
 // import { indexStaticPages } from "@/lib/util";
@@ -19,16 +19,21 @@ export const metadata: Metadata = {
 
 export default async function page({ params }: ViskumAppParams) {
   const uid = params.uid;
-
   const [[profileData], appData] = await Promise.all([getProfileData(uid), getAppData()]);
+  if (profileData.favorites != null) {
+    profileData.favorites = JSON.parse(profileData.favorites);
+  }
+
+  const strProfileData = JSON.stringify(profileData);
+  const strAppData = JSON.stringify(appData);
 
   return (
     <>
       <Header />
       <main className={styles.main} id="main">
-        <SearchSection profileData={profileData} />
-        <FavoritesSections profileData={profileData} appData={appData} />
-        <TabsSection profileData={profileData} appData={appData} />
+        <SearchSection profileData={strProfileData} />
+        <FavoritesSection profileData={strProfileData} appData={strAppData} />
+        <TabsSection profileData={strProfileData} appData={strAppData} />
       </main>
       <Footer />
     </>
