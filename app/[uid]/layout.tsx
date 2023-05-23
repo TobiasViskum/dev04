@@ -1,4 +1,6 @@
 import { userAuthServer, UserAuthClient } from "@/lib/auth";
+import { Header } from "@/components/viskum-app/page-index";
+import {} from "next/server";
 
 export default async function RootLayout({
   children,
@@ -14,6 +16,7 @@ export default async function RootLayout({
   return (
     <>
       <UserAuthClient uid={uid} />
+      <Header />
       <>{children}</>
     </>
   );

@@ -1,7 +1,6 @@
 import styles from "./page.module.scss";
 import { getProfileData, getAppData } from "@/lib/db";
 import {
-  Header,
   Footer,
   SearchSection,
   FavoritesSection,
@@ -9,6 +8,7 @@ import {
 } from "@/components/viskum-app/page-index";
 // import { indexStaticPages } from "@/lib/util";
 import { Metadata } from "next";
+
 export const metadata: Metadata = {
   title: "Home",
 };
@@ -29,7 +29,6 @@ export default async function page({ params }: ViskumAppParams) {
 
   return (
     <>
-      <Header />
       <main className={styles.main} id="main">
         <SearchSection profileData={strProfileData} />
         <FavoritesSection profileData={strProfileData} appData={strAppData} />

@@ -21,10 +21,10 @@ export default function Header(props: Props) {
 
   useEffect(() => {
     setContent();
+    window.addEventListener("resize", (e) => {
+      setContent();
+    });
   }, []);
-  useWindowEvent("resize", (e) => {
-    setContent();
-  });
 
   return (
     <h1 id="title" className={styles.title}>

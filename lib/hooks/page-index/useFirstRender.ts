@@ -1,15 +1,14 @@
 "use client";
 
 import { useEffect } from "react";
+import { useWindowEvent } from "@mantine/hooks";
 
 interface Props {
   updateHeader: (newState: boolean) => void;
 }
 export default function useFirstRender(props: Props) {
-  const updateHeader = props.updateHeader;
-
-  return useEffect(() => {
-    if (typeof document == "undefined") return;
+  useEffect(() => {
+    const updateHeader = props.updateHeader;
     const searchSection = document.getElementById("searchSection");
     const searchbar = document.getElementById("searchInput");
     const observingElement = document.getElementById("profileIcon");
@@ -17,13 +16,14 @@ export default function useFirstRender(props: Props) {
     const style = getComputedStyle(document.documentElement);
 
     let currState = false;
+
     function cancelFocus() {
       if (!searchbar) return;
-
       searchbar.blur();
     }
+
     window.addEventListener("touchmove", cancelFocus);
-    window.addEventListener("touchstart", cancelFocus);
+    window.addEventListener("touchmove", cancelFocus);
     window.addEventListener("scroll", () => {
       if (!observingElement || !searchSection || !searchbar) return;
       const navbarHeight = Number(style.getPropertyValue("--navbar-height").replace("px", ""));

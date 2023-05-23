@@ -1,5 +1,9 @@
 @import "/app/mixins.scss";
 
+.topMargin {
+  margin-bottom: calc(var(--navbar-height) * 1.25);
+}
+
 .header {
   position: fixed;
   left: 0;
