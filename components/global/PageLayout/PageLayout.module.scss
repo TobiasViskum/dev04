@@ -1,0 +1,18 @@
+@import "/app/mixins.scss";
+
+.sharedStyles {
+  position: fixed;
+  left: 0;
+  width: 100svw;
+  min-width: calc(var(--min-width) + var(--document-padding) * 2);
+  z-index: 10;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: calc(var(--navbar-height) - 1px); //because of the border
+  border-width: 0;
+
+  border-style: solid;
+}

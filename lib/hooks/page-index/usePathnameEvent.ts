@@ -5,19 +5,19 @@ import { useEffect } from "react";
 import { firstLetterUppercase } from "@/lib/util";
 
 interface Props {
-  setHeaderTitle: (str: string) => void;
+  onPathChange: (str: string) => void;
 }
 export default function usePathnameEvent(props: Props) {
   const pathname = usePathname();
-  const setHeaderTitle = props.setHeaderTitle;
+  const onPathChange = props.onPathChange;
 
   useEffect(() => {
     const splitPathname = pathname.split("/");
     if (splitPathname.length == 2) {
-      setHeaderTitle("Home");
+      onPathChange("Home");
     } else if (splitPathname.length == 3) {
-      setHeaderTitle(firstLetterUppercase(splitPathname[2]));
+      onPathChange(firstLetterUppercase(splitPathname[2]));
     }
-  }, [pathname]);
+  }, [pathname, onPathChange]);
   return;
 }

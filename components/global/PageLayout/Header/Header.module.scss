@@ -1,28 +1,13 @@
 @import "/app/mixins.scss";
 
-.topMargin {
+.bottomMargin {
   margin-bottom: calc(var(--navbar-height) * 1.25);
 }
 
 .header {
-  position: fixed;
-  left: 0;
   top: 0;
-  width: 100svw;
-  min-width: calc(var(--min-width) + var(--document-padding) * 2);
-  z-index: 10;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  border-color: var(--second-bg);
-  height: calc(var(--navbar-height) - 1px); //because of the border
-  border-width: 0;
-  border-bottom-width: 1px;
-
   border-color: var(--first-bg);
-  border-style: solid;
+  border-bottom-width: 1px;
   background: var(--first-bg);
   backdrop-filter: blur(10px);
 
@@ -53,9 +38,4 @@
   background: var(--first-bg), 0.5;
 
   @include transition(border-color, var(--transition-duration), 0s, background);
-}
-
-.intersector {
-  top: var(--icon-size);
-  position: absolute;
 }

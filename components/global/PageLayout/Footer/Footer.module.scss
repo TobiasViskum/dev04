@@ -1,0 +1,16 @@
+@import "/app/mixins.scss";
+
+.topMargin {
+  margin-top: calc(var(--navbar-height) * 1.25);
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  border-color: var(--second-bg);
+  border-top-width: 1px;
+  background: var(--first-bg), 0.5;
+  backdrop-filter: blur(10px);
+
+  @include transition(border-color, var(--transition-duration), 0s, background);
+}

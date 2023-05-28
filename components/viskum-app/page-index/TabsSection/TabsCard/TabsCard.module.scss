@@ -2,7 +2,6 @@
 
 .container {
   display: flex;
-  align-items: center;
 
   overflow: hidden;
   column-gap: 12px;
@@ -22,12 +21,8 @@
     aspect-ratio: 1 / 1;
   }
   .textHolder {
-    > h3 {
-      padding-bottom: 4px;
-    }
     > p {
       padding-top: 4px;
-      line-height: 0;
     }
   }
 

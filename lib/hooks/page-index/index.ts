@@ -1,8 +1,8 @@
-import useFirstRender from "./useFirstRender";
+import useFirstRenderEvent from "./useFirstRenderEvent";
 import usePathnameEvent from "./usePathnameEvent";
 
 const hooks = {
-  useFirstRender,
+  useFirstRenderEvent,
   usePathnameEvent,
 };
 

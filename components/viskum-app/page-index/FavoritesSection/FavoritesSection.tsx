@@ -18,7 +18,7 @@ function findFavorites(appData: AppData[], profileData: ProfileData) {
       if (appData.length == index + 1 && hasFoundFavorite == false) {
         return (
           <p key={index} className={styles.noFavoritesFoundParagraph}>
-            You dont have any favorites yet!
+            You don{"'"}t have any favorites yet!
           </p>
         );
       }

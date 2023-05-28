@@ -1,12 +1,12 @@
 "use client";
 
 import { useEffect } from "react";
-import { useWindowEvent } from "@mantine/hooks";
 
 interface Props {
   updateHeader: (newState: boolean) => void;
+  updateFooter: (newState: boolean) => void;
 }
-export default function useFirstRender(props: Props) {
+export default function useFirstRenderEvent(props: Props) {
   useEffect(() => {
     const updateHeader = props.updateHeader;
     const searchSection = document.getElementById("searchSection");
@@ -43,5 +43,5 @@ export default function useFirstRender(props: Props) {
         searchbar.blur();
       }
     });
-  }, []);
+  }, [props.updateHeader]);
 }
